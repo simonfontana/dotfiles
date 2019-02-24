@@ -28,6 +28,7 @@
 .config/user-dirs.locale
 .config/vlc/
 .config/xfce4/
+.config/yad.conf
 .dir_colors/
 .dircolors
 .fehbg
