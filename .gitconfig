@@ -1,0 +1,13 @@
+[user]
+	name = Simon Fontana Oscarsson
+	email = simon.fontana.o@gmail.com
+[core]
+	filemode = true
+	autocrlf = false
+[color]
+	ui = auto
+[alias]
+	tree = log --decorate --oneline --graph --all --topo-order -30
+	treef = log --decorate --oneline --graph --all --topo-order
+	st = status
+	rank = shortlog -sn --no-merges
