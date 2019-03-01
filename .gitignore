@@ -42,11 +42,14 @@
 .gtkrc-2.0
 .icons/
 .java/
+.kube/
 .lesshst
 .local/
 .m2/
+.minikube/
 .mozilla/
 .npm/
+.nv/
 .nvidia-settings-rc
 .pki/
 .profile
@@ -56,6 +59,7 @@
 .steampath
 .steampid
 .sudo_as_admin_successful
+.synaptic/
 .themes/
 .thumbnails/
 .vim/bundle/

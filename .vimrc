@@ -1,19 +1,6 @@
 "au FileType gitcommit set tw=72
-" Break the habit
-noremap <Up> <NOP>
-noremap <Down> <NOP>
-noremap <Left> <NOP>
-noremap <Right> <NOP>
-
-set encoding=utf-8
-
-" Maintain undo history between sessions
-set undofile
-set undodir=~/.vim/undo/
-set undolevels=10000
-
 " Vundle
-set nocompatible                " required
+set nocompatible                " required. vim >> vi.
 filetype off                    " required
 
 " set the runtime path to include Vundle and initialize
@@ -36,10 +23,56 @@ Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
 
 " All of your Plugins must be added before the following line
 call vundle#end()               " required
-filetype plugin indent on       " required
+"filetype plugin indent on       " required / or is it? https://stackoverflow.com/questions/28310094/is-it-possible-to-include-multiple-file-types-when-using-the-filetype-event
+"filetype on
+filetype plugin on
+
+" Source configuration
+source ~/.vim/rc/indent
+source ~/.vim/rc/simpylfold
+source ~/.vim/rc/syntastic
+source ~/.vim/rc/youcompleteme
+source ~/.vim/rc/nerdtree
+source ~/.vim/rc/solarized
 
 " Other configuration
-let python_highlight_all=1
+"let python_highlight_all=1
+set encoding=utf-8
+syntax on
+set nu
+
+" Maintain undo history between sessions
+set undofile
+set undodir=~/.vim/undo/
+set undolevels=10000
+set history=1000
+
+" Return to last edit position when opening files (You want this!)
+autocmd BufReadPost *
+     \ if line("'\"") > 0 && line("'\"") <= line("$") |
+     \   exe "normal! g`\"" |
+     \ endif
+
+" Toggle spellchecking
+nnoremap <leader>s :set spell!<CR>:setl spell?<CR>
+
+" Enable folding
+set foldmethod=indent
+set foldlevel=99
+nnoremap <space> za
+
+" Set maximum line length
+au FileType markdown,readme,text setl tw=79
+
+" Highlight trailing whitespace
+hi ExtraWhitespace ctermbg=red guibg=red
+au ColorScheme * hi ExtraWhitespace guibg=red
+au BufEnter * match ExtraWhitespace /\s\+$/
+au InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
+au InsertLeave * match ExtraWhitespace /\s\+$/
+":highlight ExtraWhitespace ctermbg=red guibg=red
+":match ExtraWhitespace /\s\+\%#\@<!$/
+":autocmd InsertLeave * redraw!
 
 " Split navigations
 nnoremap <C-J> <C-W><C-J>
@@ -47,34 +80,8 @@ nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 
-" Flag bad whitespaces (whitespaces at end of line)
-:highlight ExtraWhitespace ctermbg=red guibg=red
-:match ExtraWhitespace /\s\+\%#\@<!$/
-:autocmd InsertLeave * redraw!
-
-syntax on
-set nu
-
-" Enable folding
-set foldmethod=indent
-set foldlevel=99
-nnoremap <space> za
-
-" Source other configuration
-source ~/.vim/.indent.vim
-source ~/.vim/.simpylfold.vim
-source ~/.vim/.youcompleteme.vim
-source ~/.vim/.nerdtree.vim
-
-" solarize is awesome
-set t_Co=16
-syntax enable
-let g:solarized_termcolors=16
-call togglebg#map("<F5>")
-if has('gui_running')
-    set background=dark
-else
-    set background=dark
-endif
-
-colorscheme solarized
+" Break the habit
+noremap <Up> <NOP>
+noremap <Down> <NOP>
+noremap <Left> <NOP>
+noremap <Right> <NOP>

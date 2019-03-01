@@ -1,0 +1,11 @@
+ set t_Co=16
+ syntax enable
+ let g:solarized_termcolors=16
+ call togglebg#map("<F5>")
+ if has('gui_running')
+     set background=dark
+ else
+     set background=dark
+ endif
+ 
+ colorscheme solarized
