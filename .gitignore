@@ -4,6 +4,8 @@
 .bash_history
 .bash_logout
 .cache/
+.config/QtProject.conf
+.config/VeraCrypt/
 .config/Thunar/
 .config/VirtualBox/
 .config/configstore/
@@ -70,6 +72,7 @@
 Desktop/
 Downloads/
 Pictures/
+VirtualBox VMs/
 examples.desktop
 git/
 node_modules/

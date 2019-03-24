@@ -5,7 +5,7 @@
 set $mod Mod4
 
 # Because of the script for GSX1000 pulseaudio doesn't start properly
-exec --no-startup-id pulseaudio -D
+#exec --no-startup-id pulseaudio -D
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
@@ -107,20 +107,20 @@ set $ws_c "3c"
 set $ws_b "4b"
 
 # Automatically put workspaces on specific screens
-workspace $ws1 output DVI-D-0
-workspace $ws2 output DVI-D-0
-workspace $ws3 output DVI-D-0
-workspace $ws4 output DVI-D-0
-workspace $ws5 output DVI-D-0
+workspace $ws1 output DP-0
+workspace $ws2 output DP-0
+workspace $ws3 output DP-0
+workspace $ws4 output DP-0
+workspace $ws5 output DP-0
 workspace $ws6 output DP-2
 workspace $ws7 output DP-2
 workspace $ws8 output DP-2
 workspace $ws9 output DP-2
 workspace $ws10 output DP-2
-workspace $ws_z output HDMI-0
-workspace $ws_x output HDMI-0
-workspace $ws_c output HDMI-0
-workspace $ws_b output HDMI-0
+workspace $ws_z output DP-4
+workspace $ws_x output DP-4
+workspace $ws_c output DP-4
+workspace $ws_b output DP-4
 
 # switch to workspace
 bindsym $mod+1 workspace $ws1
