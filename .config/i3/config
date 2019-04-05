@@ -207,7 +207,7 @@ bindsym XF86AudioPrev exec playerctl previous
 # Disable that mouse follows when focus is changed
 mouse_warping none
 
-# Disable automatic focus where mouse is 
+# Disable automatic focus where mouse is
 #focus_follows_mouse no
 
 # Background

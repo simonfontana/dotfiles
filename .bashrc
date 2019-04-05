@@ -117,6 +117,8 @@ if ! shopt -oq posix; then
 fi
 
 source ~/.git-completion.bash
+source <(kubectl completion bash)
+source <(helm completion bash)
 
 # Do not be disturbed by Ctrl-S Ctrl-Q in terminals
 stty -ixon
