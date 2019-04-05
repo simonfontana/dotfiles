@@ -39,7 +39,8 @@ source ~/.vim/rc/solarized
 "let python_highlight_all=1
 set encoding=utf-8
 syntax on
-set nu
+set nonu
+au FileType gitcommit set tw=72
 
 " Maintain undo history between sessions
 set undofile
@@ -85,3 +86,9 @@ noremap <Up> <NOP>
 noremap <Down> <NOP>
 noremap <Left> <NOP>
 noremap <Right> <NOP>
+
+" Enter paste mode when pressing F3 (no indent)
+set pastetoggle=<F3>
+
+" Clear terminal before execution commands
+set shell=~/.vim/shell_wrapper.sh
