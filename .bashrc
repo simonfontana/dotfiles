@@ -130,3 +130,10 @@ stty -ixon
 docker-ip() {
     docker inspect --format '{{ .NetworkSettings.IPAddress }}' "$@"
 }
+
+purge_namespace() {
+    NAMESPACE=$1
+    kubectl proxy &
+    kubectl get namespace $NAMESPACE -o json |jq '.spec = {"finalizers":[]}' > /tmp/.purge_namespace.json
+    curl -k -H "Content-Type: application/json" -X PUT --data-binary @/tmp/.purge_namespace.json 127.0.0.1:8001/api/v1/namespaces/$NAMESPACE/f
+}
