@@ -14,11 +14,12 @@ Plugin 'vim-scripts/indentpython.vim'
 Bundle 'Valloric/YouCompleteMe'
 Plugin 'vim-syntastic/syntastic'
 Plugin 'nvie/vim-flake8'
-Plugin 'jnurmine/Zenburn'
-Plugin 'altercation/vim-colors-solarized'
 Plugin 'scrooloose/nerdtree'
 Plugin 'jistr/vim-nerdtree-tabs'
 Plugin 'kien/ctrlp.vim'
+Plugin 'tpope/vim-vinegar'
+Plugin 'jnurmine/Zenburn'
+Plugin 'altercation/vim-colors-solarized'
 Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
 
 " All of your Plugins must be added before the following line
@@ -36,7 +37,6 @@ source ~/.vim/rc/nerdtree
 source ~/.vim/rc/solarized
 
 " Other configuration
-"let python_highlight_all=1
 set encoding=utf-8
 syntax on
 set nonu
@@ -63,7 +63,7 @@ set foldlevel=99
 nnoremap <space> za
 
 " Set maximum line length
-au FileType markdown,readme,text setl tw=79
+au FileType markdown,readme setl tw=79
 
 " Highlight trailing whitespace
 hi ExtraWhitespace ctermbg=red guibg=red
@@ -71,9 +71,6 @@ au ColorScheme * hi ExtraWhitespace guibg=red
 au BufEnter * match ExtraWhitespace /\s\+$/
 au InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
 au InsertLeave * match ExtraWhitespace /\s\+$/
-":highlight ExtraWhitespace ctermbg=red guibg=red
-":match ExtraWhitespace /\s\+\%#\@<!$/
-":autocmd InsertLeave * redraw!
 
 " Split navigations
 nnoremap <C-J> <C-W><C-J>
@@ -92,3 +89,8 @@ set pastetoggle=<F3>
 
 " Clear terminal before execution commands
 set shell=~/.vim/shell_wrapper.sh
+
+" Enable powerline
+set  rtp+=/usr/local/lib/python2.7/dist-packages/powerline/bindings/vim/
+set laststatus=2
+set t_Co=256
