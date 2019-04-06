@@ -1,0 +1,6 @@
+*.idea/
+*.iml
+*.pyc
+*.swp
+__pycache__/
+target/

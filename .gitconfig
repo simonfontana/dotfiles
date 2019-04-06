@@ -4,6 +4,7 @@
 [core]
 	filemode = true
 	autocrlf = false
+    excludesfile = ~/.gitignore_global
 [color]
 	ui = auto
 [alias]
