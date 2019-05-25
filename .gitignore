@@ -13,6 +13,7 @@
 .config/dconf/
 .config/enchant/
 .config/evolution/
+.config/flashfocus/
 .config/gedit/
 .config/gnome-initial-setup-done
 .config/google-chrome/
@@ -45,6 +46,7 @@
 .gtkrc-2.0
 .helm/
 .icons/
+.ipython/
 .java/
 .kube/
 .lesshst
@@ -58,6 +60,7 @@
 .pki/
 .profile
 .pulse-cookie
+.pylint.d/
 .ssh/
 .steam/
 .steampath
@@ -72,6 +75,7 @@
 .vnc/
 .wget-hsts
 Desktop/
+Documents/
 Downloads/
 Pictures/
 VirtualBox VMs/
