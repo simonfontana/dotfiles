@@ -1,0 +1,1250 @@
+"KeyBindings"
+{
+	"Name"		"ARROW"
+	"Version"		"12"
+	"AlgorithmicUpdateVersion"		"6"
+	"UseHeroBindings"		"0"
+	"LinkPlayerToSpectator"		"1"
+	"Keys"
+	{
+		"CameraUp"
+		{
+			"Key"		"UPARROW"
+		}
+		"CameraDown"
+		{
+			"Key"		"DOWNARROW"
+		}
+		"CameraLeft"
+		{
+			"Key"		"LEFTARROW"
+		}
+		"CameraRight"
+		{
+			"Key"		"RIGHTARROW"
+		}
+		"CameraZoomIn"
+		{
+			"Key"		"MWHEELUP"
+		}
+		"CameraZoomOut"
+		{
+			"Key"		"MWHEELDOWN"
+		}
+		"ScoreboardToggle"
+		{
+			"Key"		"1"
+			"Modifier"		"ALT"
+			"Mode"		"0"
+		}
+		"ActivateGlyph"
+		{
+			"Key"		"J"
+		}
+		"ChatTeam"
+		{
+			"Key"		"ENTER"
+		}
+		"ChatTeam2"
+		{
+			"Key"		"KP_ENTER"
+		}
+		"ChatVoiceTeam"
+		{
+			"Key"		"T"
+			"Mode"		"0"
+		}
+		"ChatWheel"
+		{
+			"Key"		"Y"
+		}
+		"HeroChatWheel"
+		{
+			"Key"		"G"
+			"Mode"		"0"
+		}
+		"HeroAttack"
+		{
+			"Key"		"A"
+		}
+		"HeroMove"
+		{
+			"Key"		"M"
+		}
+		"HeroStop"
+		{
+			"Key"		"S"
+		}
+		"HeroSelect"
+		{
+			"Key"		"1"
+			"Mode"		"0"
+		}
+		"CourierSelect"
+		{
+			"Key"		"F1"
+			"Mode"		"0"
+		}
+		"CourierDeliver"
+		{
+			"Key"		"F2"
+			"Mode"		"0"
+		}
+		"ControlGroup2"
+		{
+			"Key"		"2"
+		}
+		"ControlGroup3"
+		{
+			"Key"		"3"
+		}
+		"ControlGroup4"
+		{
+			"Key"		"4"
+		}
+		"ControlGroup5"
+		{
+			"Key"		"5"
+		}
+		"ControlGroup6"
+		{
+			"Key"		"6"
+		}
+		"ControlGroup7"
+		{
+			"Key"		"7"
+		}
+		"ControlGroup8"
+		{
+			"Key"		"8"
+		}
+		"ControlGroup9"
+		{
+			"Key"		"9"
+		}
+		"ControlGroup10"
+		{
+			"Key"		"0"
+		}
+		"ControlGroupCycle"
+		{
+			"Key"		"TAB"
+		}
+		"AbilityPrimary1"
+		{
+			"Mode"		"1"
+		}
+		"AbilityPrimary2"
+		{
+			"Mode"		"1"
+		}
+		"AbilityPrimary3"
+		{
+			"Mode"		"1"
+		}
+		"AbilitySecondary1"
+		{
+			"Mode"		"1"
+		}
+		"AbilitySecondary2"
+		{
+			"Mode"		"1"
+		}
+		"AbilityUltimate"
+		{
+			"Mode"		"1"
+		}
+		"LearnAbilities"
+		{
+			"Key"		"O"
+		}
+		"LearnStats"
+		{
+			"Key"		"U"
+		}
+		"Inventory1"
+		{
+			"Mode"		"0"
+		}
+		"Inventory2"
+		{
+			"Mode"		"0"
+		}
+		"Inventory3"
+		{
+			"Mode"		"0"
+		}
+		"Inventory4"
+		{
+			"Key"		"X"
+			"Mode"		"0"
+		}
+		"Inventory5"
+		{
+			"Key"		"C"
+			"Mode"		"0"
+		}
+		"Inventory6"
+		{
+			"Key"		"V"
+			"Mode"		"0"
+		}
+		"InventoryTP"
+		{
+			"Key"		"H"
+			"Mode"		"0"
+		}
+		"ShopToggle"
+		{
+			"Key"		"B"
+			"Mode"		"0"
+		}
+		"PurchaseQuickbuy"
+		{
+			"Key"		"F3"
+			"Mode"		"0"
+		}
+		"PurchaseSticky"
+		{
+			"Mode"		"0"
+		}
+		"Console"
+		{
+			"Key"		"\"
+		}
+		"Pause"
+		{
+			"Key"		"F9"
+		}
+		"ScreenshotSettings"
+		{
+			"Key"		"F6"
+		}
+		"Escape"
+		{
+			"Key"		"ESCAPE"
+		}
+		"SpectatorCameraUp"
+		{
+			"Key"		"UPARROW"
+			"Modifier"		"None"
+			"Mode"		"0"
+		}
+		"SpectatorCameraDown"
+		{
+			"Key"		"DOWNARROW"
+			"Modifier"		"None"
+			"Mode"		"0"
+		}
+		"SpectatorCameraLeft"
+		{
+			"Key"		"LEFTARROW"
+			"Modifier"		"None"
+			"Mode"		"0"
+		}
+		"SpectatorCameraRight"
+		{
+			"Key"		"RIGHTARROW"
+			"Modifier"		"None"
+			"Mode"		"0"
+		}
+		"SpectatorIncreaseReplaySpeed"
+		{
+			"Key"		"="
+		}
+		"SpectatorDecreaseReplaySpeed"
+		{
+			"Key"		"-"
+		}
+		"SpectatorChat"
+		{
+			"Key"		"ENTER"
+			"Modifier"		"SHIFT"
+			"Mode"		"0"
+		}
+		"SpectatorCoach_ViewToggle"
+		{
+			"Key"		"SPACE"
+		}
+		"SpectatorScoreboard"
+		{
+			"Key"		"1"
+			"Modifier"		"ALT"
+			"Mode"		"0"
+		}
+		"SpectatorStatsHarvest"
+		{
+			"Key"		"F4"
+		}
+		"SpectatorStatsItem"
+		{
+			"Key"		"F5"
+		}
+		"SpectatorStatsGold"
+		{
+			"Key"		"F6"
+		}
+		"SpectatorStatsXP"
+		{
+			"Key"		"F7"
+		}
+		"SpectatorStatsWinChance"
+		{
+			"Key"		"F8"
+		}
+		"SpectatorFOWRadient"
+		{
+			"Key"		"F2"
+		}
+		"SpectatorFOWDire"
+		{
+			"Key"		"F3"
+		}
+		"SpectatorBroadcasterMenu"
+		{
+			"Key"		"F10"
+		}
+		"SpectatorDropdown_KDA"
+		{
+			"Key"		"q"
+		}
+		"SpectatorDropdown_Lasthits_Denies"
+		{
+			"Key"		"w"
+		}
+		"SpectatorDropdown_Level"
+		{
+			"Key"		"e"
+		}
+		"SpectatorDropdown_XP_Per_Min"
+		{
+			"Key"		"r"
+		}
+		"SpectatorDropdown_Gold"
+		{
+			"Key"		"t"
+		}
+		"SpectatorDropdown_NetWorth"
+		{
+			"Key"		"y"
+		}
+		"SpectatorDropdown_Fantasy"
+		{
+			"Key"		"o"
+		}
+		"SpectatorDropdown_Gold_Per_Min"
+		{
+			"Key"		"u"
+			"PanelParent"		"page2"
+		}
+		"SpectatorDropdown_Buyback"
+		{
+			"Key"		"i"
+		}
+		"SpectatorDropdown_Sort"
+		{
+			"Key"		"s"
+		}
+		"SpectatorDropdown_Close"
+		{
+			"Key"		"a"
+		}
+		"SpectatorCameraFocusPlayer2"
+		{
+			"Key"		"2"
+		}
+		"SpectatorCameraFocusPlayer3"
+		{
+			"Key"		"3"
+		}
+		"SpectatorCameraFocusPlayer4"
+		{
+			"Key"		"4"
+		}
+		"SpectatorCameraFocusPlayer5"
+		{
+			"Key"		"5"
+		}
+		"SpectatorCameraFocusPlayer6"
+		{
+			"Key"		"6"
+		}
+		"SpectatorCameraFocusPlayer7"
+		{
+			"Key"		"7"
+		}
+		"SpectatorCameraFocusPlayer8"
+		{
+			"Key"		"8"
+		}
+		"SpectatorCameraFocusPlayer9"
+		{
+			"Key"		"9"
+		}
+		"SpectatorCameraFocusPlayer10"
+		{
+			"Key"		"0"
+		}
+		"ShopTabConsumables"
+		{
+			"Key"		"q"
+			"Mode"		"0"
+		}
+		"ShopTabAttributes"
+		{
+			"Key"		"w"
+			"Mode"		"0"
+		}
+		"ShopTabArmaments"
+		{
+			"Key"		"e"
+			"Mode"		"0"
+		}
+		"ShopTabArcane"
+		{
+			"Key"		"r"
+			"Mode"		"0"
+		}
+		"ShopTabBasics"
+		{
+			"Key"		"a"
+			"Mode"		"0"
+		}
+		"ShopTabSupport"
+		{
+			"Key"		"s"
+			"Mode"		"0"
+		}
+		"ShopTabCaster"
+		{
+			"Key"		"d"
+			"Mode"		"0"
+		}
+		"ShopTabWeapons"
+		{
+			"Key"		"g"
+			"Mode"		"0"
+		}
+		"ShopTabArmor"
+		{
+			"Key"		"f"
+			"Mode"		"0"
+		}
+		"ShopTabArtifacts"
+		{
+			"Key"		"h"
+			"Mode"		"0"
+		}
+		"ShopTabSidePage1"
+		{
+			"Key"		"z"
+			"Mode"		"0"
+		}
+		"ShopTabSidePage2"
+		{
+			"Key"		"x"
+			"Mode"		"0"
+		}
+		"ShopTabSecret"
+		{
+			"Key"		"c"
+			"Mode"		"0"
+		}
+		"ShopTabSearchBox"
+		{
+			"Key"		"v"
+			"Mode"		"0"
+		}
+		"ShopSlot1"
+		{
+			"Key"		"1"
+			"Mode"		"0"
+		}
+		"ShopSlot2"
+		{
+			"Key"		"2"
+			"Mode"		"0"
+		}
+		"ShopSlot3"
+		{
+			"Key"		"3"
+			"Mode"		"0"
+		}
+		"ShopSlot4"
+		{
+			"Key"		"4"
+			"Mode"		"0"
+		}
+		"ShopSlot5"
+		{
+			"Key"		"5"
+			"Mode"		"0"
+		}
+		"ShopSlot6"
+		{
+			"Key"		"6"
+			"Mode"		"0"
+		}
+		"ShopSlot7"
+		{
+			"Key"		"7"
+			"Mode"		"0"
+		}
+		"ShopSlot8"
+		{
+			"Key"		"8"
+			"Mode"		"0"
+		}
+		"ShopSlot9"
+		{
+			"Key"		"9"
+			"Mode"		"0"
+		}
+		"ShopSlot10"
+		{
+			"Key"		"0"
+			"Mode"		"0"
+		}
+		"ShopSlot11"
+		{
+			"Key"		"-"
+			"Mode"		"0"
+		}
+		"ShopSlot12"
+		{
+			"Key"		"="
+			"Mode"		"0"
+		}
+		"ShopSlot13"
+		{
+			"Key"		"["
+			"Mode"		"0"
+		}
+		"ShopSlot14"
+		{
+			"Key"		"]"
+			"Mode"		"0"
+		}
+		"InspectHeroInWorld"
+		{
+			"Key"		"I"
+		}
+		"ChatGlobal"
+		{
+			"Key"		"ENTER"
+			"Modifier"		"SHIFT"
+			"Mode"		"0"
+		}
+		"ChatGlobal2"
+		{
+			"Key"		"KP_ENTER"
+			"Modifier"		"SHIFT"
+			"Mode"		"0"
+		}
+		"AbilityPrimary1AutoCast"
+		{
+			"Mode"		"0"
+		}
+		"AbilityPrimary2AutoCast"
+		{
+			"Mode"		"0"
+		}
+		"AbilityPrimary3AutoCast"
+		{
+			"Mode"		"0"
+		}
+		"AbilitySecondary1AutoCast"
+		{
+			"Mode"		"0"
+		}
+		"AbilitySecondary2AutoCast"
+		{
+			"Mode"		"0"
+		}
+		"AbilityUltimateAutoCast"
+		{
+			"Mode"		"0"
+		}
+		"Inventory1AutoCast"
+		{
+			"Mode"		"0"
+		}
+		"Inventory2AutoCast"
+		{
+			"Mode"		"0"
+		}
+		"Inventory3AutoCast"
+		{
+			"Mode"		"0"
+		}
+		"Inventory4AutoCast"
+		{
+			"Key"		"x"
+			"Modifier"		"ALT"
+			"Mode"		"0"
+		}
+		"Inventory5AutoCast"
+		{
+			"Key"		"c"
+			"Modifier"		"ALT"
+			"Mode"		"0"
+		}
+		"Inventory6AutoCast"
+		{
+			"Key"		"v"
+			"Modifier"		"ALT"
+			"Mode"		"0"
+		}
+		"InventoryTPAutoCast"
+		{
+			"Key"		"h"
+			"Modifier"		"ALT"
+			"Mode"		"0"
+		}
+		"SpectatorCameraGrip"
+		{
+			"Key"		"MOUSE3"
+			"Modifier"		"None"
+			"Mode"		"0"
+		}
+		"SpectatorHeroSelect"
+		{
+			"Key"		"1"
+			"Modifier"		"None"
+			"Mode"		"0"
+		}
+		"SpectatorPause"
+		{
+			"Key"		"F9"
+			"Modifier"		"None"
+			"Mode"		"0"
+		}
+		"AbilityPrimary1QuickCast"
+		{
+			"Key"		"Q"
+			"Mode"		"0"
+		}
+		"AbilityPrimary1AutoCastAlternate2"
+		{
+			"Key"		"q"
+			"Modifier"		"ALT"
+			"Mode"		"0"
+		}
+		"AbilityPrimary2QuickCast"
+		{
+			"Key"		"W"
+			"Mode"		"0"
+		}
+		"AbilityPrimary2AutoCastAlternate2"
+		{
+			"Key"		"w"
+			"Modifier"		"ALT"
+			"Mode"		"0"
+		}
+		"AbilityPrimary3QuickCast"
+		{
+			"Key"		"E"
+			"Mode"		"0"
+		}
+		"AbilityPrimary3AutoCastAlternate2"
+		{
+			"Key"		"e"
+			"Modifier"		"ALT"
+			"Mode"		"0"
+		}
+		"AbilitySecondary1QuickCast"
+		{
+			"Key"		"D"
+			"Mode"		"0"
+		}
+		"AbilitySecondary1AutoCastAlternate2"
+		{
+			"Key"		"d"
+			"Modifier"		"ALT"
+			"Mode"		"0"
+		}
+		"AbilityUltimateQuickCast"
+		{
+			"Key"		"R"
+			"Mode"		"0"
+		}
+		"AbilityUltimateAutoCastAlternate2"
+		{
+			"Key"		"r"
+			"Modifier"		"ALT"
+			"Mode"		"0"
+		}
+		"AbilitySecondary2QuickCast"
+		{
+			"Key"		"F"
+			"Mode"		"0"
+		}
+		"AbilitySecondary2AutoCastAlternate2"
+		{
+			"Key"		"f"
+			"Modifier"		"ALT"
+			"Mode"		"0"
+		}
+		"Inventory1QuickCast"
+		{
+			"Key"		"SPACE"
+			"Mode"		"0"
+		}
+		"Inventory1QuickAutoCast"
+		{
+			"Key"		"SPACE"
+			"Modifier"		"ALT"
+			"Mode"		"0"
+		}
+		"Inventory2QuickCast"
+		{
+			"Key"		"MOUSE3"
+			"Mode"		"0"
+		}
+		"Inventory2QuickAutoCast"
+		{
+			"Key"		"MOUSE3"
+			"Modifier"		"ALT"
+			"Mode"		"0"
+		}
+		"Inventory3QuickCast"
+		{
+			"Key"		"Z"
+			"Mode"		"0"
+		}
+		"Inventory3QuickAutoCast"
+		{
+			"Key"		"z"
+			"Modifier"		"ALT"
+			"Mode"		"0"
+		}
+		"InventoryNeutralQuickCast"
+		{
+			"Key"		"MOUSE4"
+			"Mode"		"0"
+		}
+		"InventoryNeutralQuickAutoCast"
+		{
+			"Key"		"MOUSE4"
+			"Modifier"		"ALT"
+			"Mode"		"0"
+		}
+		"Inventory4QuickCast"
+		{
+			"Mode"		"0"
+		}
+		"Inventory4QuickAutoCast"
+		{
+			"Mode"		"0"
+		}
+		"Inventory5QuickCast"
+		{
+			"Mode"		"0"
+		}
+		"Inventory5QuickAutoCast"
+		{
+			"Mode"		"0"
+		}
+		"Inventory6QuickCast"
+		{
+			"Mode"		"0"
+		}
+		"Inventory6QuickAutoCast"
+		{
+			"Mode"		"0"
+		}
+		"InventoryTPQuickCast"
+		{
+			"Mode"		"0"
+		}
+		"InventoryTPQuickAutoCast"
+		{
+			"Mode"		"0"
+		}
+		"GrabStashItems"
+		{
+			"Key"		"F3"
+			"Modifier"		"ALT"
+			"Mode"		"0"
+		}
+		"SelectAll"
+		{
+			"Key"		"`"
+			"Mode"		"0"
+		}
+		"ChatWheel2"
+		{
+			"Mode"		"0"
+		}
+		"ChatWheelGoodJob"
+		{
+			"Key"		"F4"
+			"Mode"		"0"
+		}
+		"SpectatorFOWBoth"
+		{
+			"Key"		"F1"
+			"Mode"		"0"
+		}
+		"HeroTaunt"
+		{
+			"Key"		"P"
+			"Mode"		"0"
+		}
+		"ChatWheelMissing"
+		{
+			"Key"		"F2"
+			"Modifier"		"ALT"
+			"Mode"		"0"
+		}
+		"SelectAllOthers"
+		{
+			"Key"		"`"
+			"Modifier"		"ALT"
+			"Mode"		"0"
+		}
+	}
+	"PerUnitKeybinds"		"1"
+	"Units"
+	{
+		"npc_dota_hero_faceless_void"
+		{
+			"AbilityUltimate"
+			{
+				"Key"		"R"
+				"Mode"		"1"
+			}
+			"AbilityUltimateAutoCast"
+			{
+				"Key"		"r"
+				"Modifier"		"ALT"
+				"Mode"		"0"
+			}
+			"AbilityPrimary1QuickCast"
+			{
+				"Key"		"Q"
+				"Mode"		"0"
+			}
+			"AbilityPrimary1AutoCastAlternate2"
+			{
+				"Key"		"q"
+				"Modifier"		"ALT"
+				"Mode"		"0"
+			}
+			"AbilityPrimary2QuickCast"
+			{
+				"Key"		"W"
+				"Mode"		"0"
+			}
+			"AbilityPrimary2AutoCastAlternate2"
+			{
+				"Key"		"w"
+				"Modifier"		"ALT"
+				"Mode"		"0"
+			}
+			"AbilityPrimary3QuickCast"
+			{
+				"Key"		"E"
+				"Mode"		"0"
+			}
+			"AbilityPrimary3AutoCastAlternate2"
+			{
+				"Key"		"e"
+				"Modifier"		"ALT"
+				"Mode"		"0"
+			}
+		}
+		"npc_dota_hero_dark_seer"
+		{
+			"AbilityUltimate"
+			{
+				"Mode"		"1"
+			}
+			"AbilityUltimateAutoCast"
+			{
+				"Mode"		"0"
+			}
+			"AbilityUltimateQuickCast"
+			{
+				"Key"		"R"
+				"Mode"		"0"
+			}
+			"AbilityUltimateAutoCastAlternate2"
+			{
+				"Key"		"r"
+				"Modifier"		"ALT"
+				"Mode"		"0"
+			}
+		}
+		"npc_dota_hero_puck"
+		{
+			"AbilityUltimate"
+			{
+				"Key"		"R"
+				"Mode"		"1"
+			}
+			"AbilityUltimateAutoCast"
+			{
+				"Key"		"r"
+				"Modifier"		"ALT"
+				"Mode"		"0"
+			}
+		}
+		"npc_dota_hero_dazzle"
+		{
+			"AbilityPrimary2"
+			{
+				"Mode"		"1"
+			}
+			"AbilityPrimary2AutoCast"
+			{
+				"Mode"		"0"
+			}
+			"AbilityPrimary2QuickCast"
+			{
+				"Key"		"W"
+				"Mode"		"0"
+			}
+			"AbilityPrimary2AutoCastAlternate2"
+			{
+				"Key"		"w"
+				"Modifier"		"ALT"
+				"Mode"		"0"
+			}
+		}
+		"npc_dota_hero_wisp"
+		{
+			"AbilityUltimate"
+			{
+				"Mode"		"1"
+			}
+			"AbilityUltimateAutoCast"
+			{
+				"Mode"		"0"
+			}
+			"AbilityUltimateQuickCast"
+			{
+				"Key"		"R"
+				"Mode"		"0"
+			}
+			"AbilityUltimateAutoCastAlternate2"
+			{
+				"Key"		"r"
+				"Modifier"		"ALT"
+				"Mode"		"0"
+			}
+			"AbilityUltimateAutoCastAlternate"
+			{
+				"Mode"		"0"
+			}
+		}
+		"npc_dota_hero_bloodseeker"
+		{
+			"AbilityPrimary2"
+			{
+				"Key"		"W"
+				"Mode"		"1"
+			}
+			"AbilityPrimary2AutoCast"
+			{
+				"Key"		"w"
+				"Modifier"		"ALT"
+				"Mode"		"0"
+			}
+		}
+		"npc_dota_hero_broodmother"
+		{
+			"AbilityPrimary2"
+			{
+				"Key"		"W"
+				"Mode"		"1"
+			}
+			"AbilityPrimary2AutoCast"
+			{
+				"Key"		"w"
+				"Modifier"		"ALT"
+				"Mode"		"0"
+			}
+		}
+		"npc_dota_hero_luna"
+		{
+			"AbilityUltimate"
+			{
+				"Key"		"R"
+				"Mode"		"1"
+			}
+			"AbilityUltimateAutoCast"
+			{
+				"Key"		"r"
+				"Modifier"		"ALT"
+				"Mode"		"0"
+			}
+		}
+		"npc_dota_hero_monkey_king"
+		{
+			"AbilityUltimate"
+			{
+				"Key"		"R"
+				"Mode"		"1"
+			}
+			"AbilityUltimateAutoCast"
+			{
+				"Key"		"r"
+				"Modifier"		"ALT"
+				"Mode"		"0"
+			}
+		}
+		"npc_dota_hero_sniper"
+		{
+			"AbilityPrimary1"
+			{
+				"Key"		"Q"
+				"Mode"		"1"
+			}
+			"AbilityPrimary1AutoCast"
+			{
+				"Key"		"q"
+				"Modifier"		"ALT"
+				"Mode"		"0"
+			}
+		}
+		"npc_dota_hero_phantom_lancer"
+		{
+			"AbilityPrimary2"
+			{
+				"Key"		"W"
+				"Mode"		"1"
+			}
+			"AbilityPrimary2AutoCast"
+			{
+				"Key"		"w"
+				"Modifier"		"ALT"
+				"Mode"		"0"
+			}
+		}
+		"npc_dota_hero_riki"
+		{
+			"AbilityPrimary3"
+			{
+				"Mode"		"1"
+			}
+			"AbilityPrimary3AutoCast"
+			{
+				"Mode"		"0"
+			}
+			"AbilityPrimary3QuickCast"
+			{
+				"Key"		"E"
+				"Mode"		"0"
+			}
+			"AbilityPrimary3AutoCastAlternate2"
+			{
+				"Key"		"e"
+				"Modifier"		"ALT"
+				"Mode"		"0"
+			}
+		}
+		"npc_dota_hero_abyssal_underlord"
+		{
+			"AbilityPrimary2"
+			{
+				"Key"		"W"
+				"Mode"		"1"
+			}
+			"AbilityPrimary2AutoCast"
+			{
+				"Key"		"w"
+				"Modifier"		"ALT"
+				"Mode"		"0"
+			}
+		}
+		"npc_dota_hero_viper"
+		{
+			"AbilityPrimary2"
+			{
+				"Mode"		"1"
+			}
+			"AbilityPrimary2AutoCast"
+			{
+				"Mode"		"0"
+			}
+			"AbilityPrimary2QuickCast"
+			{
+				"Key"		"W"
+				"Mode"		"0"
+			}
+			"AbilityPrimary2AutoCastAlternate2"
+			{
+				"Key"		"w"
+				"Modifier"		"ALT"
+				"Mode"		"0"
+			}
+		}
+		"npc_dota_hero_enigma"
+		{
+			"AbilityUltimate"
+			{
+				"Key"		"R"
+				"Mode"		"1"
+			}
+			"AbilityUltimateAutoCast"
+			{
+				"Key"		"r"
+				"Modifier"		"ALT"
+				"Mode"		"0"
+			}
+		}
+		"npc_dota_hero_leshrac"
+		{
+			"AbilityPrimary1"
+			{
+				"Mode"		"1"
+			}
+			"AbilityPrimary1AutoCast"
+			{
+				"Mode"		"0"
+			}
+			"AbilityPrimary1QuickCast"
+			{
+				"Key"		"Q"
+				"Mode"		"0"
+			}
+			"AbilityPrimary1AutoCastAlternate2"
+			{
+				"Key"		"q"
+				"Modifier"		"ALT"
+				"Mode"		"0"
+			}
+		}
+		"npc_dota_hero_silencer"
+		{
+			"AbilityPrimary1"
+			{
+				"Key"		"Q"
+				"Mode"		"1"
+			}
+			"AbilityPrimary1AutoCast"
+			{
+				"Key"		"q"
+				"Modifier"		"ALT"
+				"Mode"		"0"
+			}
+		}
+		"npc_dota_hero_disruptor"
+		{
+			"AbilityPrimary3"
+			{
+				"Key"		"E"
+				"Mode"		"1"
+			}
+			"AbilityPrimary3AutoCast"
+			{
+				"Key"		"e"
+				"Modifier"		"ALT"
+				"Mode"		"0"
+			}
+			"AbilityUltimate"
+			{
+				"Mode"		"1"
+			}
+			"AbilityUltimateAutoCast"
+			{
+				"Mode"		"0"
+			}
+			"AbilityPrimary3QuickCast"
+			{
+				"Mode"		"0"
+			}
+			"AbilityPrimary3AutoCastAlternate2"
+			{
+				"Mode"		"0"
+			}
+			"AbilityUltimateQuickCast"
+			{
+				"Key"		"R"
+				"Mode"		"0"
+			}
+			"AbilityUltimateAutoCastAlternate2"
+			{
+				"Key"		"r"
+				"Modifier"		"ALT"
+				"Mode"		"0"
+			}
+		}
+		"npc_dota_hero_dark_willow"
+		{
+			"AbilityPrimary1"
+			{
+				"Key"		"Q"
+				"Mode"		"1"
+			}
+			"AbilityPrimary1AutoCast"
+			{
+				"Key"		"q"
+				"Modifier"		"ALT"
+				"Mode"		"0"
+			}
+			"AbilityUltimate"
+			{
+				"Key"		"R"
+				"Mode"		"1"
+			}
+			"AbilityUltimateAutoCast"
+			{
+				"Key"		"r"
+				"Modifier"		"ALT"
+				"Mode"		"0"
+			}
+		}
+		"npc_dota_hero_warlock"
+		{
+			"AbilityPrimary3"
+			{
+				"Key"		"E"
+				"Mode"		"1"
+			}
+			"AbilityPrimary3AutoCast"
+			{
+				"Key"		"e"
+				"Modifier"		"ALT"
+				"Mode"		"0"
+			}
+		}
+		"npc_dota_hero_witch_doctor"
+		{
+			"AbilityUltimate"
+			{
+				"Mode"		"1"
+			}
+			"AbilityUltimateAutoCast"
+			{
+				"Mode"		"0"
+			}
+			"AbilityUltimateQuickCast"
+			{
+				"Key"		"R"
+				"Mode"		"0"
+			}
+			"AbilityUltimateAutoCastAlternate2"
+			{
+				"Key"		"r"
+				"Modifier"		"ALT"
+				"Mode"		"0"
+			}
+		}
+		"npc_dota_hero_obsidian_destroyer"
+		{
+			"AbilityUltimate"
+			{
+				"Key"		"R"
+				"Mode"		"1"
+			}
+			"AbilityUltimateAutoCast"
+			{
+				"Key"		"r"
+				"Modifier"		"ALT"
+				"Mode"		"0"
+			}
+		}
+	}
+}

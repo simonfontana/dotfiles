@@ -1,0 +1,40 @@
+"ControlGroups"
+{
+	"npc_dota_hero_meepo"
+	{
+		"1"
+		{
+			"0"
+			{
+				"unitname"		"npc_dota_hero_meepo"
+				"unitlabel"		"meepo"
+				"illusion"		"0"
+				"unitindex"		"0"
+			}
+			"1"
+			{
+				"unitname"		"npc_dota_hero_meepo"
+				"unitlabel"		"meepo"
+				"illusion"		"0"
+				"unitindex"		"1"
+			}
+		}
+		"2"
+		{
+			"0"
+			{
+				"unitname"		"npc_dota_hero_meepo"
+				"unitlabel"		"meepo"
+				"illusion"		"0"
+				"unitindex"		"2"
+			}
+			"1"
+			{
+				"unitname"		"npc_dota_hero_meepo"
+				"unitlabel"		"meepo"
+				"illusion"		"0"
+				"unitindex"		"3"
+			}
+		}
+	}
+}

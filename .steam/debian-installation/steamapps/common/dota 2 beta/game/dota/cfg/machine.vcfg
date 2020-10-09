@@ -1,0 +1,8 @@
+"schema"
+{
+	"dota_weekend_tourney_selected_division"		"2"
+	"speaker_config"		"7"
+	"cl_auto_cursor_scale"		"true"
+	"sound_device_override"		"Source2SDLDefaultDevice"
+	"cl_cursor_scale"		"0.995595"
+}
