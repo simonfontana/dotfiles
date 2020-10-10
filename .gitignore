@@ -5,12 +5,16 @@
 .bash_history
 .bash_logout
 .cache/
+.config/Code
 .config/QtProject.conf
-.config/VeraCrypt/
 .config/Thunar/
+.config/VeraCrypt/
 .config/VirtualBox/
+.config/autostart/
+.config/cef_user_data/
 .config/configstore/
 .config/dconf/
+.config/discord/
 .config/enchant/
 .config/evolution/
 .config/flashfocus/
@@ -27,7 +31,10 @@
 .config/nautilus/
 .config/pavucontrol.ini
 .config/pulse/
+.config/teamviewer/
+.config/thefuck/
 .config/totem/
+.config/transmission/
 .config/user-dirs.dirs
 .config/user-dirs.locale
 .config/vlc/
@@ -61,6 +68,7 @@
 .profile
 .pulse-cookie
 .pylint.d/
+.python_history
 .ssh/
 .steam/
 .steampath
@@ -71,13 +79,17 @@
 .thumbnails/
 .vim/bundle/
 .vim/undo/
+.vim/.netrwhist
 .viminfo
 .vnc/
+.vscode/
 .wget-hsts
+.wine/
 Desktop/
 Documents/
 Downloads/
 Pictures/
+Steam/
 VirtualBox VMs/
 examples.desktop
 git/
@@ -86,4 +98,5 @@ node_modules/
 package-lock.json
 package.json
 snap/
+venv/
 *.swp
