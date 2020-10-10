@@ -215,7 +215,7 @@ mouse_warping none
 #focus_follows_mouse no
 
 # Background
-exec_always feh --bg-scale ~/Pictures/wallpapers/ice_mountain.jpeg
+exec_always feh --bg-scale ~/Pictures/bg/wallpapersden.com_small-memory_1920x1080.jpg
 
 # Lock computer
 bindsym $mod+shift+p exec i3lock -n --color='#111111'
