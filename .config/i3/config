@@ -238,6 +238,3 @@ bindsym $mod+Shift+s exec ~/.screenlayout/three_screens.sh
 
 # For calendar to work. Read docs
 for_window [class="Yad"] floating enable
-
-# Set mouse acceleration
-exec xinput --set-prop 9 "libinput Accel Speed" -0.2
