@@ -238,3 +238,5 @@ bindsym $mod+Shift+s exec ~/.screenlayout/three_screens.sh
 
 # For calendar to work. Read docs
 for_window [class="Yad"] floating enable
+
+exec redshift-gtk
