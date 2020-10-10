@@ -116,7 +116,6 @@ if ! shopt -oq posix; then
   fi
 fi
 
-source ~/.git-completion.bash
 source <(kubectl completion bash)
 source <(helm completion bash)
 
@@ -124,16 +123,12 @@ source <(helm completion bash)
 stty -ixon
 
 # Default editor
-#export EDITOR='vim'
-#export VISUAL='vim'
+export EDITOR='vim'
+export VISUAL='vim'
 
 docker-ip() {
     docker inspect --format '{{ .NetworkSettings.IPAddress }}' "$@"
 }
 
-purge_namespace() {
-    NAMESPACE=$1
-    kubectl proxy &
-    kubectl get namespace $NAMESPACE -o json |jq '.spec = {"finalizers":[]}' > /tmp/.purge_namespace.json
-    curl -k -H "Content-Type: application/json" -X PUT --data-binary @/tmp/.purge_namespace.json 127.0.0.1:8001/api/v1/namespaces/$NAMESPACE/f
-}
+eval $(thefuck --alias)
+eval $(thefuck --alias FUCK)
