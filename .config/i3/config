@@ -104,7 +104,8 @@ set $ws10 "10"
 set $ws_z "1z"
 set $ws_x "2x"
 set $ws_c "3c"
-set $ws_b "4b"
+set $ws_b "4n"
+set $ws_b "5m"
 
 # Automatically put workspaces on specific screens
 workspace $ws1 output DP-0
@@ -120,7 +121,8 @@ workspace $ws10 output DP-2
 workspace $ws_z output DP-4
 workspace $ws_x output DP-4
 workspace $ws_c output DP-4
-workspace $ws_b output DP-4
+workspace $ws_n output DP-4
+workspace $ws_m output DP-4
 
 # switch to workspace
 bindsym $mod+1 workspace $ws1
@@ -136,7 +138,8 @@ bindsym $mod+0 workspace $ws10
 bindsym $mod+z workspace $ws_z
 bindsym $mod+x workspace $ws_x
 bindsym $mod+c workspace $ws_c
-bindsym $mod+b workspace $ws_b
+bindsym $mod+n workspace $ws_n
+bindsym $mod+m workspace $ws_m
 
 # move focused container to workspace
 bindsym $mod+Shift+1 move container to workspace $ws1
@@ -152,7 +155,8 @@ bindsym $mod+Shift+0 move container to workspace $ws10
 bindsym $mod+Shift+z move container to workspace $ws_z
 bindsym $mod+Shift+x move container to workspace $ws_x
 bindsym $mod+Shift+c move container to workspace $ws_c
-bindsym $mod+Shift+b move container to workspace $ws_b
+bindsym $mod+Shift+n move container to workspace $ws_n
+bindsym $mod+Shift+m move container to workspace $ws_m
 
 # reload the configuration file
 bindsym $mod+Shift+t reload
