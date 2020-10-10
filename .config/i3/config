@@ -221,10 +221,11 @@ exec_always feh --bg-scale ~/Pictures/bg/wallpapersden.com_small-memory_1920x108
 bindsym $mod+shift+p exec i3lock -n --color='#111111'
 
 # Screenshots
-# All screnshots
+# Current window
+bindsym Print exec scrot -u ~/Pictures/screenshots/%Y-%m-%d-%H:%M:%S.png
 bindsym $mod+Print exec scrot -u ~/Pictures/screenshots/%Y-%m-%d-%H:%M:%S.png
 # Interactive select
-bindsym $mod+Shift+Print exec scrot -s ~/Pictures/screenshots/%Y-%m-%d-%H:%M:%S.png
+bindsym --release $mod+Shift+Print exec scrot -s ~/Pictures/screenshots/%Y-%m-%d-%H:%M:%S.png
 
 # Intellij window pop-up
 new_float none
