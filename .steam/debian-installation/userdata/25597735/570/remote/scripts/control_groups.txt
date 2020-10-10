@@ -37,4 +37,29 @@
 			}
 		}
 	}
+	"npc_dota_hero_juggernaut"
+	{
+		"1"
+		{
+			"0"
+			{
+				"unitname"		"npc_dota_juggernaut_healing_ward"
+				"unitlabel"		"healing_ward"
+				"illusion"		"0"
+				"unitindex"		"0"
+			}
+		}
+	}
+	"npc_dota_hero_leshrac"
+	{
+		"4"
+		{
+			"0"
+			{
+				"unitname"		"npc_dota_hero_leshrac"
+				"illusion"		"0"
+				"unitindex"		"0"
+			}
+		}
+	}
 }
