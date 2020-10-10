@@ -233,6 +233,8 @@ new_float none
 bindsym mod1+control+Delete exec ~/.config/i3/i3blocks-contrib/shutdown_menu/shutdown_menu
 
 exec ~/.screenlayout/three_screens.sh
+bindsym $mod+Shift+a exec ~/.screenlayout/one_screen.sh
+bindsym $mod+Shift+s exec ~/.screenlayout/three_screens.sh
 
 # For calendar to work. Read docs
 for_window [class="Yad"] floating enable
