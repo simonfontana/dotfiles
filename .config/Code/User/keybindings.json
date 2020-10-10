@@ -1,0 +1,17 @@
+[
+    {
+        "key": "ctrl+k",
+        "command": "deleteAllRight",
+        "when": "terminalFocus"
+    },
+    {
+        "key": "ctrl+u",
+        "command": "deleteAllLeft",
+        "when": "terminalFocus"
+    },
+    {
+        "key": "ctrl+e",
+        "command": "End",
+        "when": "terminalFocus"
+    }
+]
