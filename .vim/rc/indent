@@ -1,9 +1,3 @@
-" Default
-set expandtab
-set tabstop=4
-set shiftwidth=4
-set softtabstop=4
-
 " Python files (PEP-8)
 au BufNewFile,BufRead *.py
     \ set tabstop=4 |
@@ -31,3 +25,6 @@ au BufNewFile,BufRead *.yaml,*.yml
     \ set expandtab |
     \ set autoindent |
     \ set fileformat=unix
+
+" markdown
+au FileType markdown,readme setl tw=79

@@ -28,6 +28,7 @@
 .config/ibus/
 .config/menus/
 .config/mimeapps.list
+.config/mono.addins/
 .config/nautilus/
 .config/pavucontrol.ini
 .config/pulse/
