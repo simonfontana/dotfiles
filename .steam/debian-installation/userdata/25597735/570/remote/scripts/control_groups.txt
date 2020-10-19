@@ -62,4 +62,50 @@
 			}
 		}
 	}
+	"npc_dota_hero_spectre"
+	{
+		"1"
+		{
+			"0"
+			{
+				"unitname"		"npc_dota_hero_spectre"
+				"illusion"		"1"
+				"illusionlabel"		"illusion_0"
+				"unitindex"		"0"
+			}
+		}
+	}
+	"npc_dota_hero_luna"
+	{
+		"1"
+		{
+			"0"
+			{
+				"unitname"		"npc_dota_hero_luna"
+				"illusion"		"1"
+				"illusionlabel"		"manta_0"
+				"unitindex"		"0"
+			}
+			"1"
+			{
+				"unitname"		"npc_dota_hero_luna"
+				"illusion"		"1"
+				"illusionlabel"		"manta_1"
+				"unitindex"		"0"
+			}
+		}
+	}
+	"npc_dota_hero_faceless_void"
+	{
+		"1"
+		{
+			"0"
+			{
+				"unitname"		"npc_dota_hero_faceless_void"
+				"illusion"		"1"
+				"illusionlabel"		"illusion_0"
+				"unitindex"		"0"
+			}
+		}
+	}
 }
