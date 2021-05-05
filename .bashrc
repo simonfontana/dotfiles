@@ -146,3 +146,8 @@ function unplay_satisfactory()
     sudo ifconfig docker0 up
     sudo ifconfig br-a2fe5f48a75b up
 }
+
+alias vi='nvim'
+alias vim='nvim'
+export VISUAL=nvim
+export EDITOR="$VISUAL"
