@@ -259,3 +259,5 @@ bindsym $mod+Shift+d exec ~/.screenlayout/three_screens_and_tv.sh
 for_window [class="Yad"] floating enable
 
 exec redshift-gtk
+
+for_window [instance="origin.exe"] floating enable
