@@ -253,6 +253,7 @@ bindsym mod1+control+Delete exec ~/.config/i3/i3blocks-contrib/shutdown_menu/shu
 exec ~/.screenlayout/three_screens.sh
 bindsym $mod+Shift+a exec ~/.screenlayout/one_screen.sh
 bindsym $mod+Shift+s exec ~/.screenlayout/three_screens.sh
+bindsym $mod+Shift+d exec ~/.screenlayout/three_screens_and_tv.sh
 
 # For calendar to work. Read docs
 for_window [class="Yad"] floating enable
