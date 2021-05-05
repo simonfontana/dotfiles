@@ -6,6 +6,7 @@ call plug#begin(stdpath('data') . '/plugged')
 " Plugins
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+Plug 'jeffkreeftmeijer/vim-numbertoggle'
 
 " Initialize plugin system
 call plug#end()
@@ -51,3 +52,7 @@ set shell=~/.vim/shell_wrapper.sh
 
 " vim-airline configuration
 let g:airline_theme='solarized_flood'
+
+" Enable number toggle and set color for current line number
+set number relativenumber
+highlight CursorLineNR cterm=bold ctermfg=Grey ctermbg=none
