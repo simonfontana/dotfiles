@@ -5,6 +5,7 @@ call plug#begin(stdpath('data') . '/plugged')
 
 " Plugins
 Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 
 " Initialize plugin system
 call plug#end()
@@ -47,3 +48,6 @@ set pastetoggle=<F3>
 
 " Clear terminal before execution commands
 set shell=~/.vim/shell_wrapper.sh
+
+" vim-airline configuration
+let g:airline_theme='solarized_flood'
