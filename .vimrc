@@ -8,7 +8,7 @@ call vundle#begin()
 
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
-Bundle 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
+Plugin 'vim-airline/vim-airline'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -54,8 +54,3 @@ set pastetoggle=<F3>
 
 " Clear terminal before execution commands
 set shell=~/.vim/shell_wrapper.sh
-
-" Enable powerline (installed with apt)
-set rtp+=~/.vim/bundle/powerline/powerline/bindings/vim/
-set laststatus=2
-set t_Co=256
