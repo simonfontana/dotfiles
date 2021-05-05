@@ -132,3 +132,17 @@ docker-ip() {
 
 eval $(thefuck --alias)
 eval $(thefuck --alias FUCK)
+
+function play_satisfactory()
+{
+    sudo ifconfig wlan0 down
+    sudo ifconfig docker0 down
+    sudo ifconfig br-a2fe5f48a75b down
+}
+
+function unplay_satisfactory()
+{
+    sudo ifconfig wlan0 up
+    sudo ifconfig docker0 up
+    sudo ifconfig br-a2fe5f48a75b up
+}
