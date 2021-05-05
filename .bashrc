@@ -147,7 +147,11 @@ function unplay_satisfactory()
     sudo ifconfig br-a2fe5f48a75b up
 }
 
+# NVIM is VIM
 alias vi='nvim'
 alias vim='nvim'
 export VISUAL=nvim
 export EDITOR="$VISUAL"
+
+# Enable autojump
+source /usr/share/autojump/autojump.sh
