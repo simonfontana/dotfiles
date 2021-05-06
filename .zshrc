@@ -117,3 +117,6 @@ ex () {
         echo "'$1' is not a valid file"
     fi
 }
+
+# Load zsh-syntax-highlighting; should be last.
+source /home/simon/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
