@@ -62,6 +62,7 @@
 .gnupg/
 .gtkrc-2.0
 .helm/
+.histfile
 .icons/
 .ipython/
 .java/
@@ -102,6 +103,7 @@
 .wget-hsts
 .wine/
 .wine32/
+.zcompdump
 AudioBooks/
 Desktop/
 Documents/
