@@ -4,6 +4,7 @@
 call plug#begin(stdpath('data') . '/plugged')
 
 " Plugins
+Plug 'altercation/vim-colors-solarized'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'jeffkreeftmeijer/vim-numbertoggle'
@@ -52,7 +53,9 @@ set pastetoggle=<F3>
 " Clear terminal before execution commands
 set shell=~/.vim/shell_wrapper.sh
 
-" vim-airline configuration
+" Colors
+set background=dark
+colorscheme solarized
 let g:airline_theme='solarized_flood'
 
 " Enable number toggle and set color for current line number
