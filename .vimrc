@@ -66,3 +66,6 @@ let g:loaded_node_provider=0
 
 " Toggle line numbers with ctrl-n
 nnoremap <C-n> :set number! relativenumber!<CR>
+
+" Synchronize clipboard with default register
+set clipboard^=unnamed
