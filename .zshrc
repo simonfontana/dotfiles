@@ -176,5 +176,8 @@ ex () {
     fi
 }
 
+# recirsive search
+bindkey '^R' history-incremental-search-backward
+
 # Load zsh-syntax-highlighting; should be last.
 source /home/simon/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
