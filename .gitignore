@@ -104,6 +104,7 @@
 .wine/
 .wine32/
 .zcompdump
+.zsh/
 AudioBooks/
 Desktop/
 Documents/
