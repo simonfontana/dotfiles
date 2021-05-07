@@ -127,9 +127,6 @@ docker-ip() {
     docker inspect --format '{{ .NetworkSettings.IPAddress }}' "$@"
 }
 
-eval $(thefuck --alias)
-eval $(thefuck --alias FUCK)
-
 function play_satisfactory()
 {
     sudo ifconfig wlan0 down
@@ -145,8 +142,6 @@ function unplay_satisfactory()
 }
 
 # NVIM is VIM
-alias vi='nvim'
-alias vim='nvim'
 export VISUAL=nvim
 export EDITOR="$VISUAL"
 
@@ -178,6 +173,8 @@ ex () {
 
 # recirsive search
 bindkey '^R' history-incremental-search-backward
+
+source .zsh/aliases
 
 # Load zsh-syntax-highlighting; should be last.
 source /home/simon/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh

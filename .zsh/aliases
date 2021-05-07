@@ -1,0 +1,7 @@
+# NVIM is VIM
+alias vi='nvim'
+alias vim='nvim'
+
+# Other
+eval $(thefuck --alias)
+eval $(thefuck --alias FUCK)
