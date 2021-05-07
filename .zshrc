@@ -54,17 +54,6 @@ SPACESHIP_EXIT_CODE_SHOW=false
 # feature configuration
 SPACESHIP_DIR_TRUNC_REPO=false
 
-# Toggle git show with ctrl-g
-function toggle_git_show {
-    if [[ "$SPACESHIP_GIT_SHOW" = true ]]; then
-        export SPACESHIP_GIT_SHOW=false
-    else
-        export SPACESHIP_GIT_SHOW=true
-    fi
-}
-bindkey -s '^g' "toggle_git_show\n"
-
-
 # Basic auto/tab complete:
 autoload -U compinit
 zstyle ':completion:*' menu select
@@ -119,6 +108,17 @@ lfcd () {
     fi
 }
 bindkey -s '^p' 'lfcd\n'
+
+# Toggle git show with ctrl-g
+function toggle_git_show {
+    if [[ "$SPACESHIP_GIT_SHOW" = true ]]; then
+        export SPACESHIP_GIT_SHOW=false
+    else
+        export SPACESHIP_GIT_SHOW=true
+    fi
+}
+bindkey -s '^g' "toggle_git_show\n"
+
 
 source <(kubectl completion zsh)
 source <(helm completion zsh)
