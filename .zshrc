@@ -1,12 +1,6 @@
 source .zsh/prompt.zsh
+source .zsh/autocomplete.zsh
 source .zsh/history.zsh
-
-# Basic auto/tab complete:
-autoload -U compinit
-zstyle ':completion:*' menu select
-zmodload zsh/complist
-compinit
-_comp_options+=(globdots)		# Include hidden files.
 
 # vi mode
 bindkey -v
@@ -66,9 +60,6 @@ function toggle_git_show {
 }
 bindkey -s '^g' "toggle_git_show\n"
 
-
-source <(kubectl completion zsh)
-source <(helm completion zsh)
 
 docker-ip() {
     docker inspect --format '{{ .NetworkSettings.IPAddress }}' "$@"
