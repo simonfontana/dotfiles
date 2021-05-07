@@ -1,11 +1,69 @@
-# Enable colors and change prompt:
-autoload -U colors && colors
-PS1="%B%{$fg[red]%}[%{$fg[yellow]%}%n%{$fg[green]%}@%{$fg[blue]%}%M %{$fg[magenta]%}%~%{$fg[red]%}]%{$reset_color%}$%b "
-
 # history length
 HISTFILE=~/.histfile
 HISTSIZE=10000
 SAVEHIST=1000000
+
+# prompt
+autoload -U promptinit; promptinit
+prompt spaceship
+
+# enabled features
+SPACESHIP_VENV_SHOW=true
+SPACESHIP_EXEC_TIME_SHOW=true
+SPACESHIP_PROMPT_SEPARATE_LINE=true
+SPACESHIP_PROMPT_ADD_NEWLINE=true
+SPACESHIP_JOBS_SHOW=true
+SPACESHIP_EXIT_CODE_SHOW=true
+
+# disabled features
+SPACESHIP_GIT_SHOW=false
+SPACESHIP_HG_SHOW=false
+SPACESHIP_HG_BRANCH_SHOW=false
+SPACESHIP_HG_STATUS_SHOW=false
+SPACESHIP_PACKAGE_SHOW=false
+SPACESHIP_NODE_SHOW=false
+SPACESHIP_RUBY_SHOW=false
+SPACESHIP_ELM_SHOW=false
+SPACESHIP_ELIXIR_SHOW=false
+SPACESHIP_XCODE_SHOW_LOCAL=false
+SPACESHIP_SWIFT_SHOW_LOCAL=false
+SPACESHIP_GOLANG_SHOW=true
+SPACESHIP_PHP_SHOW=false
+SPACESHIP_RUST_SHOW=false
+SPACESHIP_HASKELL_SHOW=false
+SPACESHIP_JULIA_SHOW=false
+SPACESHIP_DOCKER_SHOW=false
+SPACESHIP_DOCKER_CONTEXT_SHOW=false
+SPACESHIP_AWS_SHOW=false
+SPACESHIP_GCLOUD_SHOW=false
+SPACESHIP_CONDA_SHOW=false
+SPACESHIP_PYENV_SHOW=false
+SPACESHIP_DOTNET_SHOW=false
+SPACESHIP_EMBER_SHOW=false
+SPACESHIP_KUBECTL_SHOW=false
+SPACESHIP_KUBECTL_VERSION_SHOW=false
+SPACESHIP_KUBECONTEXT_SHOW=false
+SPACESHIP_GRADLE_SHOW=false
+SPACESHIP_MAVEN_SHOW=false
+SPACESHIP_TERRAFORM_SHOW=false
+SPACESHIP_BATTERY_SHOW=false
+SPACESHIP_VI_MODE_SHOW=false
+SPACESHIP_USER_SHOW=false
+SPACESHIP_HOST_SHOW=false
+
+# feature configuration
+SPACESHIP_DIR_TRUNC_REPO=false
+
+# Toggle git show with ctrl-g
+function toggle_git_show {
+    if [[ "$SPACESHIP_GIT_SHOW" = true ]]; then
+        export SPACESHIP_GIT_SHOW=false
+    else
+        export SPACESHIP_GIT_SHOW=true
+    fi
+}
+bindkey -s '^g' "toggle_git_show\n"
+
 
 # Basic auto/tab complete:
 autoload -U compinit
