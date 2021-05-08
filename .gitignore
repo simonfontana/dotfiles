@@ -16,6 +16,7 @@
 .config/VirtualBox/
 .config/autostart/
 .config/cef_user_data/
+.config/coc/
 .config/configstore/
 .config/dconf/
 .config/discord/
