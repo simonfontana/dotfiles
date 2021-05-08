@@ -42,11 +42,6 @@ au BufEnter * match ExtraWhitespace /\s\+$/
 au InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
 au InsertLeave * match ExtraWhitespace /\s\+$/
 
-" Enable folding
-set foldmethod=indent
-set foldlevel=99
-nnoremap <space> za
-
 " Enter paste mode when pressing F3 (no indent)
 set pastetoggle=<F3>
 
