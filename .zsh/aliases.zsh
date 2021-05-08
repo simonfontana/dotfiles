@@ -41,6 +41,7 @@ complete -F __start_kubectl k
 alias vi='nvim'
 alias vim='nvim'
 alias e='nvim'
+alias truevim='/usr/bin/vim'
 
 # Other
 eval $(thefuck --alias)

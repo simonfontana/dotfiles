@@ -3,6 +3,8 @@ source ~/.zsh/prompt.zsh
 source ~/.zsh/autocomplete.zsh
 source ~/.zsh/vi.zsh
 source ~/.zsh/keybindings.zsh
+source ~/.zsh/aliases.zsh
+source ~/.zsh/utils.zsh
 
 # NVIM is VIM
 export VISUAL=nvim
@@ -13,8 +15,6 @@ source /usr/share/autojump/autojump.sh
 
 # recirsive search
 bindkey '^R' history-incremental-search-backward
-
-source ~/.zsh/aliases
 
 # Load zsh-syntax-highlighting; should be last.
 source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
