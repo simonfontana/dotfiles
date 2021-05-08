@@ -35,13 +35,6 @@ autocmd BufReadPost *
      \   exe "normal! g`\"" |
      \ endif
 
-" Highlight trailing whitespace
-hi ExtraWhitespace ctermbg=red guibg=red
-au ColorScheme * hi ExtraWhitespace guibg=red
-au BufEnter * match ExtraWhitespace /\s\+$/
-au InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
-au InsertLeave * match ExtraWhitespace /\s\+$/
-
 " Enter paste mode when pressing F3 (no indent)
 set pastetoggle=<F3>
 
@@ -52,6 +45,13 @@ set shell=~/.vim/shell_wrapper.sh
 set background=dark
 colorscheme solarized
 let g:airline_theme='solarized_flood'
+
+" Highlight trailing whitespace
+hi ExtraWhitespace ctermbg=red guibg=red
+au ColorScheme * hi ExtraWhitespace guibg=red
+au BufEnter * match ExtraWhitespace /\s\+$/
+au InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
+au InsertLeave * match ExtraWhitespace /\s\+$/
 
 " Enable number toggle and set color for current line number
 set number relativenumber
