@@ -31,6 +31,15 @@ bindkey -M menuselect 'l' vi-forward-char
 bindkey -M menuselect 'j' vi-down-line-or-history
 bindkey -v '^?' backward-delete-char
 
-# recirsive search
+# some keybinding that I'm used to
 bindkey -M viins '^r' history-incremental-search-backward
 bindkey -M vicmd '^r' history-incremental-search-backward
+bindkey -M viins '^a' beginning-of-line
+bindkey -M vicmd '^a' beginning-of-line
+bindkey -M viins '^e' end-of-line
+bindkey -M vicmd '^e' end-of-line
+bindkey -M viins '^[[1;5D' backward-word        # left arrow
+bindkey -M vicmd '^[[1;5D' backward-word        # left arrow
+bindkey -M viins '^[[1;5C' forward-word         # right arrow
+bindkey -M vicmd '^[[1;5C' forward-word         # right arrow
+bindkey -M viins '^H' backward-delete-word      # ctrl-backspace (gnome-terminal is bugged: https://stackoverflow.com/questions/2715537/how-do-i-get-ctrl-backspace-to-delete-a-word-in-vim-within-gnome-terminal)
