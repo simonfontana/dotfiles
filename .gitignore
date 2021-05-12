@@ -7,6 +7,7 @@
 .bitsquid/
 .cache/
 .config/Code
+.config/Element/
 .config/JetBrains/
 .config/QtProject.conf
 .config/Microsoft/
@@ -33,6 +34,7 @@
 .config/i3/config.def
 .config/i3/i3blocks-contrib/
 .config/ibus/
+.config/libreoffice/
 .config/menus/
 .config/mimeapps.list
 .config/mono.addins/
