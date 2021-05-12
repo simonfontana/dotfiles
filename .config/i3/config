@@ -261,3 +261,6 @@ for_window [class="Yad"] floating enable
 exec redshift-gtk
 
 for_window [instance="origin.exe"] floating enable
+
+# Set keyboard repeat delay and delay rate
+exec_always xset r rate 250 60
