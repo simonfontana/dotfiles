@@ -32,7 +32,6 @@
 .config/gtk-3.0/
 .config/htop/
 .config/i3/config.def
-.config/i3/i3blocks-contrib/
 .config/ibus/
 .config/libreoffice/
 .config/menus/
