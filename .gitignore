@@ -21,6 +21,7 @@
 .config/configstore/
 .config/dconf/
 .config/discord/
+.config/dotfiles-environment/
 .config/enchant/
 .config/evolution/
 .config/filezilla/
