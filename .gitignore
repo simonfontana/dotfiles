@@ -39,6 +39,7 @@
 .config/mimeapps.list
 .config/mono.addins/
 .config/nautilus/
+.config/obs-studio/
 .config/pavucontrol.ini
 .config/pulse/
 .config/teams/
