@@ -38,6 +38,10 @@ bindkey -M viins '^a' beginning-of-line
 bindkey -M vicmd '^a' beginning-of-line
 bindkey -M viins '^e' end-of-line
 bindkey -M vicmd '^e' end-of-line
+bindkey -M vicmd '^u' backward-kill-line
+bindkey -M viins '^u' backward-kill-line
+bindkey -M vicmd '^k' kill-line
+bindkey -M viins '^k' kill-line
 bindkey -M viins '^[[1;5D' backward-word        # left arrow
 bindkey -M vicmd '^[[1;5D' backward-word        # left arrow
 bindkey -M viins '^[[1;5C' forward-word         # right arrow
