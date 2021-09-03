@@ -6,8 +6,8 @@ source ~/.zsh/keybindings.zsh
 source ~/.zsh/aliases.zsh
 source ~/.zsh/utils.zsh
 
-# NVIM is VIM
-export VISUAL=nvim
+# LVIM is VIM
+export VISUAL=lvim
 export EDITOR="$VISUAL"
 
 # Enable autojump

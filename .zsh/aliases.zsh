@@ -37,10 +37,10 @@ alias ku='kubectl config use-context'
 alias k=kubectl
 complete -F __start_kubectl k
 
-# NVIM is VIM
-alias vi='nvim'
-alias vim='nvim'
-alias e='nvim'
+# LVIM is VIM
+alias vi='lvim'
+alias vim='lvim'
+alias e='lvim'
 alias truevim='/usr/bin/vim'
 
 # Other

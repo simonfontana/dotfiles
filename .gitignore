@@ -35,6 +35,7 @@
 .config/i3/config.def
 .config/ibus/
 .config/libreoffice/
+.config/lvim/
 .config/menus/
 .config/mimeapps.list
 .config/mono.addins/

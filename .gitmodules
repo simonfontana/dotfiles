@@ -1,9 +1,3 @@
-[submodule ".config/.config/nvim"]
-	path = .config/.config/nvim
-	url = git@github.com:simonfontana/LunarVim.git
-[submodule ".config/nvim"]
-	path = .config/nvim
-	url = git@github.com:simonfontana/LunarVim.git
 [submodule ".config/i3/i3blocks-contrib"]
 	path = .config/i3/i3blocks-contrib
 	url = git@github.com:simonfontana/i3blocks-contrib
