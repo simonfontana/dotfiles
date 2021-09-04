@@ -1,3 +1,6 @@
 [submodule ".config/i3/i3blocks-contrib"]
 	path = .config/i3/i3blocks-contrib
 	url = git@github.com:simonfontana/i3blocks-contrib
+[submodule "/home/simon/.zsh/zsh-syntax-highlighting"]
+	path = /home/simon/.zsh/zsh-syntax-highlighting
+	url = git@github.com:zsh-users/zsh-syntax-highlighting

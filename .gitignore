@@ -22,6 +22,7 @@
 .config/dconf/
 .config/discord/
 .config/dotfiles-environment/
+.config/eog/
 .config/enchant/
 .config/evolution/
 .config/filezilla/
@@ -57,9 +58,10 @@
 .dbus/
 .dir_colors/
 .dircolors
+.electrum/
 .fehbg
 .fltk/
-.fonts.bak/
+.fontconfig/
 .fonts/
 .gedit/
 .git-completion.bash
@@ -109,7 +111,6 @@
 .wine/
 .wine32/
 .zcompdump
-.zsh/zsh-syntax-highlighting/
 AudioBooks/
 Desktop/
 Documents/
@@ -117,6 +118,7 @@ Downloads/
 FiraxisLive/
 Pictures/
 Steam/
+Videos/
 VirtualBox VMs/
 examples.desktop
 git/
