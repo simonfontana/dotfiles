@@ -26,16 +26,13 @@ alias history='history 0'
 
 # Docker
 alias d=docker
-complete -F __start_docker d
 
 # Helm
 alias h=helm
-complete -F __start_helm h
 
 # Kubectl
 alias ku='kubectl config use-context'
 alias k=kubectl
-complete -F __start_kubectl k
 
 # LVIM is VIM
 alias vi='lvim'
