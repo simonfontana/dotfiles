@@ -1,3 +1,4 @@
+fpath=( "$HOME/.zfunctions" $fpath )
 source ~/.zsh/history.zsh
 source ~/.zsh/prompt.zsh
 source ~/.zsh/autocomplete.zsh
