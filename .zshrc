@@ -1,3 +1,5 @@
+setopt interactive_comments
+
 fpath=( "$HOME/.zfunctions" $fpath )
 source ~/.zsh/history.zsh
 source ~/.zsh/prompt.zsh
