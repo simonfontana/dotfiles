@@ -144,26 +144,31 @@ Add the official PPA and install the latest version of Neovim with the below com
 sudo add-apt-repository ppa:neovim-ppa/stable
 sudo apt-get update
 sudo apt-get install neovim
-sudo apt-get install build-essential  # make is required to install LunarVim
 ```
 
 Install nerdfont which is required for icons to show.
 Follow the [instructions in the LunarVim documentation](https://www.lunarvim.org/configuration/04-nerd-fonts.html#installing-a-font).
 Make sure you also change the font of your terminal.
 
-Now, install LunarVim with the following command:
+The following programs (except for xclip) are listed as prerequisites to install LunarVim:
+
+```
+curl -sL https://deb.nodesource.com/setup_16.x | sudo -E bash -  # Install PPA for nodejs v16.x
+sudo apt install \
+  build-essential  # make is required to install LunarVim
+  cargo  `# required to install packages` \
+  nodejs  `# required to install packages` \
+  python3-venv  `# required to install packages` \
+  xclip  `# required for system and vim to share clipboard`
+```
+
+Install LunarVim with the following command:
 
 ```
 bash <(curl -s https://raw.githubusercontent.com/lunarvim/lunarvim/master/utils/installer/install.sh)
 ```
 
-Now go to the [LunarVim documentation](https://www.lunarvim.org/02-after-install.html#add-lvim-to-path) to get started.
-
-Xclip is also required for system and vim to share clipboard.
-
-```
-sudo apt install xclip  
-```
+Now go to the [LunarVim documentation](https://www.lunarvim.org/02-after-install.html#quick-start) to get started.
 
 ## Enjoy!
 
