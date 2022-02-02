@@ -165,7 +165,7 @@ sudo apt install \
 Install LunarVim with the following command:
 
 ```
-bash <(curl -s https://raw.githubusercontent.com/lunarvim/lunarvim/master/utils/installer/install.sh)
+bash <(curl -s https://raw.githubusercontent.com/simonfontana/lunarvim/master/utils/installer/install.sh)
 ```
 
 Now go to the [LunarVim documentation](https://www.lunarvim.org/02-after-install.html#quick-start) to get started.
