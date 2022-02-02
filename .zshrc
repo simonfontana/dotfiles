@@ -1,4 +1,5 @@
 setopt interactive_comments
+unset zle_bracketed_paste
 
 fpath=( "$HOME/.zfunctions" $fpath )
 source ~/.zsh/history.zsh
