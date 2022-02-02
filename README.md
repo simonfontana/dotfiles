@@ -155,7 +155,7 @@ The following programs (except for xclip) are listed as prerequisites to install
 ```
 curl -sL https://deb.nodesource.com/setup_16.x | sudo -E bash -  # Install PPA for nodejs v16.x
 sudo apt install \
-  build-essential  # make is required to install LunarVim
+  build-essential  `# make is required to install LunarVim` \
   cargo  `# required to install packages` \
   nodejs  `# required to install packages` \
   python3-venv  `# required to install packages` \
