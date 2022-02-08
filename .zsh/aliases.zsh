@@ -43,3 +43,6 @@ alias truevim='/usr/bin/vim'
 # Other
 eval $(thefuck --alias)
 eval $(thefuck --alias FUCK)
+
+# Bob
+alias bob='bob/bob'
