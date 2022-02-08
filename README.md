@@ -43,6 +43,7 @@ Before moving on with the installation of the environment, let's install some gr
 sudo apt install \
   curl  `# transfer url` \
   docker.io  `# run docker containers` \
+  pavucontrol  `# volume control tool` \
   playerctl  `# required for i3-blocks mediaplayer and for mediakeys to work` \
   python3-distutils  `# utility package, required by thefuck` \
   python3-venv  `# virtual environments for python` \
