@@ -9,6 +9,7 @@ source ~/.zsh/vi.zsh
 source ~/.zsh/keybindings.zsh
 source ~/.zsh/aliases.zsh
 source ~/.zsh/utils.zsh
+source .secure/credentials.zsh
 
 # LVIM is installed in this directory
 PATH=.local/bin:$PATH
