@@ -178,3 +178,9 @@ ex () {
         echo "'$1' is not a valid file"
     fi
 }
+
+# start zsh from bash since it's not possible in my work environment to
+# change the default shell
+if [[ $# -eq 0 ]] ; then
+    exec zsh
+fi
