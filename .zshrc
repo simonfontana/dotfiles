@@ -1,3 +1,7 @@
+# Reverse complete with CTRL+Shift+z
+zmodload zsh/complist
+bindkey -M menuselect '^[[Z' reverse-menu-complete
+
 setopt interactive_comments
 unset zle_bracketed_paste
 setopt no_auto_remove_slash
