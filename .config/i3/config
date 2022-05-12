@@ -256,6 +256,7 @@ for_window [class="Yad"] floating enable
 exec redshift-gtk
 
 for_window [instance="origin.exe"] floating enable
+for_window [class="PanGPUI"] move position mouse
 
 # Set keyboard repeat delay and delay rate
 exec_always xset r rate 250 45
