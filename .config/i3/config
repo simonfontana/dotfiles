@@ -258,6 +258,9 @@ exec redshift-gtk
 for_window [instance="origin.exe"] floating enable
 for_window [class="PanGPUI"] move position mouse
 
+# Red mouse pointer (useful for Teams). https://askubuntu.com/questions/1220386/workarounds-for-mouse-pointer-visibility-in-screen-sharing-sessions
+bindsym $mod+F12 exec /bin/bash -c "pkill find-cursor || find-cursor --repeat 0 --follow --distance 1 --line-width 16 --size 16 --color red"
+
 # Set keyboard repeat delay and delay rate
 exec_always xset r rate 250 45
 
