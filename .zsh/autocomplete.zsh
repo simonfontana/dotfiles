@@ -8,3 +8,4 @@ zstyle ':completion:*' special-dirs true
 
 source <(kubectl completion zsh)
 source <(helm completion zsh)
+source <(k3d completion zsh)
