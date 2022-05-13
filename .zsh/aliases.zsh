@@ -46,3 +46,6 @@ eval $(thefuck --alias FUCK)
 
 # Bob
 alias bob='bob/bob'
+
+# GlobalProtect
+alias gpoc-ui='globalprotect launch-ui'
