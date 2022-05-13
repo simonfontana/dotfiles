@@ -2,8 +2,17 @@
 zmodload zsh/complist
 bindkey -M menuselect '^[[Z' reverse-menu-complete
 
+# Use bash-style when moving between words
+autoload -U select-word-style
+select-word-style bash
+
+# Allow comments in zsh.
 setopt interactive_comments
+
+# Disable bracketed paste so the that pasting a newline at the end actually runs the command.
 unset zle_bracketed_paste
+
+# Don't remove slash at the end of directory
 setopt no_auto_remove_slash
 
 fpath=( "$HOME/.zfunctions" $fpath )
