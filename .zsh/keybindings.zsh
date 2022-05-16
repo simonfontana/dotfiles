@@ -47,6 +47,7 @@ bindkey -M vicmd '^[[1;5D' backward-word        # left arrow
 bindkey -M viins '^[[1;5C' forward-word         # right arrow
 bindkey -M vicmd '^[[1;5C' forward-word         # right arrow
 bindkey -M viins '^H' backward-delete-word      # ctrl-backspace (gnome-terminal is bugged: https://stackoverflow.com/questions/2715537/how-do-i-get-ctrl-backspace-to-delete-a-word-in-vim-within-gnome-terminal)
+bindkey -M viins "\e[3;5~" delete-word          # ctrl+del
 
 # Disable software flow control (https://unix.stackexchange.com/questions/12107/how-to-unfreeze-after-accidentally-pressing-ctrl-s-in-a-terminal) 
 # and use ctrl-q for push-input
