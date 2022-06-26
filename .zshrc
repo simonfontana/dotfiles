@@ -42,6 +42,8 @@ export PATH=$PATH:/usr/local/go/bin
 export PATH=$PATH:$(go env GOPATH)/bin
 export GO111MODULE=on
 
+export KUBECONFIG=~/.kube/config
+
 export XDG_CONFIG_HOME=~/.config
 
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
