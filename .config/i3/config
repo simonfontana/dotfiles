@@ -227,7 +227,7 @@ mouse_warping none
 #focus_follows_mouse no
 
 # Background
-exec_always feh --bg-scale /home/simon/Pictures/bg/wallpapersden.com_small-memory_1920x1080.jpg
+exec_always --no-startup-id feh --bg-scale /home/simon/Pictures/bg/wallpapersden.com_small-memory_1920x1080.jpg
 
 # Lock computer
 bindsym $mod+shift+p exec i3lock -n --color='#111111'
@@ -253,7 +253,7 @@ bindsym $mod+Shift+d exec ~/.config/dotfiles-environment/displays/super_shift_d.
 # For calendar to work. Read docs
 for_window [class="Yad"] floating enable
 
-exec redshift-gtk
+exec --no-startup-id redshift-gtk
 
 for_window [instance="origin.exe"] floating enable
 for_window [class="PanGPUI"] move position mouse
@@ -262,7 +262,7 @@ for_window [class="PanGPUI"] move position mouse
 bindsym $mod+F12 exec /bin/bash -c "pkill find-cursor || find-cursor --repeat 0 --follow --distance 1 --line-width 16 --size 16 --color red"
 
 # Set keyboard repeat delay and delay rate
-exec_always xset r rate 250 45
+exec_always --no-startup-id xset r rate 250 45
 
 # Set screen brightness (laptop)
 bindsym XF86MonBrightnessUp exec brightnessctl -d intel_backlight s +10%
