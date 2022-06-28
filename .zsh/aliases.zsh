@@ -52,3 +52,6 @@ alias gpoc-ui='globalprotect launch-ui'
 
 # Nice git diff
 alias cdiff='git cdiff'
+
+# LazyGit on lazy binding
+alias gg='lazygit'

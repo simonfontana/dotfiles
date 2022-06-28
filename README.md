@@ -41,7 +41,7 @@ Before moving on with the installation of the environment, let's install some gr
 
 ```
 sudo apt install \
-  brightnessctl `# set screen brightness` \
+  brightnessctl  `# set screen brightness` \
   curl  `# transfer url` \
   docker.io  `# run docker containers` \
   pavucontrol  `# volume control tool` \
@@ -52,6 +52,14 @@ sudo apt install \
   thunar  `# file manager` \
   thefuck  `# correct errors in previous command` \
   vim  `# text editor`
+```
+
+```
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"  # package manager
+```
+
+```
+brew install lazygit  # nice git tool
 ```
 
 ### Zsh

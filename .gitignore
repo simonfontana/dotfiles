@@ -35,6 +35,7 @@
 .config/htop/
 .config/i3/config.def
 .config/ibus/
+.config/lazygit/state.yml
 .config/libreoffice/
 .config/lvim/
 .config/menus/
