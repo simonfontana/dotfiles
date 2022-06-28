@@ -62,6 +62,10 @@ sudo apt install \
 brew install lazygit  # nice git tool
 ```
 
+```
+pip install --user --upgrade cdiff
+```
+
 ### Zsh
 
 I prefer zsh over bash.
