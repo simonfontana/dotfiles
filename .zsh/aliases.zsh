@@ -49,3 +49,6 @@ alias bob='bob/bob'
 
 # GlobalProtect
 alias gpoc-ui='globalprotect launch-ui'
+
+# Nice git diff
+alias cdiff='git cdiff'
