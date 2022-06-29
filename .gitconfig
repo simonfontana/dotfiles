@@ -1,1 +1,30 @@
-.config/dotfiles-environment/.gitconfig
+[user]
+  name = Simon Fontana Oscarsson
+  email = simon.fontana.oscarsson@ericsson.com
+[core]
+  filemode = true
+  pager = less -FRXiMq
+  autocrlf = false
+  excludesfile = ~/.gitignore_global
+[color]
+  ui = auto
+[color "diff"]
+  old = red bold
+  new = green bold
+[alias]
+  tree = log --decorate --oneline --graph --all --topo-order -30
+  treef = log --decorate --oneline --graph --all --topo-order
+  st = status
+  rank = shortlog -sn --no-merges
+  pushf = push origin HEAD:refs/for/master
+  cdiff = "!f() { git diff | cdiff -s; }; f"
+  diffhead = "!f() { git diff HEAD~ | cdiff -s -w 0 --shift 1; }; f"
+  tr = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --all --
+[difftool "lvimdiff"]
+  cmd = lvim -d $LOCAL $REMOTE
+[diff]
+  tool = lvimdiff
+[mergetool "lvimmerge"]
+  cmd = lvim -d $LOCAL $MERGED $REMOTE
+[merge]
+  tool = lvimmerge
