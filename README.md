@@ -8,7 +8,7 @@ Some commands **will** overwrite files in your home directory, proceed with care
 
 ## Prerequisites
 
-System: Ubuntu 20.04
+System: Ubuntu 20.04.
 
 ## Clone Repo
 
@@ -19,18 +19,15 @@ sudo apt update && sudo apt install git
 ```
 
 Download this dotfiles repository into your home folder.
+> WARNING: Only do this if you know what you're doing and you're sure this is what you want.
+> This instruction is mostly for myself to easily copy-paste the commands.
+> Other users may use this repo as a reference.
 
 ```
 git clone https://github.com/simonfontana/dotfiles.git /tmp/dotfiles  # answer yes if you get a prompt
 shopt -s dotglob  # turn on dot files
 cp -r /tmp/dotfiles/* ~/
 cd ~ && git submodule update --init --recursive
-```
-
-Choose an environment project and clone it into _~/.config/dotfiles-environment/_. Below command will use [dotfiles-battlestation-environment](https://github.com/simonfontana/dotfiles-battlestation-environment) as an example.
-
-```
-git clone https://github.com/simonfontana/dotfiles-battlestation-environment.git ~/.config/dotfiles-environment/
 ```
 
 ## Installation
