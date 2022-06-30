@@ -49,17 +49,11 @@ sudo apt install \
   thunar  `# file manager` \
   thefuck  `# correct errors in previous command` \
   vim  `# text editor`
-```
-
-```
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"  # package manager
 ```
 
 ```
 brew install lazygit  # nice git tool
-```
-
-```
 pip install --user --upgrade cdiff
 ```
 
