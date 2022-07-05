@@ -41,6 +41,7 @@ source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 export PATH=$PATH:/usr/local/go/bin
 export PATH=$PATH:$(go env GOPATH)/bin
 export GO111MODULE=on
+export GOPRIVATE=gerrit.ericsson.se
 
 export KUBECONFIG=~/.kube/config
 
