@@ -43,3 +43,20 @@ function unplay_satisfactory()
     sudo ifconfig docker0 up
     sudo ifconfig br-a2fe5f48a75b up
 }
+
+function wttr()
+{
+    curl 'wttr.in/gothenburg?M&format=v2'
+}
+
+function wttr_repeat()
+{
+  interval=900
+  if [ -n "$1" ]; then interval=$1; fi
+  echo "$interval"
+    while true; do
+        clear
+        wttr
+        sleep $interval
+    done;
+}

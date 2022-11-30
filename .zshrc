@@ -35,16 +35,20 @@ export EDITOR="$VISUAL"
 # Enable autojump
 source /usr/share/autojump/autojump.sh
 
-# Load zsh-syntax-highlighting; should be last.
-source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-
 export PATH=$PATH:/usr/local/go/bin
 export PATH=$PATH:$(go env GOPATH)/bin
+
+# Go envs
 export GO111MODULE=on
 export GOPRIVATE=gerrit.ericsson.se
+export GOPATH=~/go
+export GOMODCACHE=~/go/pkg/mod
 
 export KUBECONFIG=~/.kube/config
 
 export XDG_CONFIG_HOME=~/.config
 
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+
+# Load zsh-syntax-highlighting; should be last.
+source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh

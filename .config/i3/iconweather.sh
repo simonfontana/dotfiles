@@ -22,7 +22,7 @@ print "$sun";
 }
 if( $values[0] eq "Mostly Cloudy" || $values[0] eq "Cloudy" || $values[0] eq "Dreary (Overcast)" || $values[0] eq "Fog")
 {
-my $cloud = "";
+my $cloud = "  ";
 binmode(STDOUT, ":utf8");
 print "$cloud";
 }
@@ -40,7 +40,7 @@ print "$wind";
 } 
 if($values[0] eq "Flurries" || $values[0] eq "Mostly Cloudy w/ Flurries" || $values[0] eq "Partly Sunny w/ Flurries"|| $values[0] eq "Snow"|| $values[0] eq "Mostly Cloudy w/ Snow"|| $values[0] eq "Ice"|| $values[0] eq "Sleet"|| $values[0] eq "Freezing Rain"|| $values[0] eq "Rain and Snow"|| $values[0] eq "Cold")
 {
-my $snow = "";
+my $snow = "";
 binmode(STDOUT, ":utf8");
 print "$rain";
 }
