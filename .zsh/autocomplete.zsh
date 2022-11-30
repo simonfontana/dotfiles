@@ -9,4 +9,8 @@ zstyle ':completion:*' special-dirs true
 source <(kubectl completion zsh)
 source <(helm completion zsh)
 source <(k3d completion zsh)
+
+# bashcompinit is required because bob-completion is written in bash
+autoload bashcompinit
+bashcompinit
 source ~/git/adp/bob/bob-completion.sh
