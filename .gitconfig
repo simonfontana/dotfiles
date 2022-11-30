@@ -18,7 +18,8 @@
   st = status
   rank = shortlog -sn --no-merges
   pushf = push origin HEAD:refs/for/master
-  cdiff = "!f() { git diff | cdiff -s -w 0; }; f"
+  cdiff = "!f() { git diff $@ | cdiff -s -w 0; }; f"
+  d = cdiff
   diffhead = "!f() { git diff HEAD~ | cdiff -s -w 0 --shift 1; }; f"
   tr = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --all --
 [difftool "lvimdiff"]
