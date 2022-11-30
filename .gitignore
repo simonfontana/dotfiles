@@ -55,7 +55,8 @@
 .config/k9s/skins/
 .config/lazygit/state.yml
 .config/libreoffice/
-.config/lvim/
+.config/lvim/config.lua
+.config/lvim/plugin/
 .config/menus/
 .config/mimeapps.list
 .config/mono.addins/
