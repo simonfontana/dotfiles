@@ -11,7 +11,9 @@
 .cache/
 .cargo/
 .ccache/
+.config/BraveSoftware/
 .config/Code
+.config/Electron/
 .config/Element/
 .config/GIMP/
 .config/Insomnia/
@@ -29,10 +31,12 @@
 .config/configstore/
 .config/dconf/
 .config/discord/
+.config/dlv/
 .config/dotfiles-environment/
 .config/elx/
 .config/eog/
 .config/enchant/
+.config/evince/
 .config/evolution/
 .config/filezilla/
 .config/flashfocus/
@@ -47,6 +51,7 @@
 .config/htop/
 .config/i3/config.def
 .config/ibus/
+.config/k9s/plugin.yml
 .config/k9s/skins/
 .config/lazygit/state.yml
 .config/libreoffice/
@@ -122,6 +127,7 @@
 .steampid
 .sudo_as_admin_successful
 .synaptic/
+.terminalizer/
 .themes/
 .thumbnails/
 .thunderbird/
@@ -137,7 +143,6 @@
 .wine32/
 .zcompdump
 .zsh/bob-completion.sh
-\\
 AudioBooks/
 Desktop/
 Documents/
