@@ -40,7 +40,11 @@ source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 export PATH=$PATH:/usr/local/go/bin
 export PATH=$PATH:$(go env GOPATH)/bin
+
+# Go envs
 export GO111MODULE=on
+export GOPATH=~/go
+export GOMODCACHE=~/go/pkg/mod
 
 export KUBECONFIG=~/.kube/config
 
