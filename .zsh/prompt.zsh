@@ -16,7 +16,7 @@ SPACESHIP_BATTERY_THRESHOLD=10
 # Directory
 SPACESHIP_DIR_SHOW=true
 SPACESHIP_DIR_TRUNC=3
-SPACESHIP_DIR_TRUNC_REPO=false
+SPACESHIP_DIR_TRUNC_REPO=true
 
 # Execution time - only show when command takes longer than time elapsed
 SPACESHIP_EXEC_TIME_SHOW=true
