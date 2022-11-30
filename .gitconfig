@@ -6,6 +6,7 @@
   pager = less -FRXiMq
   autocrlf = false
   excludesfile = ~/.gitignore_global
+  editor = lvim
 [color]
   ui = auto
 [color "diff"]
