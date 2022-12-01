@@ -93,6 +93,7 @@ Execute the below command to install i3-wm and other dependencies required by th
 
 ```
 sudo apt install \
+  autorandr  `# automatically switch displays` \
   feh  `# background image` \
   i3-wm  `# i3 window manager` \
   i3blocks  `# status bar` \
