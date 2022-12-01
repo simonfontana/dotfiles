@@ -1,0 +1,2 @@
+#!/bin/sh
+xrandr --delmonitor VIRTUAL_RIGHT --delmonitor VIRTUAL_LEFT

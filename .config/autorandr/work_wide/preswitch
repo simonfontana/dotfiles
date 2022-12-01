@@ -1,0 +1,3 @@
+#!/bin/sh
+xrandr --setmonitor VIRTUAL_LEFT 1920/447x1440/335+1920+0 DP-2
+xrandr --setmonitor VIRTUAL_RIGHT 1520/353x1440/335+3840+0 none
