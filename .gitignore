@@ -64,6 +64,7 @@
 .config/obs-studio/
 .config/pavucontrol.ini
 .config/pulse/
+.config/spaceship/spaceship.zsh.zwc
 .config/spotify/
 .config/teams/
 .config/teamviewer/

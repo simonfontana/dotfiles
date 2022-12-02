@@ -17,7 +17,6 @@ setopt no_auto_remove_slash
 
 fpath=( "$HOME/.zfunctions" $fpath )
 source ~/.zsh/history.zsh
-source ~/.zsh/prompt.zsh
 source ~/.zsh/autocomplete.zsh
 source ~/.zsh/vi.zsh
 source ~/.zsh/keybindings.zsh
@@ -49,6 +48,10 @@ export KUBECONFIG=~/.kube/config
 export XDG_CONFIG_HOME=~/.config
 
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+
+# Load spaceship prompt
+autoload -U promptinit; promptinit
+prompt spaceship
 
 # Load zsh-syntax-highlighting; should be last.
 source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
