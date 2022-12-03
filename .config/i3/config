@@ -244,11 +244,6 @@ new_float none
 # Shutdown menu
 bindsym mod1+control+Delete exec ~/.config/i3/i3blocks-contrib/shutdown_menu/shutdown_menu
 
-exec ~/.config/dotfiles-environment/displays/super_shift_s.sh
-bindsym $mod+Shift+a exec ~/.config/dotfiles-environment/displays/super_shift_a.sh
-bindsym $mod+Shift+s exec ~/.config/dotfiles-environment/displays/super_shift_s.sh
-bindsym $mod+Shift+d exec ~/.config/dotfiles-environment/displays/super_shift_d.sh
-
 # For calendar to work. Read docs
 for_window [class="Yad"] floating enable
 
