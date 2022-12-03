@@ -38,6 +38,7 @@ Before moving on with the installation of the environment, let's install some gr
 
 ```
 sudo apt install \
+  autorandr  `# automatically switch displays` \
   brightnessctl  `# set screen brightness` \
   curl  `# transfer url` \
   docker.io  `# run docker containers` \
@@ -93,7 +94,6 @@ Execute the below command to install i3-wm and other dependencies required by th
 
 ```
 sudo apt install \
-  autorandr  `# automatically switch displays` \
   feh  `# background image` \
   i3-wm  `# i3 window manager` \
   i3blocks  `# status bar` \
@@ -103,20 +103,21 @@ sudo apt install \
   scrot  `# screen capturing`
 ```
 
-### Font Awesome
-
-> Note: I've had issues previously when installing fontawesome from Ubuntu repository which is why I'm doing it manually.
-
-Download the [Font Awesome](https://fontawesome.com/download) (click "Free for Desktop") fonts which are used in i3-blocks.
-
-```
-cd Downloads/
-unzip fontawesome-*.zip
-mkdir -p ~/.fonts/
-mv fontawesome-*/otfs/*.otf ~/.fonts/
-```
-
 ### i3-blocks
+
+#### Ubuntu Nerd Font
+
+Start by installing Ubuntu NF fonts which is what I have configured for i3.
+Without it, icons will not show properly in i3-bar.
+
+```
+mkdir -p ~/.fonts/Ubuntu-Nerd-Font/
+wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.2.2/Ubuntu.zip
+unzip -d ~/.fonts/Ubuntu-Nerd-Font/ Ubuntu.zip
+rm Ubuntu.zip
+```
+
+#### Configuration
 
 List all programs used by your i3-blocks configuration.
 
