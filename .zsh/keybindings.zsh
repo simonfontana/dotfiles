@@ -53,3 +53,10 @@ bindkey -M viins "\e[3;5~" delete-word          # ctrl+del
 # and use ctrl-q for push-input
 stty -ixon
 bindkey '^Q' push-input
+
+# ctr-l to accept suggestion, ctrl-j to execut
+bindkey '^l' autosuggest-accept
+bindkey '^j' autosuggest-execute
+# alt-j to search history on the current text backward, alt-k forward
+bindkey '^[j' history-beginning-search-backward
+bindkey '^[k' history-beginning-search-forward

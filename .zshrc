@@ -54,4 +54,5 @@ autoload -U promptinit; promptinit
 prompt spaceship
 
 # Load zsh-syntax-highlighting; should be last.
+source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
