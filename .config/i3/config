@@ -259,5 +259,5 @@ bindsym $mod+F12 exec /bin/bash -c "pkill find-cursor || find-cursor --repeat 0 
 exec_always --no-startup-id xset r rate 250 45
 
 # Set screen brightness (laptop)
-bindsym XF86MonBrightnessUp exec brightnessctl -d intel_backlight s +10%
-bindsym XF86MonBrightnessDown exec brightnessctl -d intel_backlight s 10%-
+bindsym XF86MonBrightnessUp exec brightnessctl -d amdgpu_bl0 s +10%
+bindsym XF86MonBrightnessDown exec brightnessctl -d amdgpu_bl0 s 10%-
