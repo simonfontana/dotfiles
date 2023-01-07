@@ -262,6 +262,8 @@ exec_always --no-startup-id xset r rate 250 45
 bindsym XF86MonBrightnessUp exec brightnessctl -d intel_backlight s +10%
 bindsym XF86MonBrightnessDown exec brightnessctl -d intel_backlight s 10%-
 
+bindsym $mod+Shift+a exec autorandr -l laptop
+
 # Hide Teams sharing pop-up as much as possible. Too low negative number will
 # reset the window to it's default position, -55 px works for 1920x1080 screen.
 for_window [floating_from="auto" title=" is sharing your screen.$"] border none, sticky enable, move position 0 px -55 px
