@@ -34,13 +34,14 @@ export EDITOR="$VISUAL"
 # Enable autojump
 source /usr/share/autojump/autojump.sh
 
+# Go envs
 export PATH=$PATH:/usr/local/go/bin
 export PATH=$PATH:$(go env GOPATH)/bin
-
-# Go envs
+export GOROOT=$(go1.19.5 env GOROOT)
+export PATH=${GOROOT}/bin:${PATH}
+export GOPATH=~/go
 export GO111MODULE=on
 export GOPRIVATE=gerrit.ericsson.se
-export GOPATH=~/go
 export GOMODCACHE=~/go/pkg/mod
 
 export KUBECONFIG=~/.kube/config
