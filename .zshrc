@@ -55,3 +55,6 @@ prompt spaceship
 # Load zsh-syntax-highlighting; should be last.
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+# Android studio
+export PATH=/home/simon/Android/Sdk/platform-tools:/home/simon/Android/Sdk/tools:/home/simon/Android/Sdk/tools/bin:/home/simon/android-studio/bin:$PATH
