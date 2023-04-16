@@ -179,6 +179,7 @@ git/
 go/
 jenkins_home/
 node_modules/
+notes/
 package-lock.json
 package.json
 proton_tkg_token
