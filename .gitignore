@@ -20,8 +20,32 @@
 .config/QtProject.conf
 .config/Slack/
 .config/Thunar/
-.config/VSCodium/
 .config/VeraCrypt/
+.config/VSCodium/Cache/
+.config/VSCodium/CachedData/
+.config/VSCodium/CachedExtensionVSIXs/
+.config/VSCodium/CachedProfilesData/
+.config/VSCodium/Code Cache/
+.config/VSCodium/Cookies
+.config/VSCodium/Cookies-journal
+.config/VSCodium/Crashpad/
+.config/VSCodium/Dictionaries/
+.config/VSCodium/GPUCache/
+.config/VSCodium/Local Storage/
+.config/VSCodium/Network Persistent State
+.config/VSCodium/Preferences
+.config/VSCodium/Service Worker/
+.config/VSCodium/Session Storage/
+.config/VSCodium/TransportSecurity
+.config/VSCodium/User/History/
+.config/VSCodium/User/globalStorage/
+.config/VSCodium/User/workspaceStorage/
+.config/VSCodium/WebStorage/
+.config/VSCodium/code.lock
+.config/VSCodium/databases/
+.config/VSCodium/languagepacks.json
+.config/VSCodium/logs/
+.config/VSCodium/machineid
 .config/VirtualBox/
 .config/autostart/
 .config/cef_user_data/
