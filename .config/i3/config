@@ -256,7 +256,7 @@ for_window [class="PanGPUI"] move position mouse
 bindsym $mod+F12 exec /bin/bash -c "pkill find-cursor || find-cursor --repeat 0 --follow --distance 1 --line-width 16 --size 16 --color red"
 
 # Set keyboard repeat delay and delay rate
-exec_always --no-startup-id xset r rate 250 45
+exec_always --no-startup-id xset r rate 200 55
 
 # Set screen brightness (laptop)
 bindsym XF86MonBrightnessUp exec brightnessctl -d intel_backlight s +10%
