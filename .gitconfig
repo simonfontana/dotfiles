@@ -17,7 +17,7 @@
   treef = log --decorate --oneline --graph --all --topo-order
   st = status
   rank = shortlog -sn --no-merges
-  pushf = push origin HEAD:refs/for/master
+  pushf = "!f() { git push origin HEAD:refs/for/$1; }; f"
   cdiff = "!f() { git diff $@ | cdiff -s -w 0; }; f"
   d = cdiff
   diffhead = "!f() { git diff HEAD~ | cdiff -s -w 0 --shift 1; }; f"

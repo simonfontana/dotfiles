@@ -60,3 +60,13 @@ function wttr_repeat()
         sleep $interval
     done;
 }
+
+# Git push for review
+function pushf()
+{
+  if [ -z "${1}" ]; then
+    echo "Error! Missing branch name." >&2
+  else
+    git push origin HEAD:refs/for/${1}
+  fi
+}
