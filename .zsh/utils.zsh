@@ -1,5 +1,5 @@
 docker-ip() {
-    docker inspect --format '{{ .NetworkSettings.IPAddress }}' "$@"
+    docker ps -q | xargs -n 1 docker inspect --format '{{ .NetworkSettings.IPAddress }} {{ .Name }}' | sed 's/ \// /'
 }
 
 # ex - archive extractor
