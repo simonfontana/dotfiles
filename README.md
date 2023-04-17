@@ -56,6 +56,8 @@ sudo apt install \
 ```
 brew install lazygit  # nice git tool
 pip install --user --upgrade cdiff
+go install github.com/rhysd/notes-cli/cmd/notes@latest
+go install github.com/charmbracelet/glow@latest
 ```
 
 ### Zsh

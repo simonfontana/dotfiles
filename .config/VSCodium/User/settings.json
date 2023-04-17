@@ -1,0 +1,8 @@
+{
+    "workbench.colorTheme": "Default Dark+",
+    "git.openRepositoryInParentFolders": "never",
+    "vscode-neovim.neovimExecutablePaths.linux": "/usr/local/bin/nvim",
+    "editor.lineNumbers": "relative",
+    "files.insertFinalNewline": true,
+    "files.trimTrailingWhitespace": true
+}
