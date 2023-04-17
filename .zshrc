@@ -42,6 +42,7 @@ export PATH=${GOROOT}/bin:${PATH}
 export GOPATH=~/go
 export GO111MODULE=on
 export GOPRIVATE=gerrit.ericsson.se
+export GOCACHE=~/.cache/go-build
 export GOMODCACHE=~/go/pkg/mod
 
 export KUBECONFIG=~/.kube/config
