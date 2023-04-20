@@ -52,3 +52,6 @@ alias gpoc-ui='globalprotect launch-ui'
 
 # LazyGit on lazy binding
 alias gg='lazygit'
+
+# Run Operator and pipe to adp-log-parser
+alias runop='(cd ${OPERATOR_PROJECT_PATH} && go run main.go | adp-log-parser)'
