@@ -29,3 +29,5 @@
   cmd = lvim -d $LOCAL $MERGED $REMOTE
 [merge]
   tool = lvimmerge
+[merge "ours"]
+  driver = true
