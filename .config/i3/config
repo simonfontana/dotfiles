@@ -227,7 +227,7 @@ mouse_warping none
 
 # Background
 # exec_always --no-startup-id feh --bg-scale /home/simon/Pictures/bg/wallpapersden.com_small-memory_1920x1080.jpg
-exec_always --no-startup-id feh --bg-scale /home/simon/Pictures/bg/hoodie.jpg
+exec_always --no-startup-id feh --bg-scale ~/Pictures/bg/hoodie.jpg
 
 # Lock computer
 bindsym $mod+shift+p exec i3lock -n --color='#111111'
