@@ -105,6 +105,13 @@ sudo apt install \
   scrot  `# screen capturing`
 ```
 
+### Alacritty Terminal
+
+Install Alacritty following the installation instructions: https://github.com/alacritty/alacritty/blob/master/INSTALL.md
+
+To use the opacity configuration, I use picom as compisotor.
+To build and install picom, go to: https://github.com/yshui/picom
+
 ### i3-blocks
 
 #### Ubuntu Nerd Font
