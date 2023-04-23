@@ -13,14 +13,13 @@
   old = red bold
   new = green bold
 [alias]
+  cdiff = "!f() { git diff $@ | cdiff -s -w 0; }; f"
+  d = cdiff
   tree = log --decorate --oneline --graph --all --topo-order -30
   treef = log --decorate --oneline --graph --all --topo-order
   st = status
   rank = shortlog -sn --no-merges
   pushf = "!f() { git push origin HEAD:refs/for/$1; }; f"
-  cdiff = "!f() { git diff $@ | cdiff -s -w 0; }; f"
-  d = cdiff
-  diffhead = "!f() { git diff HEAD~ | cdiff -s -w 0 --shift 1; }; f"
   tr = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --all --
 [difftool "lvimdiff"]
   cmd = lvim -d $LOCAL $REMOTE
