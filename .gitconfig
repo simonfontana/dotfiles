@@ -21,7 +21,7 @@
   rank = shortlog -sn --no-merges
   tr = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --all --
 [difftool "lvimdiff"]
-  cmd = lvim -d $LOCAL $REMOTE
+  cmd = lvim $LOCAL -c 'vert diffsplit '$BASE'|vert diffsplit '$REMOTE'|vert diffsplit '$MERGED'|wincmd J'
 [diff]
   tool = lvimdiff
 [mergetool "lvimmerge"]
