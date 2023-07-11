@@ -59,6 +59,9 @@ source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 # Android Studio
 export PATH=/home/simon/Android/Sdk/platform-tools:/home/simon/Android/Sdk/tools:/home/simon/Android/Sdk/tools/bin:/home/simon/android-studio/bin:$PATH
 
+# Cargo
+export PATH=~/.cargo/bin:$PATH
+
 # Notes
 export NOTES_CLI_HOME=~/notes
 export NOTES_CLI_EDITOR=~/.local/bin/lvim
