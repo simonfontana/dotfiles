@@ -56,6 +56,8 @@ sudo apt install \
 ```
 brew install lazygit  # nice git tool
 pip install --user --upgrade cdiff
+go install github.com/rhysd/notes-cli/cmd/notes@latest
+go install github.com/charmbracelet/glow@latest
 ```
 
 ### Zsh
@@ -103,6 +105,13 @@ sudo apt install \
   scrot  `# screen capturing`
 ```
 
+### Alacritty Terminal
+
+Install Alacritty following the installation instructions: https://github.com/alacritty/alacritty/blob/master/INSTALL.md
+
+To use the opacity configuration, I use picom as compisotor.
+To build and install picom, go to: https://github.com/yshui/picom
+
 ### i3-blocks
 
 #### Ubuntu Nerd Font
@@ -144,38 +153,7 @@ Install by extracting the archive into either ~/.themes/ or ~/.icons/ depending 
 
 ### LunarVim
 
-LunarVim requires installing Neovim of version 0.5 and later.
-Add the official PPA and install the latest version of Neovim with the below commands:
-
-```
-sudo add-apt-repository ppa:neovim-ppa/stable
-sudo apt-get update
-sudo apt-get install neovim
-```
-
-Install nerdfont which is required for icons to show.
-Follow the [instructions in the LunarVim documentation](https://www.lunarvim.org/configuration/04-nerd-fonts.html#installing-a-font).
-Make sure you also change the font of your terminal.
-
-The following programs (except for xclip) are listed as prerequisites to install LunarVim:
-
-```
-curl -sL https://deb.nodesource.com/setup_16.x | sudo -E bash -  # Install PPA for nodejs v16.x
-sudo apt install \
-  build-essential  `# make is required to install LunarVim` \
-  cargo  `# required to install packages` \
-  nodejs  `# required to install packages` \
-  python3-venv  `# required to install packages` \
-  xclip  `# required for system and vim to share clipboard`
-```
-
-Install LunarVim with the following command:
-
-```
-bash <(curl -s https://raw.githubusercontent.com/simonfontana/lunarvim/master/utils/installer/install.sh)
-```
-
-Now go to the [LunarVim documentation](https://www.lunarvim.org/02-after-install.html#quick-start) to get started.
+Simply follow the [LunarVim documentation](https://www.lunarvim.org/docs/installation)
 
 ## Enjoy!
 

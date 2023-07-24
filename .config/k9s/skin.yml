@@ -14,35 +14,35 @@ yellow_bright: &yellow_bright "#d19a66"
 k9s:
   body:
     fgColor: *foreground
-    bgColor: *background
+    bgColor: default
     logoColor: *green
   prompt:
     fgColor: *foreground
-    bgColor: *background
+    bgColor: default
     suggestColor: *orange
   info:
     fgColor: *grey
-    sectionColor: *green
+    sectionColor: default
   dialog:
     fgColor: *black
-    bgColor: *background
+    bgColor: default
     buttonFgColor: *foreground
     buttonBgColor: *green
     buttonFocusFgColor: *black
     buttonFocusBgColor: *blue
-    labelFgColor: *orange
-    fieldFgColor: *blue
+    labelFgColor: default
+    fieldFgColor: default
   frame:
     border:
       fgColor: *green
       focusColor: *green
     menu:
-      fgColor: *grey
+      fgColor: default
       keyColor: *yellow
       numKeyColor: *yellow
     crumbs:
       fgColor: *black
-      bgColor: *green
+      bgColor: default
       activeColor: *yellow
     status:
       newColor: *blue
@@ -55,13 +55,13 @@ k9s:
       completedColor: *grey
     title:
       fgColor: *blue
-      bgColor: *background
+      bgColor: default
       highlightColor: *purple
       counterColor: *foreground
       filterColor: *blue
   views:
     charts:
-      bgColor: *background
+      bgColor: default
       defaultDialColors:
         - *green
         - *red
@@ -70,17 +70,17 @@ k9s:
         - *red
     table:
       fgColor: *yellow
-      bgColor: *background
+      bgColor: default
       cursorFgColor: *black
       cursorBgColor: *blue
       markColor: *yellow_bright
       header:
-        fgColor: *grey
-        bgColor: *background
+        fgColor: default
+        bgColor: deafult
         sorterColor: *orange
     xray:
       fgColor: *blue
-      bgColor: *background
+      bgColor: default
       cursorColor: *foreground
       graphicColor: *yellow_bright
       showIcons: false
@@ -90,12 +90,12 @@ k9s:
       valueColor: *grey
     logs:
       fgColor: *grey
-      bgColor: *background
+      bgColor: deafult
       indicator:
         fgColor: *blue
-        bgColor: *background
+        bgColor: default
     help:
       fgColor: *grey
-      bgColor: *background
+      bgColor: default
       indicator:
         fgColor: *blue

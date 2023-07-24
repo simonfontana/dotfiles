@@ -44,7 +44,7 @@ bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOU
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec i3-sensible-terminal
+bindsym $mod+Return exec alacritty
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -226,7 +226,8 @@ mouse_warping none
 #focus_follows_mouse no
 
 # Background
-exec_always --no-startup-id feh --bg-scale /home/simon/Pictures/bg/wallpapersden.com_small-memory_1920x1080.jpg
+# exec_always --no-startup-id feh --bg-scale /home/simon/Pictures/bg/wallpapersden.com_small-memory_1920x1080.jpg
+exec_always --no-startup-id feh --bg-scale ~/Pictures/bg/hoodie.jpg
 
 # Lock computer
 bindsym $mod+shift+p exec i3lock -n --color='#111111'
@@ -256,8 +257,11 @@ for_window [class="PanGPUI"] move position mouse
 bindsym $mod+F12 exec /bin/bash -c "pkill find-cursor || find-cursor --repeat 0 --follow --distance 1 --line-width 16 --size 16 --color red"
 
 # Set keyboard repeat delay and delay rate
-exec_always --no-startup-id xset r rate 250 45
+exec_always --no-startup-id xset r rate 200 55
 
 # Set screen brightness (laptop)
 bindsym XF86MonBrightnessUp exec brightnessctl -d amdgpu_bl0 s +10%
 bindsym XF86MonBrightnessDown exec brightnessctl -d amdgpu_bl0 s 10%-
+
+# Start picom as compositor
+exec picom &
