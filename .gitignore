@@ -11,6 +11,7 @@
 .cache/
 .cargo/
 .ccache/
+.config/.gsd-keyboard.settings-ported
 .config/Code
 .config/Element/
 .config/GIMP/
@@ -52,6 +53,7 @@
 .config/coc/
 .config/configstore/
 .config/dconf/
+.config/deluge/
 .config/discord/
 .config/dotfiles-environment/
 .config/elx/
@@ -75,13 +77,16 @@
 .config/lazygit/state.yml
 .config/libreoffice/
 .config/lvim/plugin/
+.config/lvim/lazy-lock.json
 .config/menus/
 .config/mimeapps.list
 .config/mono.addins/
 .config/nautilus/
+.config/nvm/
 .config/obs-studio/
 .config/pavucontrol.ini
 .config/pulse/
+.config/redshift.conf
 .config/spaceship/spaceship.zsh.zwc
 .config/spotify/
 .config/teams/
@@ -117,6 +122,7 @@
 .ipython/
 .java/
 .jcat/
+.jet/
 .klei/
 .kube/
 .lemminx/
@@ -140,6 +146,7 @@
 .putty/
 .pylint.d/
 .python_history
+.rustup/
 .secure/
 .ssh/
 .steam/
@@ -162,11 +169,11 @@
 .wine32/
 .zcompdump
 .zsh/bob-completion.sh
-\\
 AudioBooks/
 Desktop/
 Documents/
 Downloads/
+E-Books/
 FiraxisLive/
 Pictures/
 Steam/
