@@ -201,6 +201,11 @@ bar {
         # Disable changing workspace with mouse scroll
         bindsym button4 nop
         bindsym button5 nop
+
+        # Hide bar by default, show by pressing Alt.
+        mode hide
+        hidden_state hide
+        modifier Mod1
 }
 
 # Pulse Audio Controls
