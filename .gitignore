@@ -82,6 +82,7 @@
 .config/mimeapps.list
 .config/mono.addins/
 .config/nautilus/
+.config/nvim/lazy-lock.json
 .config/nvm/
 .config/obs-studio/
 .config/pavucontrol.ini

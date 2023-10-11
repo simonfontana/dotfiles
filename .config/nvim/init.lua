@@ -1,16 +1,27 @@
-local function map(mode, lhs, rhs, opts)
-  local options = { noremap = true, silent = true }
-  if opts then
-    options = vim.tbl_extend("force", options, opts)
-  end
-  vim.api.nvim_set_keymap(mode, lhs, rhs, options)
+vim.g.mapleader = " " -- Make sure to set `mapleader` before lazy so your mappings are correct
+
+-- Bootstrap lazy.nvim
+local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
+if not vim.loop.fs_stat(lazypath) then
+  vim.fn.system({
+    "git",
+    "clone",
+    "--filter=blob:none",
+    "https://github.com/folke/lazy.nvim.git",
+    "--branch=stable",
+    lazypath,
+  })
 end
+vim.opt.rtp:prepend(lazypath)
 
-map("n", "<A-j>", ":m .+1<CR>==")
-map("n", "<A-k>", ":m .-2<CR>==")
-
-map("i", "<A-j>", "<Esc>:m .+1<CR>==gi")
-map("i", "<A-k>", "<Esc>:m .-2<CR>==gi")
-
-map("v", "<A-j>", ":m '>+1<CR>gv-gv")
-map("v", "<A-k>", ":m '<-2<CR>gv-gv")
+require("lazy").setup({
+  {
+    "folke/which-key.nvim",
+    event = "VeryLazy",
+    init = function()
+      vim.o.timeout = true
+      vim.o.timeoutlen = 200
+    end,
+    opts = {},
+  }
+})
