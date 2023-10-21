@@ -34,10 +34,10 @@ alias h=helm
 alias ku='kubectl config use-context'
 alias k=kubectl
 
-# LVIM is VIM
-alias vi='lvim'
-alias vim='lvim'
-alias e='lvim'
+# NVIM is VIM
+alias vi='nvim'
+alias vim='nvim'
+alias e='nvim'
 alias truevim='/usr/bin/vim'
 
 # Other
