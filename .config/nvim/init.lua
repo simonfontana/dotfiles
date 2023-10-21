@@ -4,3 +4,4 @@ require('plugins.lazy')
 require('plugins.mason')
 
 require('lsp.gopls')
+require('simonfontana')
