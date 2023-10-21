@@ -89,6 +89,7 @@
 .config/redshift.conf
 .config/spaceship/spaceship.zsh.zwc
 .config/spotify/
+.config/systemd/
 .config/teams/
 .config/teamviewer/
 .config/thefuck/
