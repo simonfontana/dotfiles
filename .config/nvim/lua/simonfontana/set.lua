@@ -22,6 +22,7 @@ vim.opt.isfname:append("@-@")
 
 vim.opt.updatetime = 50
 
+vim.cmd.colorscheme "catppuccin-mocha"
 vim.opt.colorcolumn = "80"
 
 vim.opt.number = true
