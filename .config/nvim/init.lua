@@ -4,4 +4,7 @@ require('plugins.lazy')
 require('plugins.mason')
 
 require('lsp.gopls')
+
+require('telescope').load_extension('fzf')
+
 require('simonfontana')
