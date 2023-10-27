@@ -49,6 +49,15 @@ require("lazy").setup({
         }
     },
 
+    -- treesitter
+    {
+        'nvim-treesitter/nvim-treesitter',
+        dependencies = {
+            'nvim-treesitter/nvim-treesitter-textobjects',
+        },
+        build = ':TSUpdate',
+    },
+
     -- colorscheme
     { "catppuccin/nvim", name = "catppuccin", priority = 1000 },
 })

@@ -2,6 +2,7 @@ vim.g.mapleader = " " -- Make sure to set `mapleader` before lazy so your mappin
 
 require('plugins.lazy')
 require('plugins.mason')
+require('plugins.treesitter')
 
 require('lsp.gopls')
 
