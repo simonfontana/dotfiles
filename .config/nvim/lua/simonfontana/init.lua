@@ -1,2 +1,2 @@
 require('simonfontana/set')
-require('simonfontana/remap')
+require('simonfontana/keybindings')

@@ -13,6 +13,7 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
+    -- which-key
     {
         "folke/which-key.nvim",
         event = "VeryLazy",
@@ -84,4 +85,5 @@ require("lazy").setup({
 
     -- other
     { 'RRethy/vim-illuminate' },
+    { 'numToStr/Comment.nvim', opts = {} },
 })
