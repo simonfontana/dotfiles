@@ -60,7 +60,7 @@ require("lazy").setup({
     },
 
     -- colorscheme
-    { "catppuccin/nvim", name = "catppuccin", priority = 1000 },
+    { "catppuccin/nvim",      name = "catppuccin", priority = 1000 },
 
     -- statusline
     {
@@ -70,4 +70,7 @@ require("lazy").setup({
             'nvim-tree/nvim-web-devicons'
         }
     },
+
+    -- other
+    { 'RRethy/vim-illuminate' },
 })
