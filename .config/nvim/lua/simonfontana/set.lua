@@ -28,7 +28,13 @@ vim.opt.colorcolumn = "80"
 vim.opt.number = true
 vim.opt.relativenumber = true
 
--- share clipboard with OS
+-- Share clipboard with OS.
 vim.opt.clipboard = 'unnamedplus'
 
 vim.o.completeopt = 'menuone,noselect'
+
+-- Disabling netrw is recommended by nvim documentation.
+-- Fake that netrw is already setup:
+vim.g.loaded_netrw       = 1
+vim.g.loaded_netrwPlugin = 1
+

@@ -71,6 +71,16 @@ require("lazy").setup({
         }
     },
 
+    -- several small plugins such as file explorer.
+    {
+        'echasnovski/mini.nvim',
+        version = '*',
+        dependencies = {
+            "nvim-tree/nvim-web-devicons",
+        },
+        lazy = true,
+    },
+
     -- other
     { 'RRethy/vim-illuminate' },
 })

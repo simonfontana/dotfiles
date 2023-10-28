@@ -6,9 +6,9 @@ require('plugins.lualine')
 
 require('plugins.mason')
 require('plugins.treesitter')
-
 require('lsp.gopls')
 
 require('plugins.telescope')
 
 require('simonfontana')
+require('mini.files').setup()
