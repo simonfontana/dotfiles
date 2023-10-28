@@ -22,6 +22,7 @@ require("lazy").setup({
         end,
         opts = {},
     },
+
     -- mason
     { "williamboman/mason.nvim" },
     { "williamboman/mason-lspconfig.nvim" },
@@ -60,4 +61,13 @@ require("lazy").setup({
 
     -- colorscheme
     { "catppuccin/nvim", name = "catppuccin", priority = 1000 },
+
+    -- statusline
+    {
+        'nvim-lualine/lualine.nvim',
+        priority = 999,
+        dependencies = {
+            'nvim-tree/nvim-web-devicons'
+        }
+    },
 })
