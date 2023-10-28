@@ -27,3 +27,8 @@ vim.opt.colorcolumn = "80"
 
 vim.opt.number = true
 vim.opt.relativenumber = true
+
+-- share clipboard with OS
+vim.opt.clipboard = 'unnamedplus'
+
+vim.o.completeopt = 'menuone,noselect'
