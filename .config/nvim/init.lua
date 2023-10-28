@@ -9,6 +9,6 @@ require('plugins.treesitter')
 
 require('lsp.gopls')
 
-require('telescope').load_extension('fzf')
+require('plugins.telescope')
 
 require('simonfontana')
