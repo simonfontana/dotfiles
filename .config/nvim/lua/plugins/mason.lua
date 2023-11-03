@@ -56,14 +56,14 @@ require('mason-lspconfig').setup({
 })
 
 local cmp = require('cmp')
-
 cmp.setup({
-    sources = {
+    sources = cmp.config.sources({
         { name = 'nvim_lsp' },
-        { name = 'buffer' },
-        { name = 'path' },
+        { name = 'nvim_lua' },
+        { name = 'path', },
         { name = 'nvim_lsp_signature_help' },
-    },
+        { name = 'buffer',                 keyword_length = 3 },
+    }),
     mapping = cmp.mapping.preset.insert({
         -- Enter key confirms completion item
         ['<CR>'] = cmp.mapping.confirm({ select = false }),
