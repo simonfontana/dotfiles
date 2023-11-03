@@ -23,18 +23,19 @@ vim.opt.isfname:append("@-@")
 vim.opt.updatetime = 50
 
 vim.cmd.colorscheme "catppuccin-mocha"
-vim.opt.colorcolumn = "80"
+vim.opt.colorcolumn      = "80"
 
-vim.opt.number = true
-vim.opt.relativenumber = true
+vim.opt.number           = true
+vim.opt.relativenumber   = true
 
 -- Share clipboard with OS.
-vim.opt.clipboard = 'unnamedplus'
+vim.opt.clipboard        = 'unnamedplus'
 
-vim.o.completeopt = 'menuone,noselect'
+vim.o.completeopt        = 'menuone,noselect'
 
 -- Disabling netrw is recommended by nvim documentation.
 -- Fake that netrw is already setup:
 vim.g.loaded_netrw       = 1
 vim.g.loaded_netrwPlugin = 1
 
+vim.opt.title            = true
