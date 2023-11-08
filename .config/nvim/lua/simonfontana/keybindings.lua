@@ -121,6 +121,7 @@ local wk_mappings = {
             --     "Prev Diagnostic",
             -- },
             r = { "<cmd>lua vim.lsp.buf.rename()<cr>", "Rename" },
+            s = { "<cmd>lua vim.lsp.buf.signature_help()<cr>", "Signature documentation" },
         },
         q = { "<cmd>confirm q<CR>", "Quit" },
         w = { "<cmd>w!<CR>", "Save" },
