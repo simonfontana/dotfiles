@@ -27,6 +27,7 @@ vim.opt.colorcolumn      = "80"
 
 vim.opt.number           = true
 vim.opt.relativenumber   = true
+vim.opt.cursorline       = true
 
 -- Share clipboard with OS.
 vim.opt.clipboard        = 'unnamedplus'
@@ -38,4 +39,5 @@ vim.o.completeopt        = 'menuone,noselect'
 vim.g.loaded_netrw       = 1
 vim.g.loaded_netrwPlugin = 1
 
+-- Display NVIM title in the OS window.
 vim.opt.title            = true
