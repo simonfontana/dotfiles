@@ -40,7 +40,7 @@ local mappings = {
         ["<C-Left>"] = ":vertical resize -2<CR>",
         ["<C-Right>"] = ":vertical resize +2<CR>",
 
-        -- Move current line / block with Alt-j/k a la vscode.
+        -- Move current line / block with Alt-j/k a la vscode
         ["<A-j>"] = ":m .+1<CR>==",
         ["<A-k>"] = ":m .-2<CR>==",
     },
@@ -89,21 +89,52 @@ which_key.setup({
 
 local wk_mappings = {
     normal_mode = {
+        ["/"] = { "<Plug>(comment_toggle_linewise_current)", "Comment toggle current line" },
+        b = {
+            -- TODO: buffer handling
+            name = "Buffers",
+            f = { "<cmd>Telescope buffers previewer=false<cr>", "Find" },
+        },
+        -- TODO: "d" is reserved for debug
         e = { "<cmd>lua MiniFiles.open()<CR>", "Explorer" },
         f = {
             name = "Find",
+            C = { "<cmd>Telescope commands<cr>", "Commands" },
             d = { "<cmd>Telescope find_files<cr>", "Files in current working directory" },
             f = { "<cmd>Telescope git_files<cr>", "Files in project" },
-            r = { "<cmd>Telescope oldfiles<cr>", "Recent files" },
             g = { "<cmd>Telescope live_grep<cr>", "Grep for string" },
+            r = { "<cmd>Telescope oldfiles<cr>", "Recent files" },
             w = { "<cmd>Telescope grep_string<cr>", "Grep for word under cursor" },
         },
+        -- TODO: "g" is reserved for git
+        l = {
+            name = "LSP",
+            a = { "<cmd>lua vim.lsp.buf.code_action()<cr>", "Code Action" },
+            f = { "<cmd>lua vim.lsp.buf.format({async = true})<cr>", "Format" },
+            h = { "<cmd>lua vim.lsp.buf.hover()<cr>", "Hover" },
+            i = { "<cmd>LspInfo<cr>", "Info" },
+            -- TOREMOVE: learn "]d" instead
+            -- n = {
+            --     "<cmd>lua vim.diagnostic.goto_next()<cr>",
+            --     "Next Diagnostic",
+            -- },
+            -- TOREMOVE: learn "[d" instead
+            -- p = {
+            --     "<cmd>lua vim.diagnostic.goto_prev()<cr>",
+            --     "Prev Diagnostic",
+            -- },
+            r = { "<cmd>lua vim.lsp.buf.rename()<cr>", "Rename" },
+        },
+        q = { "<cmd>confirm q<CR>", "Quit" },
+        w = { "<cmd>w!<CR>", "Save" },
     },
+
     visual_mode = {
         ["/"] = { "<Plug>(comment_toggle_linewise_visual)", "Comment toggle linewise (visual)" },
         l = {
             name = "LSP",
             a = { "<cmd>lua vim.lsp.buf.code_action()<cr>", "Code Action" },
+            f = { "<cmd>lua vim.lsp.buf.format({async = true})<cr>", "Format" },
         },
     },
 }
