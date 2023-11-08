@@ -90,15 +90,12 @@ which_key.setup({
 local wk_mappings = {
     normal_mode = {
         ["/"] = { "<Plug>(comment_toggle_linewise_current)", "Comment toggle current line" },
-        b = {
-            -- TODO: buffer handling
-            name = "Buffers",
-            f = { "<cmd>Telescope buffers previewer=false<cr>", "Find" },
-        },
+        -- TODO: "b" is reserved for buffer
         -- TODO: "d" is reserved for debug
         e = { "<cmd>lua MiniFiles.open()<CR>", "Explorer" },
         f = {
             name = "Find",
+            b = { "<cmd>Telescope buffers previewer=false<cr>", "Find" },
             C = { "<cmd>Telescope commands<cr>", "Commands" },
             d = { "<cmd>Telescope find_files<cr>", "Files in current working directory" },
             f = { "<cmd>Telescope git_files<cr>", "Files in project" },
@@ -109,9 +106,9 @@ local wk_mappings = {
         -- TODO: "g" is reserved for git
         l = {
             name = "LSP",
-            a = { "<cmd>lua vim.lsp.buf.code_action()<cr>", "Code Action" },
+            a = { "<cmd>lua vim.lsp.buf.code_action()<cr>", "Code action" },
             f = { "<cmd>lua vim.lsp.buf.format({async = true})<cr>", "Format" },
-            h = { "<cmd>lua vim.lsp.buf.hover()<cr>", "Hover" },
+            h = { "<cmd>lua vim.lsp.buf.hover()<cr>", "Hover documentation" },
             i = { "<cmd>LspInfo<cr>", "Info" },
             -- TOREMOVE: learn "]d" instead
             -- n = {
@@ -133,7 +130,7 @@ local wk_mappings = {
         ["/"] = { "<Plug>(comment_toggle_linewise_visual)", "Comment toggle linewise (visual)" },
         l = {
             name = "LSP",
-            a = { "<cmd>lua vim.lsp.buf.code_action()<cr>", "Code Action" },
+            a = { "<cmd>lua vim.lsp.buf.code_action()<cr>", "Code action" },
             f = { "<cmd>lua vim.lsp.buf.format({async = true})<cr>", "Format" },
         },
     },
