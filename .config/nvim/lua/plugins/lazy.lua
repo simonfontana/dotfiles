@@ -29,7 +29,12 @@ require("lazy").setup({
     { "williamboman/mason-lspconfig.nvim" },
 
     -- lsp
-    { "neovim/nvim-lspconfig" },
+    {
+        "neovim/nvim-lspconfig",
+        dependencies = {
+            'folke/neodev.nvim',
+        }
+    },
 
     -- cmp
     { "hrsh7th/nvim-cmp" },
@@ -62,7 +67,7 @@ require("lazy").setup({
     },
 
     -- colorscheme
-    { "catppuccin/nvim",      name = "catppuccin", priority = 1000 },
+    { "catppuccin/nvim",       name = "catppuccin", priority = 1000 },
 
     -- statusline
     {
