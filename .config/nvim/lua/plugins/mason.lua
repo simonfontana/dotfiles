@@ -36,18 +36,7 @@ require('mason-lspconfig').setup({
     ensure_installed = {},
     handlers = {
         default_setup,
-        lua_ls = function()
-            require('lspconfig').lua_ls.setup({
-                -- suppress warning of "vim" global
-                settings = {
-                    Lua = {
-                        diagnostics = {
-                            globals = { "vim" }
-                        },
-                    },
-                },
-            })
-        end,
+        -- more handlers in lua/lsp directory
     },
 })
 

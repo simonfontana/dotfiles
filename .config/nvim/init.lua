@@ -6,7 +6,7 @@ require('plugins.lualine')
 
 require('plugins.mason')
 require('plugins.treesitter')
-require('lsp.gopls')
+require('lsp')
 
 require('plugins.telescope')
 
