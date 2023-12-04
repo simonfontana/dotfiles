@@ -5,6 +5,7 @@ require('plugins.lazy')
 require('plugins.lualine')
 
 require('plugins.mason')
+require('plugins.luasnip')
 require('plugins.treesitter')
 require('lsp')
 
