@@ -28,8 +28,7 @@ local parse = require("luasnip.util.parser").parse_snippet
 -- local k = require("luasnip.nodes.key_indexer").new_key
 
 
-
-ls.add_snippets("go", {
+return {
     s({ trig = "fn", name = "Function", dscr = "Insert new function" }, {
         t("func "), i(1), t("("), i(2), t(") "), i(3), t("{"),
         t({"", "  "}), i(4),
@@ -55,4 +54,4 @@ ls.add_snippets("go", {
         t({ "", "  return fmt.Errorf(\"failed to " }), i(1), t(": %w\", err)"),
         t({ "", "}" })
     }),
-})
+}
