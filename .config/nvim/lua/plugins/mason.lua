@@ -53,9 +53,14 @@ cmp.setup({
     mapping = cmp.mapping.preset.insert({
         -- Enter key confirms completion item
         ['<CR>'] = cmp.mapping.confirm({ select = false }),
+        ['<C-e>'] = cmp.mapping.confirm({ select = false }),
 
         -- Ctrl + space triggers completion menu
         ['<C-Space>'] = cmp.mapping.complete(),
+
+        -- Navigate items with j, k
+        ['<C-j>'] = cmp.mapping.select_next_item(),
+        ['<C-k>'] = cmp.mapping.select_prev_item(),
 
         -- Scroll up and down in the completion documentation
         ['<C-u>'] = cmp.mapping.scroll_docs(4),

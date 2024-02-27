@@ -27,7 +27,7 @@ local mappings = {
         ["<A-k>"] = "<Esc>:m .-2<CR>==gi",
 
         -- Luasnip navigation
-        ["<C-j>"] = function() require("luasnip").expand() end,
+        ["<C-e>"] = function() require("luasnip").expand() end,
         ["<C-l>"] = function() require("luasnip").jump(1) end,
         ["<C-h>"] = function() require("luasnip").jump(-1) end,
     },
