@@ -13,7 +13,7 @@
   old = red bold
   new = green bold
 [alias]
-  cdiff = "!f() { git diff $@ | cdiff -s -w 0; }; f"
+  cdiff = "!f() { git diff $@ | ydiff -s -w 0; }; f"
   d = cdiff
   tree = log --decorate --oneline --graph --all --topo-order -30
   treef = log --decorate --oneline --graph --all --topo-order

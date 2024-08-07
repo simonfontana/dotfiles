@@ -8,7 +8,7 @@ Some commands **will** overwrite files in your home directory, proceed with care
 
 ## Prerequisites
 
-System: Ubuntu 20.04.
+System: Ubuntu 24.04.
 
 ## Clone Repo
 
@@ -37,14 +37,17 @@ cd ~ && git submodule update --init --recursive
 Before moving on with the installation of the environment, let's install some great programs, some of which may be useful moving forward.
 
 ```
+sudo apt update && sudo apt dist-upgrade
+sudo add-apt-repository universe  # additional repository required to install FUSE
 sudo apt install \
   autorandr  `# automatically switch displays` \
   brightnessctl  `# set screen brightness` \
   curl  `# transfer url` \
   docker.io  `# run docker containers` \
+  libfuse2t64  `# run AppImages` \
   pavucontrol  `# volume control tool` \
   playerctl  `# required for i3-blocks mediaplayer and for mediakeys to work` \
-  python3-distutils  `# utility package, required by thefuck` \
+  python3-dev python3-pip python3-setuptools  `# good to have python tools, also required by thefuck` \
   python3-venv  `# virtual environments for python` \
   redshift-gtk  `# adjust color temperature of your screen` \
   thunar  `# file manager` \
@@ -55,7 +58,7 @@ sudo apt install \
 
 ```
 brew install lazygit  # nice git tool
-pip install --user --upgrade cdiff
+brew install ydiff  # nice diff tool
 go install github.com/rhysd/notes-cli/cmd/notes@latest
 go install github.com/charmbracelet/glow@latest
 ```
@@ -109,6 +112,12 @@ sudo apt install \
 
 Install Alacritty following the installation instructions: https://github.com/alacritty/alacritty/blob/master/INSTALL.md
 
+```
+curl https://sh.rustup.rs -sSf | sh  # install rust
+apt install cmake pkg-config libfreetype6-dev libfontconfig1-dev libxcb-xfixes0-dev libxkbcommon-dev python3  # install dependencies
+cargo install alacritty  # install alacritty
+```
+
 To use the opacity configuration, I use picom as compisotor.
 To build and install picom, go to: https://github.com/yshui/picom
 
@@ -121,7 +130,7 @@ Without it, icons will not show properly in i3-bar.
 
 ```
 mkdir -p ~/.fonts/Ubuntu-Nerd-Font/
-wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.2.2/Ubuntu.zip
+wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.2.1/Ubuntu.zip
 unzip -d ~/.fonts/Ubuntu-Nerd-Font/ Ubuntu.zip
 rm Ubuntu.zip
 ```
