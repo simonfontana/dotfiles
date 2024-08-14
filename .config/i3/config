@@ -221,12 +221,8 @@ bindsym XF86AudioPrev exec playerctl previous
 # Disable that mouse follows when focus is changed
 mouse_warping none
 
-# Disable automatic focus where mouse is
-#focus_follows_mouse no
-
 # Background
-# exec_always --no-startup-id feh --bg-scale /home/simon/Pictures/bg/wallpapersden.com_small-memory_1920x1080.jpg
-exec_always --no-startup-id feh --bg-scale ~/Pictures/bg/hoodie.jpg
+exec_always --no-startup-id feh --bg-scale ~/Pictures/bg.png
 
 # Lock computer
 bindsym $mod+shift+p exec i3lock -n --color='#111111'
@@ -263,4 +259,4 @@ bindsym XF86MonBrightnessUp exec brightnessctl -d intel_backlight s +10%
 bindsym XF86MonBrightnessDown exec brightnessctl -d intel_backlight s 10%-
 
 # Start picom as compositor
-exec --no-startup-id picom -b --backend glx --vsync --inactive-opacity 0.85 --opacity-rule "100:class_g = 'i3lock'"
+exec --no-startup-id picom -b --backend glx --vsync --inactive-opacity 0.80 --opacity-rule "100:class_g = 'i3lock'"
