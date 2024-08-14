@@ -24,31 +24,20 @@ alias nowtime='now'
 alias nowdate='date +"%Y-%m-%d"'
 alias history='history 0'
 
-# Docker
+# Docker, helm, kubernetes
 alias d=docker
-
-# Helm
 alias h=helm
-
-# Kubectl
-alias ku='kubectl config use-context'
 alias k=kubectl
 
-# LVIM is VIM
-alias vi='lvim'
-alias vim='lvim'
-alias e='lvim'
+# NVIM is VIM
+alias vi='nvim'
+alias vim='nvim'
+alias e='nvim'
 alias truevim='/usr/bin/vim'
 
 # Other
 eval $(thefuck --alias)
 eval $(thefuck --alias FUCK)
-
-# Bob
-alias bob='bob/bob'
-
-# GlobalProtect
-alias gpoc-ui='globalprotect launch-ui'
 
 # LazyGit on lazy binding
 alias gg='lazygit'

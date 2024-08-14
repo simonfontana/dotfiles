@@ -42,6 +42,8 @@ export GO111MODULE=on
 export GOPATH=~/go
 export GOMODCACHE=~/go/pkg/mod
 
+export GOTESTS_TEMPLATE=testify
+
 export KUBECONFIG=~/.kube/config
 
 export XDG_CONFIG_HOME=~/.config
@@ -49,8 +51,7 @@ export XDG_CONFIG_HOME=~/.config
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 
 # Load spaceship prompt
-autoload -U promptinit; promptinit
-prompt spaceship
+source ~/.zsh/spaceship-prompt/spaceship.zsh
 
 # Load zsh-syntax-highlighting; should be last.
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
