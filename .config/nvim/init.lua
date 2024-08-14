@@ -1,16 +1,36 @@
-local function map(mode, lhs, rhs, opts)
-  local options = { noremap = true, silent = true }
-  if opts then
-    options = vim.tbl_extend("force", options, opts)
-  end
-  vim.api.nvim_set_keymap(mode, lhs, rhs, options)
-end
+vim.g.mapleader = " " -- Make sure to set `mapleader` before lazy so your mappings are correct
 
-map("n", "<A-j>", ":m .+1<CR>==")
-map("n", "<A-k>", ":m .-2<CR>==")
+require('plugins.lazy')
 
-map("i", "<A-j>", "<Esc>:m .+1<CR>==gi")
-map("i", "<A-k>", "<Esc>:m .-2<CR>==gi")
+require('plugins.lualine')
 
-map("v", "<A-j>", ":m '>+1<CR>gv-gv")
-map("v", "<A-k>", ":m '<-2<CR>gv-gv")
+require('plugins.mason')
+require("luasnip.loaders.from_lua").load({ paths = "~/.config/nvim/snippets" })
+-- require('plugins.luasnip')
+require('plugins.treesitter')
+require('lsp')
+
+require('plugins.telescope')
+
+
+require('simonfontana')
+-- require('mini.files').setup()
+
+require('plugins.tabby')
+require("nvim-tree").setup()
+
+require("aerial").setup({
+    -- optionally use on_attach to set keymaps when aerial has attached to a buffer
+    on_attach = function(bufnr)
+        -- Jump forwards/backwards with '{' and '}'
+        vim.keymap.set("n", "{", "<cmd>AerialPrev<CR>", { buffer = bufnr })
+        vim.keymap.set("n", "}", "<cmd>AerialNext<CR>", { buffer = bufnr })
+    end,
+    -- layout = {
+    --     default_direction = "float"
+    -- }
+})
+
+require('gitsigns').setup()
+
+require('plugins.debug')

@@ -160,9 +160,9 @@ Open lxappearance and see if you find a theme you like.
 There are more available at [gnome-look.org](gnome-look.org).
 Install by extracting the archive into either ~/.themes/ or ~/.icons/ depending on if it's a GTK theme or an icon theme.
 
-### LunarVim
+### NeoVim
 
-Simply follow the [LunarVim documentation](https://www.lunarvim.org/docs/installation)
+I use nvim. Follow [installation guide](https://github.com/neovim/neovim/blob/master/INSTALL.md#linux).
 
 ## Enjoy!
 
