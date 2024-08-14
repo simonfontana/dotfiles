@@ -1,12 +1,12 @@
 [user]
-	name = Simon Fontana Oscarsson
-	email = sfo_93@hotmail.com
+  name = Simon Fontana Oscarsson
+  email = sfo_93@hotmail.com
 [core]
   filemode = true
   pager = less -FRXiMq
   autocrlf = false
   excludesfile = ~/.gitignore_global
-	editor = lvim
+  editor = nvim
 [color]
   ui = auto
 [color "diff"]
@@ -20,13 +20,14 @@
   st = status
   rank = shortlog -sn --no-merges
   tr = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --all --
-[difftool "lvimdiff"]
-  cmd = lvim $LOCAL -c 'vert diffsplit '$BASE'|vert diffsplit '$REMOTE'|vert diffsplit '$MERGED'|wincmd J'
+  mr = !sh -c 'git fetch $1 merge-requests/$2/head:mr-$1-$2 && git checkout mr-$1-$2' -
+[difftool "nvimdiff"]
+  cmd = nvim $LOCAL -c 'vert diffsplit '$BASE'|vert diffsplit '$REMOTE'|vert diffsplit '$MERGED'|wincmd J'
 [diff]
-  tool = lvimdiff
-[mergetool "lvimmerge"]
-  cmd = lvim -d $LOCAL $MERGED $REMOTE
+  tool = nvimdiff
+[mergetool "nvimmerge"]
+  cmd = nvim -d $LOCAL $MERGED $REMOTE
 [merge]
-  tool = lvimmerge
+  tool = nvimmerge
 [merge "ours"]
   driver = true
