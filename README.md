@@ -54,7 +54,8 @@ sudo apt install \
   redshift-gtk  `# adjust color temperature of your screen` \
   thunar  `# file manager` \
   thefuck  `# correct errors in previous command` \
-  vim  `# text editor`
+  vim  `# text editor` \
+  xclip `# copy-paste from nvim`
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"  # package manager
 ```
 
