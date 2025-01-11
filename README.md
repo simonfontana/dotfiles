@@ -40,8 +40,10 @@ Before moving on with the installation of the environment, let's install some gr
 sudo apt update && sudo apt dist-upgrade
 sudo add-apt-repository universe  # additional repository required to install FUSE
 sudo apt install \
+  autojump  `# faster way to navigate your filesystem` \
   autorandr  `# automatically switch displays` \
   brightnessctl  `# set screen brightness` \
+  colordiff  `# colorize diff output` \
   curl  `# transfer url` \
   docker.io  `# run docker containers` \
   libfuse2t64  `# run AppImages` \
@@ -69,8 +71,6 @@ I prefer zsh over bash.
 
 ```
 sudo apt install \
-  autojump  `# faster way to navigate your filesystem` \
-  colordiff  `# colorize diff output` \
   fonts-powerline  `# font required by spaceship` \
   zsh  `# Z shell`
 ```
@@ -114,7 +114,7 @@ Install Alacritty following the installation instructions: https://github.com/al
 
 ```
 curl https://sh.rustup.rs -sSf | sh  # install rust
-apt install cmake pkg-config libfreetype6-dev libfontconfig1-dev libxcb-xfixes0-dev libxkbcommon-dev python3  # install dependencies
+apt install cmake g++ pkg-config libfreetype6-dev libfontconfig1-dev libxcb-xfixes0-dev libxkbcommon-dev python3  # install dependencies
 cargo install alacritty  # install alacritty
 ```
 
@@ -127,12 +127,16 @@ To build and install picom, go to: https://github.com/yshui/picom
 
 Start by installing Ubuntu NF fonts which is what I have configured for i3.
 Without it, icons will not show properly in i3-bar.
-
+Also install DroidSansM NF fonts which are used in alacritty.
 ```
 mkdir -p ~/.fonts/Ubuntu-Nerd-Font/
 wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.2.1/Ubuntu.zip
 unzip -d ~/.fonts/Ubuntu-Nerd-Font/ Ubuntu.zip
 rm Ubuntu.zip
+mkdir -p ~/.fonts/DroidSansM-Nerd-Font/
+wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.3.0/DroidSansMono.zip
+unzip -d ~/.fonts/DroidSansM-Nerd-Font/ DroidSansMono.zip
+rm  DroidSansMono.zip
 ```
 
 #### Configuration

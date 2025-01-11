@@ -149,6 +149,7 @@
 .putty/
 .pylint.d/
 .python_history
+.rustup/
 .secure/
 .ssh/
 .steam/

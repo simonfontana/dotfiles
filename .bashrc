@@ -169,3 +169,4 @@ ex () {
 export PATH=$PATH:/usr/local/go/bin
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 export PATH="$PATH:/opt/nvim/"
+. "$HOME/.cargo/env"

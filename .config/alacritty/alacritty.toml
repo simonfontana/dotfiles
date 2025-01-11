@@ -1,0 +1,17 @@
+[general]
+import = ["~/.config/alacritty/alacritty-themes/themes/doom_one.toml"]
+
+[window]
+opacity = 1.0
+
+[scrolling]
+history = 100000
+
+multiplier = 6
+
+[font]
+normal.family = "DroidSansM Nerd Font"
+size = 6.5
+
+[cursor]
+vi_mode_style.shape = "Block"
