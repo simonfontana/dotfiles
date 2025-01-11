@@ -116,9 +116,6 @@ if ! shopt -oq posix; then
   fi
 fi
 
-source <(kubectl completion bash)
-source <(helm completion bash)
-
 # Do not be disturbed by Ctrl-S Ctrl-Q in terminals
 stty -ixon
 
@@ -130,24 +127,8 @@ docker-ip() {
     docker inspect --format '{{ .NetworkSettings.IPAddress }}' "$@"
 }
 
-eval $(thefuck --alias)
-eval $(thefuck --alias FUCK)
-
-function play_satisfactory()
-{
-    sudo ifconfig wlan0 down
-    sudo ifconfig docker0 down
-    sudo ifconfig br-a2fe5f48a75b down
-}
-
-function unplay_satisfactory()
-{
-    sudo ifconfig wlan0 up
-    sudo ifconfig docker0 up
-    sudo ifconfig br-a2fe5f48a75b up
-}
-
 # NVIM is VIM
+alias truevim='/usr/bin/vim'
 alias vi='nvim'
 alias vim='nvim'
 export VISUAL=nvim
@@ -181,6 +162,10 @@ ex () {
 
 # start zsh from bash since it's not possible in my work environment to
 # change the default shell
-if [[ $# -eq 0 ]] ; then
-    exec zsh
-fi
+#if [[ $# -eq 0 ]] ; then
+#    exec zsh
+#fi
+
+export PATH=$PATH:/usr/local/go/bin
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+export PATH="$PATH:/opt/nvim/"
