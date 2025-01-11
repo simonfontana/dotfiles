@@ -65,4 +65,7 @@ export PATH=~/.cargo/bin:$PATH
 
 # Notes
 export NOTES_CLI_HOME=~/notes
-export NOTES_CLI_EDITOR=~/.local/bin/lvim
+export NOTES_CLI_EDITOR=~/.local/bin/nvim
+
+# NVIM
+export PATH="$PATH:/opt/nvim/"
