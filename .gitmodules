@@ -9,7 +9,7 @@
 	url = https://github.com/spaceship-prompt/spaceship-prompt.git
 [submodule ".zsh/zsh-autosuggestions"]
 	path = .zsh/zsh-autosuggestions
-	url = git@github.com:zsh-users/zsh-autosuggestions.git
+	url = https://github.com/zsh-users/zsh-autosuggestions.git
 [submodule ".config/alacritty/alacritty-themes"]
 	path = .config/alacritty/alacritty-themes
 	url = https://github.com/alacritty/alacritty-theme.git
