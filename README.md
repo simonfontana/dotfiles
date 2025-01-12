@@ -49,11 +49,10 @@ sudo apt install \
   libfuse2t64  `# run AppImages` \
   pavucontrol  `# volume control tool` \
   playerctl  `# required for i3-blocks mediaplayer and for mediakeys to work` \
-  python3-dev python3-pip python3-setuptools  `# good to have python tools, also required by thefuck` \
+  python3-dev python3-pip python3-setuptools  `# good to have python tools` \
   python3-venv  `# virtual environments for python` \
   redshift-gtk  `# adjust color temperature of your screen` \
   thunar  `# file manager` \
-  thefuck  `# correct errors in previous command` \
   vim  `# text editor` \
   xclip `# copy-paste from nvim`
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"  # package manager
@@ -62,6 +61,7 @@ sudo apt install \
 ```
 brew install lazygit  # nice git tool
 brew install ydiff  # nice diff tool
+brew install thefuck  # correct errors in previous command
 go install github.com/rhysd/notes-cli/cmd/notes@latest
 go install github.com/charmbracelet/glow@latest
 ```

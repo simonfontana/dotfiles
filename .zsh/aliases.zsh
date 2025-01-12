@@ -35,9 +35,5 @@ alias vim='nvim'
 alias e='nvim'
 alias truevim='/usr/bin/vim'
 
-# Other
-eval $(thefuck --alias)
-eval $(thefuck --alias FUCK)
-
 # LazyGit on lazy binding
 alias gg='lazygit'

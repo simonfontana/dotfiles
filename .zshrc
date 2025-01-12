@@ -50,6 +50,8 @@ export XDG_CONFIG_HOME=~/.config
 
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 
+eval $(thefuck --alias)
+
 # Load spaceship prompt
 source ~/.zsh/spaceship-prompt/spaceship.zsh
 
