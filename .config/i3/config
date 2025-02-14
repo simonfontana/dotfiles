@@ -259,4 +259,4 @@ bindsym XF86MonBrightnessUp exec brightnessctl -d intel_backlight s +10%
 bindsym XF86MonBrightnessDown exec brightnessctl -d intel_backlight s 10%-
 
 # Start picom as compositor
-exec --no-startup-id picom -b --backend glx --vsync --inactive-opacity 0.80 --opacity-rule "100:class_g = 'i3lock'"
+exec_always --no-startup-id picom --daemon --backend glx
