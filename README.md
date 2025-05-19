@@ -106,7 +106,7 @@ sudo apt install \
   i3lock  `# lock screen` \
   i3status  `# status bar` \
   rofi  `# application launcher` \
-  scrot  `# screen capturing`
+  maim  `# screen capturing`
 ```
 
 ### Alacritty Terminal

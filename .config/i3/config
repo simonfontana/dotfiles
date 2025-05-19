@@ -229,10 +229,11 @@ bindsym $mod+shift+p exec i3lock -n --color='#111111'
 
 # Screenshots
 # Current window
-bindsym Print exec scrot -u ~/Pictures/screenshots/%Y-%m-%d-%H_%M_%S.png
-bindsym $mod+Print exec scrot -u ~/Pictures/screenshots/%Y-%m-%d-%H_%M_%S.png
+bindsym Print exec --no-startup-id maim -i $(xdotool getactivewindow) ~/Pictures/Screenshots/$(date +%Y-%m-%d-%H_%M_%S).png
+bindsym $mod+Print exec --no-startup-id maim -i $(xdotool getactivewindow) ~/Pictures/Screenshots/$(date +%Y-%m-%d-%H_%M_%S).png
+
 # Interactive select
-bindsym --release $mod+Shift+Print exec scrot -s ~/Pictures/screenshots/%Y-%m-%d-%H_%M_%S.png
+bindsym --release $mod+Shift+Print exec --no-startup-id maim -s ~/Pictures/Screenshots/$(date +%Y-%m-%d-%H_%M_%S).png
 
 # Intellij window pop-up
 new_float none
