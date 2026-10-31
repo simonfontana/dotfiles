@@ -6,6 +6,7 @@ set -euo pipefail
 packages=(
     git-delta  # 2. git pager
     zsh        # 4. login shell
+    fzf        # 5. Ctrl+R history search
 )
 
 if ! rpm -q "${packages[@]}" >/dev/null; then

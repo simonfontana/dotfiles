@@ -28,7 +28,13 @@ Delete this file when the list is done.
   - The bootstrap runs `chsh` when the login shell isn't zsh.
   - Bootstrap scripts have number prefixes, so the packages are installed before the scripts that need them.
   - With zsh as the login shell, SDDM no longer reads `~/.bash_profile`; the session environment is item 11.
-- [ ] 5. zsh behaviour: vi mode, cursor shapes, word movement, history, Ctrl keys
+- [x] 5. zsh behaviour: vi mode, cursor shapes, word movement, history, Ctrl keys
+  - Config lives in `~/.config/zsh/`; `~/.zshenv` only points zsh there. History is in `~/.local/state/zsh/`.
+  - Built-in vi mode, plus zsh's bundled vim text objects and surround.
+  - History is shared between terminals right away; HISTSIZE and SAVEHIST now match, so it really keeps 100,000 lines.
+  - New from current practice: fzf on Ctrl+R/Ctrl+T/Alt+C, ↑/↓ search by what's typed, `autocd`.
+  - Editing the line in `$EDITOR` moved to Ctrl+X Ctrl+E; it was shadowed by Ctrl+E before.
+  - Bracketed paste is back on, so a pasted line waits for Enter.
 - [ ] 6. Completion: compinit, menu select, docker-compose, go-task
 - [ ] 7. Plugins: autosuggestions and syntax highlighting (from Fedora packages)
 - [ ] 8. Prompt: spaceship with a slimmer config, Ctrl+G toggles git info
