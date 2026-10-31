@@ -17,7 +17,10 @@ Delete this file when the list is done.
   - delta is the pager; `git d` shows it side by side. ydiff is gone.
   - Editor comes from `$EDITOR` (item 11); diff and merge use git's built-in nvimdiff (item 44).
   - Trying the settings from GitButler's "How Core Git Developers Configure Git".
-- [ ] 3. Fonts: Ubuntu Nerd Font and DroidSansM Nerd Font were used before
+- [x] 3. Fonts
+  - Symbols Nerd Font, pinned and downloaded by the bootstrap, is a fontconfig fallback, so any font shows the icons.
+  - Fedora's packaged Cascadia NF was rejected: it lacks about 13% of the icons, among them nvim's yaml icon.
+  - The text font is chosen at item 13.
 
 ## Phase 1: shell and terminal
 

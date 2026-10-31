@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+# Nerd Font icons as a fontconfig fallback, so any font can show them
+
+set -euo pipefail
+
+version=v3.5.1
+font_dir=~/.local/share/fonts/NerdFontsSymbolsOnly
+
+if [[ $(cat "$font_dir/VERSION" 2>/dev/null) != "$version" ]]; then
+    rm -rf "$font_dir"
+    mkdir -p "$font_dir" ~/.config/fontconfig/conf.d
+    curl -fL "https://github.com/ryanoasis/nerd-fonts/releases/download/$version/NerdFontsSymbolsOnly.tar.xz" |
+        tar -xJ -C "$font_dir"
+    cp "$font_dir/10-nerd-font-symbols.conf" ~/.config/fontconfig/conf.d/
+    echo "$version" >"$font_dir/VERSION"
+    fc-cache -f
+fi
