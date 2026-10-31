@@ -1,0 +1,8 @@
+*.idea/
+*.iml
+*.pyc
+*.swp
+__pycache__/
+target/
+
+**/.claude/settings.local.json

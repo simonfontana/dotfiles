@@ -24,3 +24,15 @@ Clone into the home directory. yadm will not overwrite existing files, it report
 ```
 yadm clone -b main https://github.com/simonfontana/dotfiles.git
 ```
+
+yadm offers to run the bootstrap after cloning. It installs the packages the dotfiles need and can be run again at any time:
+
+```
+yadm bootstrap
+```
+
+Each script in `~/.config/yadm/bootstrap.d/` runs in turn. Scripts that only apply to one distro have a `##distro.<name>` suffix, and yadm links the matching one into place.
+
+## Machine specific settings
+
+`~/.config/git/config.local` is read if it exists but is not tracked. Use it for anything that differs per machine, such as a work email.

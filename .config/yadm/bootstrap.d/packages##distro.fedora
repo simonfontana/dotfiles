@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+# Fedora packages, each commented with its checklist item
+
+set -euo pipefail
+
+packages=(
+    git-delta  # 2. git pager
+)
+
+if ! rpm -q "${packages[@]}" >/dev/null; then
+    sudo dnf install -y "${packages[@]}"
+fi

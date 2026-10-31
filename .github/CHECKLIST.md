@@ -12,7 +12,11 @@ Delete this file when the list is done.
   - Bootstrap uses `bootstrap.d/` so other distros can be added later; Fedora only for now. Added with the first item that installs something.
   - yadm is a pinned release download into `~/.local/bin`.
   - `main` is pushed after every item; it becomes the default branch when it can set up a machine.
-- [ ] 2. Git config: aliases, ydiff `git d`, nvimdiff/merge tools, the old `merge=ours` per-branch hack, per-machine email
+- [x] 2. Git config
+  - Lives in `~/.config/git/`; per-machine settings go in the untracked `config.local`.
+  - delta is the pager; `git d` shows it side by side. ydiff is gone.
+  - Editor comes from `$EDITOR` (item 11); diff and merge use git's built-in nvimdiff (item 44).
+  - Trying the settings from GitButler's "How Core Git Developers Configure Git".
 - [ ] 3. Fonts: Ubuntu Nerd Font and DroidSansM Nerd Font were used before
 
 ## Phase 1: shell and terminal

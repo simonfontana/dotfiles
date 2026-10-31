@@ -1,0 +1,45 @@
+[user]
+  name = Simon Fontana Oscarsson
+  email = sfo_93@hotmail.com
+[core]
+  filemode = true
+  pager = delta
+  autocrlf = false
+[color]
+  ui = auto
+[interactive]
+  diffFilter = delta --color-only
+[delta]
+  navigate = true
+[alias]
+  d = "!f() { cd -- \"${GIT_PREFIX:-.}\" && git -c delta.side-by-side=true diff \"$@\"; }; f"
+  tree = log --decorate --oneline --graph --all --topo-order -30
+  treef = log --decorate --oneline --graph --all --topo-order
+  st = status
+  rank = shortlog -sn --no-merges
+  tr = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --all --
+[diff]
+  tool = nvimdiff
+  algorithm = histogram
+[merge]
+  tool = nvimdiff
+  conflictstyle = zdiff3
+[mergetool "nvimdiff"]
+  layout = LOCAL,MERGED,REMOTE
+[init]
+  defaultBranch = main
+[pull]
+  rebase = true
+[push]
+  autoSetupRemote = true
+[fetch]
+  prune = true
+[rerere]
+  enabled = true
+[branch]
+  sort = -committerdate
+[rebase]
+  autoSquash = true
+# Machine specific settings, not tracked
+[include]
+  path = ~/.config/git/config.local
