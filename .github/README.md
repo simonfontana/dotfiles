@@ -31,7 +31,7 @@ yadm offers to run the bootstrap after cloning. It installs the packages the dot
 yadm bootstrap
 ```
 
-Each script in `~/.config/yadm/bootstrap.d/` runs in turn. Scripts that only apply to one distro have a `##distro.<name>` suffix, and yadm links the matching one into place.
+Each script in `~/.config/yadm/bootstrap.d/` runs in name order, so a number prefix sets the order. Scripts that only apply to one distro have a `##distro.<name>` suffix, and yadm links the matching one into place.
 
 ## Machine specific settings
 

@@ -24,7 +24,10 @@ Delete this file when the list is done.
 
 ## Phase 1: shell and terminal
 
-- [ ] 4. Login shell: zsh via `chsh`
+- [x] 4. Login shell: zsh via `chsh`
+  - The bootstrap runs `chsh` when the login shell isn't zsh.
+  - Bootstrap scripts have number prefixes, so the packages are installed before the scripts that need them.
+  - With zsh as the login shell, SDDM no longer reads `~/.bash_profile`; the session environment is item 11.
 - [ ] 5. zsh behaviour: vi mode, cursor shapes, word movement, history, Ctrl keys
 - [ ] 6. Completion: compinit, menu select, docker-compose, go-task
 - [ ] 7. Plugins: autosuggestions and syntax highlighting (from Fedora packages)
