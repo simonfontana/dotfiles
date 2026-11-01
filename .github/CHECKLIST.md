@@ -45,7 +45,11 @@ Delete this file when the list is done.
   - → and Ctrl+E accept a suggestion and Ctrl+→ takes a word; the old Ctrl+L accept and Ctrl+J accept-and-run stay for now.
   - Suggestions come from history only; the completion source would run slow completions such as kubectl's on every key.
   - fast-syntax-highlighting (not packaged) and zsh-autocomplete (replaces item 6's menu) were rejected.
-- [ ] 8. Prompt: spaceship with a slimmer config, Ctrl+G toggles git info
+- [x] 8. Prompt: spaceship with a slimmer config, Ctrl+G toggles git info
+  - Spaceship stays: its git section is drawn in the background, so huge monorepos don't hold up the prompt. Starship waits for git, and Pure lacks exit code and jobs.
+  - A pinned release download by the bootstrap; not packaged in Fedora.
+  - The order is listed in `.zshrc` instead of 50 removals: dir, git, venv, exec time, jobs, exit code, char. Battery is dropped on the desktop.
+  - Git is always shown; Ctrl+G is gone. It had done nothing since 2022, when the upgrade removed the git section.
 - [ ] 9. Moving around: autojump, lf on Ctrl+P
 - [ ] 10. Aliases and functions: `..`, `ex`, `wttr`, docker/k8s, the Satisfactory network hack
 - [x] 11. Environment and PATH: Go, cargo, Homebrew, Android SDK, nvim, LM Studio, the secrets file, EDITOR

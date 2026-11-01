@@ -103,6 +103,17 @@ bindkey -M menuselect '^[[Z' reverse-menu-complete      # Shift+Tab
 # fzf: Ctrl+R searches history, Ctrl+T inserts a path, Alt+C changes folder
 source <(fzf --zsh)
 
+# Prompt: spaceship draws git and the other slow sections in the background
+SPACESHIP_PROMPT_ORDER=(dir git venv exec_time jobs exit_code char)
+SPACESHIP_PROMPT_ADD_NEWLINE=false
+SPACESHIP_PROMPT_SEPARATE_LINE=false
+SPACESHIP_DIR_COLOR=blue
+SPACESHIP_EXIT_CODE_SHOW=true
+# Spaceship sets these without declaring them, and syntax highlighting
+# warns about that on every Ctrl+C
+typeset -g _spaceship_prompt_opened _spaceship_rprompt_opened symbol
+source ~/.local/share/spaceship/spaceship.zsh
+
 # Suggestions from history: → or Ctrl+E accepts, Ctrl+→ takes a word
 source /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 bindkey -M viins '^L' autosuggest-accept

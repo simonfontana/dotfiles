@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+# Spaceship prompt; not packaged in Fedora
+
+set -euo pipefail
+
+version=v4.22.6
+dir=~/.local/share/spaceship
+
+if [[ $(cat "$dir/VERSION" 2>/dev/null) != "$version" ]]; then
+    rm -rf "$dir"
+    mkdir -p "$dir"
+    curl -fL "https://github.com/spaceship-prompt/spaceship-prompt/archive/refs/tags/$version.tar.gz" |
+        tar -xz -C "$dir" --strip-components=1
+    echo "$version" >"$dir/VERSION"
+fi
