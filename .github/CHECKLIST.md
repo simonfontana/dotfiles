@@ -50,7 +50,9 @@ Delete this file when the list is done.
   - A pinned release download by the bootstrap; not packaged in Fedora.
   - The order is listed in `.zshrc` instead of 50 removals: dir, git, venv, exec time, jobs, exit code, char. Battery is dropped on the desktop.
   - Git is always shown; Ctrl+G is gone. It had done nothing since 2022, when the upgrade removed the git section.
-- [ ] 9. Moving around: autojump, lf on Ctrl+P
+- [x] 9. Moving around: autojump, lf on Ctrl+P
+  - zoxide replaces autojump, which has had no release since 2019. It keeps its default commands, `z` and `zi`, rather than `j`.
+  - No terminal file manager for now; fzf's Alt+C and `zi` cover hopping between folders. Ctrl+P is free.
 - [ ] 10. Aliases and functions: `..`, `ex`, `wttr`, docker/k8s, the Satisfactory network hack
 - [x] 11. Environment and PATH: Go, cargo, Homebrew, Android SDK, nvim, LM Studio, the secrets file, EDITOR
   - Set in `~/.config/zsh/.zshenv`, which every zsh reads, including the login shell SDDM starts the session with, so GUI apps get it too.

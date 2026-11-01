@@ -9,6 +9,7 @@ packages=(
     fzf                      # 5. Ctrl+R history search
     zsh-autosuggestions      # 7. grey suggestions from history
     zsh-syntax-highlighting  # 7. colours on the command line
+    zoxide                   # 9. z jumps to visited folders
     neovim                   # 11. EDITOR
     cargo                    # 11. cargo install for CLI tools
 )

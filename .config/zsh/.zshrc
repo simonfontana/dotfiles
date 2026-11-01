@@ -103,6 +103,9 @@ bindkey -M menuselect '^[[Z' reverse-menu-complete      # Shift+Tab
 # fzf: Ctrl+R searches history, Ctrl+T inserts a path, Alt+C changes folder
 source <(fzf --zsh)
 
+# z jumps to a visited folder by part of its name, zi picks one with fzf
+eval "$(zoxide init zsh)"
+
 # Prompt: spaceship draws git and the other slow sections in the background
 SPACESHIP_PROMPT_ORDER=(dir git venv exec_time jobs exit_code char)
 SPACESHIP_PROMPT_ADD_NEWLINE=false
