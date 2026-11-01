@@ -53,7 +53,11 @@ Delete this file when the list is done.
 - [x] 9. Moving around: autojump, lf on Ctrl+P
   - zoxide replaces autojump, which has had no release since 2019. It keeps its default commands, `z` and `zi`, rather than `j`.
   - No terminal file manager for now; fzf's Alt+C and `zi` cover hopping between folders. Ctrl+P is free.
-- [ ] 10. Aliases and functions: `..`, `ex`, `wttr`, docker/k8s, the Satisfactory network hack
+- [x] 10. Aliases and functions: `..`, `ex`, `wttr`, docker/k8s, the Satisfactory network hack
+  - Kept: the `ls` family, `vi`/`vim` as nvim, `history` showing everything, `wttr`.
+  - `x` runs `bsdtar -xf`, which replaces the `ex` function and also shadowed vim's `ex`.
+  - Dropped: the `..` family (`autocd` does it), grep colours (Fedora sets them), history and time shortcuts, `bc`, `less -R`, `truevim`, `e`, `wttr_repeat`, the Satisfactory network hack.
+  - docker aliases move to item 46; `k`, `h`, `gg` and colordiff to item 12.
 - [x] 11. Environment and PATH: Go, cargo, Homebrew, Android SDK, nvim, LM Studio, the secrets file, EDITOR
   - Set in `~/.config/zsh/.zshenv`, which every zsh reads, including the login shell SDDM starts the session with, so GUI apps get it too.
   - PATH: `~/.local/bin` first; Go, cargo and LM Studio last.
