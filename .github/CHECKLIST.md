@@ -35,7 +35,11 @@ Delete this file when the list is done.
   - New from current practice: fzf on Ctrl+R/Ctrl+T/Alt+C, ↑/↓ search by what's typed, `autocd`.
   - Editing the line in `$EDITOR` moved to Ctrl+X Ctrl+E; it was shadowed by Ctrl+E before.
   - Bracketed paste is back on, so a pasted line waits for Enter.
-- [ ] 6. Completion: compinit, menu select, docker-compose, go-task
+- [x] 6. Completion: compinit, menu select, docker-compose, go-task
+  - Built-in completion with the old menu keys: hjkl and Shift+Tab. New: lowercase also matches uppercase, ls colours, group headings.
+  - The cache lives in `~/.cache/zsh/`.
+  - The old docker-compose completion was never on `fpath`, and docker-compose v1 is gone; dropped. Docker versus podman is item 46.
+  - go-task's own RPM ships its completion. fzf-tab was rejected: not packaged, and fzf's `**<Tab>` covers most of it.
 - [ ] 7. Plugins: autosuggestions and syntax highlighting (from Fedora packages)
 - [ ] 8. Prompt: spaceship with a slimmer config, Ctrl+G toggles git info
 - [ ] 9. Moving around: autojump, lf on Ctrl+P

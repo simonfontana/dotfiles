@@ -83,5 +83,22 @@ zle -N edit-command-line
 bindkey -M viins '^X^E' edit-command-line
 bindkey -M vicmd '^X^E' edit-command-line
 
+# Completion: Tab opens a menu
+zmodload zsh/complist
+autoload -Uz compinit
+[[ -d ~/.cache/zsh ]] || mkdir -p ~/.cache/zsh
+compinit -d ~/.cache/zsh/zcompdump
+zstyle ':completion:*' menu select
+zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'   # lowercase also matches uppercase
+zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}    # colours as in ls
+zstyle ':completion:*' group-name ''                     # group by kind, with headings
+zstyle ':completion:*:descriptions' format '%F{yellow}%d%f'
+zstyle ':completion:*' special-dirs true                 # complete the / after ..
+bindkey -M menuselect h vi-backward-char
+bindkey -M menuselect j vi-down-line-or-history
+bindkey -M menuselect k vi-up-line-or-history
+bindkey -M menuselect l vi-forward-char
+bindkey -M menuselect '^[[Z' reverse-menu-complete      # Shift+Tab
+
 # fzf: Ctrl+R searches history, Ctrl+T inserts a path, Alt+C changes folder
 source <(fzf --zsh)
