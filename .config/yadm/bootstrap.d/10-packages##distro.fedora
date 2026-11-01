@@ -4,9 +4,11 @@
 set -euo pipefail
 
 packages=(
-    git-delta  # 2. git pager
-    zsh        # 4. login shell
-    fzf        # 5. Ctrl+R history search
+    git-delta                # 2. git pager
+    zsh                      # 4. login shell
+    fzf                      # 5. Ctrl+R history search
+    zsh-autosuggestions      # 7. grey suggestions from history
+    zsh-syntax-highlighting  # 7. colours on the command line
 )
 
 if ! rpm -q "${packages[@]}" >/dev/null; then

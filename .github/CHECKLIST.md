@@ -40,7 +40,11 @@ Delete this file when the list is done.
   - The cache lives in `~/.cache/zsh/`.
   - The old docker-compose completion was never on `fpath`, and docker-compose v1 is gone; dropped. Docker versus podman is item 46.
   - go-task's own RPM ships its completion. fzf-tab was rejected: not packaged, and fzf's `**<Tab>` covers most of it.
-- [ ] 7. Plugins: autosuggestions and syntax highlighting (from Fedora packages)
+- [x] 7. Plugins: autosuggestions and syntax highlighting (from Fedora packages)
+  - Fedora's packages replace the submodules; both run with their default settings.
+  - → and Ctrl+E accept a suggestion and Ctrl+→ takes a word; the old Ctrl+L accept and Ctrl+J accept-and-run stay for now.
+  - Suggestions come from history only; the completion source would run slow completions such as kubectl's on every key.
+  - fast-syntax-highlighting (not packaged) and zsh-autocomplete (replaces item 6's menu) were rejected.
 - [ ] 8. Prompt: spaceship with a slimmer config, Ctrl+G toggles git info
 - [ ] 9. Moving around: autojump, lf on Ctrl+P
 - [ ] 10. Aliases and functions: `..`, `ex`, `wttr`, docker/k8s, the Satisfactory network hack

@@ -102,3 +102,11 @@ bindkey -M menuselect '^[[Z' reverse-menu-complete      # Shift+Tab
 
 # fzf: Ctrl+R searches history, Ctrl+T inserts a path, Alt+C changes folder
 source <(fzf --zsh)
+
+# Suggestions from history: → or Ctrl+E accepts, Ctrl+→ takes a word
+source /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+bindkey -M viins '^L' autosuggest-accept
+bindkey -M viins '^J' autosuggest-execute
+
+# Syntax highlighting; must be last, after every widget and hook
+source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
