@@ -109,9 +109,6 @@ SPACESHIP_PROMPT_ADD_NEWLINE=false
 SPACESHIP_PROMPT_SEPARATE_LINE=false
 SPACESHIP_DIR_COLOR=blue
 SPACESHIP_EXIT_CODE_SHOW=true
-# Spaceship sets these without declaring them, and syntax highlighting
-# warns about that on every Ctrl+C
-typeset -g _spaceship_prompt_opened _spaceship_rprompt_opened symbol
 source ~/.local/share/spaceship/spaceship.zsh
 
 # Suggestions from history: → or Ctrl+E accepts, Ctrl+→ takes a word
