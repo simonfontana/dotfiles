@@ -48,7 +48,13 @@ Delete this file when the list is done.
 - [ ] 8. Prompt: spaceship with a slimmer config, Ctrl+G toggles git info
 - [ ] 9. Moving around: autojump, lf on Ctrl+P
 - [ ] 10. Aliases and functions: `..`, `ex`, `wttr`, docker/k8s, the Satisfactory network hack
-- [ ] 11. Environment and PATH: Go, cargo, Homebrew, Android SDK, nvim, LM Studio, the secrets file, EDITOR
+- [x] 11. Environment and PATH: Go, cargo, Homebrew, Android SDK, nvim, LM Studio, the secrets file, EDITOR
+  - Set in `~/.config/zsh/.zshenv`, which every zsh reads, including the login shell SDDM starts the session with, so GUI apps get it too.
+  - PATH: `~/.local/bin` first; Go, cargo and LM Studio last.
+  - `EDITOR` is nvim from Fedora's package; its config is item 44. cargo is Fedora's package, only for `cargo install`.
+  - Homebrew is dropped: Fedora packages nearly every tool it was used for; the rest are item 12.
+  - Dropped as defaults: `GO111MODULE`, `GOPATH`, `GOMODCACHE`, `KUBECONFIG`, `XDG_CONFIG_HOME`. Dropped as not installed: Android SDK, `/opt/nvim`, the secrets file.
+  - `NOTES_CLI_*` moves to item 12, `GOTESTS_TEMPLATE` to item 44, how Go is installed to item 46.
 - [ ] 12. CLI tools: thefuck, lazygit, ydiff, colordiff, glow, notes-cli, k9s/kubectl/helm
 - [ ] 13. Terminal: alacritty with doom_one, or foot
 - [ ] 51. bash: set up `.bashrc` or keep Fedora's default
