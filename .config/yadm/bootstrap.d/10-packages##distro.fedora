@@ -11,6 +11,12 @@ packages=(
     zsh-syntax-highlighting  # 7. colours on the command line
     zoxide                   # 9. z jumps to visited folders
     bsdtar                   # 10. x extracts any archive
+    ripgrep                  # 12. fast grep that skips .gitignore
+    fd-find                  # 12. fast find; fzf lists files with it
+    bat                      # 12. cat with syntax highlighting
+    jq                       # 12. JSON
+    tig                      # 12. git terminal UI
+    tealdeer                 # 12. tldr, short examples for a command
     neovim                   # 11. EDITOR
     cargo                    # 11. cargo install for CLI tools
 )

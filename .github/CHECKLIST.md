@@ -65,7 +65,11 @@ Delete this file when the list is done.
   - Homebrew is dropped: Fedora packages nearly every tool it was used for; the rest are item 12.
   - Dropped as defaults: `GO111MODULE`, `GOPATH`, `GOMODCACHE`, `KUBECONFIG`, `XDG_CONFIG_HOME`. Dropped as not installed: Android SDK, `/opt/nvim`, the secrets file.
   - `NOTES_CLI_*` moves to item 12, `GOTESTS_TEMPLATE` to item 44, how Go is installed to item 46.
-- [ ] 12. CLI tools: thefuck, lazygit, ydiff, colordiff, glow, notes-cli, k9s/kubectl/helm
+- [x] 12. CLI tools: thefuck, lazygit, ydiff, colordiff, glow, notes-cli, k9s/kubectl/helm
+  - tig replaces lazygit; its simpler interface is preferred.
+  - New: ripgrep, fd, bat, jq and tealdeer (`tldr`). fzf's Ctrl+T and Alt+C list paths with fd, so `.gitignore`d files drop out.
+  - `diff` colours its own output, so colordiff is gone.
+  - Dropped: thefuck (unmaintained, broke on Python 3.12), glow, notes-cli, k9s, kubectl, helm and their aliases. eza was considered and skipped.
 - [ ] 13. Terminal: alacritty with doom_one, or foot
 - [ ] 51. bash: set up `.bashrc` or keep Fedora's default
 
@@ -124,4 +128,13 @@ Delete this file when the list is done.
 ## Phase 7: later
 
 - [ ] 49. Other machines: yadm alternates, the old laptop and workstation branches
-- [ ] 50. Cleanup: delete the old clone, the old GitHub branches and `draft-2026-10`
+- [ ] 50. Cleanup: delete the old clone, the old GitHub branches and `draft-2026-10`; move "To try" somewhere that outlives this file
+
+## To try
+
+Programs to test some day; none is installed yet.
+
+- btop: a nicer top
+- dust: a nicer du, as a tree
+- duf: a nicer df
+- atuin: shell history in a database, with optional sync between machines

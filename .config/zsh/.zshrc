@@ -101,6 +101,9 @@ bindkey -M menuselect l vi-forward-char
 bindkey -M menuselect '^[[Z' reverse-menu-complete      # Shift+Tab
 
 # fzf: Ctrl+R searches history, Ctrl+T inserts a path, Alt+C changes folder
+# Paths come from fd, which skips what .gitignore ignores
+FZF_CTRL_T_COMMAND='fd --hidden --follow --exclude .git'
+FZF_ALT_C_COMMAND='fd --type d --hidden --follow --exclude .git'
 source <(fzf --zsh)
 
 # Aliases; Fedora already colours ls and grep
@@ -108,6 +111,7 @@ alias ls='ls --color=auto -F' # mark folders with / and programs with *
 alias l=ls la='ls -a' ll='ls -lh' lla='ls -lha'
 alias vi=nvim vim=nvim
 alias history='history 0'     # all of it, not only the last 16
+alias diff='diff --color=auto'
 alias x='bsdtar -xf'          # tar.*, zip, 7z and more
 wttr() { curl 'wttr.in/gothenburg?M&format=v2' }
 

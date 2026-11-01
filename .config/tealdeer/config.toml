@@ -1,0 +1,3 @@
+# Download the pages on first use and refresh them when they are old
+[updates]
+auto_update = true
