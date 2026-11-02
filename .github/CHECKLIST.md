@@ -75,7 +75,10 @@ Delete this file when the list is done.
   - Colours: foot's bundled onedark, the closest to doom_one, with a lighter bright black so autosuggestions are readable.
   - Font: Commit Mono 9.5, a pinned download by the bootstrap; fontconfig makes it the default monospace for every program. Picked after comparing Droid Sans Mono, JetBrains Mono, Cascadia Mono, Adwaita Mono, Geist Mono, IBM Plex Mono, Intel One Mono and Hack.
   - zsh reports the folder and prompt positions, so Ctrl+Shift+N opens a terminal in the same folder and Ctrl+Shift+Z/X jump between prompts.
-- [ ] 51. bash: set up `.bashrc` or keep Fedora's default
+- [x] 51. bash: set up `.bashrc` or keep Fedora's default
+  - Fedora's default `.bashrc` and `.bash_profile`, untracked. bash is never the starting shell here, so it inherits PATH and `EDITOR` from zsh.
+  - Lines that installers had appended (LM Studio, Go, go-task completion) were removed; they doubled PATH entries.
+  - A shared POSIX `~/.profile` waits until a machine starts in bash (item 49).
 
 ## Phase 2: Sway core
 
