@@ -60,6 +60,19 @@ autoload -Uz select-word-style
 select-word-style bash
 
 # Keys
+# Fedora binds no Delete, Home, End, Insert or Page keys, unlike Ubuntu.
+# Unbound, the Escape that starts their sequence switches to normal mode
+# and the rest runs as normal mode commands: Delete sends ^[[3~, and 3~
+# swaps the case of three characters.
+for keymap in viins vicmd; do
+    bindkey -M $keymap '^[[3~' delete-char                     # Delete
+    bindkey -M $keymap '^[[H' beginning-of-line                # Home
+    bindkey -M $keymap '^[[F' end-of-line                      # End
+    bindkey -M $keymap '^[[5~' beginning-of-buffer-or-history  # Page Up
+    bindkey -M $keymap '^[[6~' end-of-buffer-or-history        # Page Down
+done
+bindkey -M viins '^[[2~' overwrite-mode                        # Insert
+bindkey -M vicmd '^[[2~' vi-insert
 for keymap in viins vicmd; do
     bindkey -M $keymap '^A' beginning-of-line
     bindkey -M $keymap '^E' end-of-line
