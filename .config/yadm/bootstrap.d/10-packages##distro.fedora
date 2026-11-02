@@ -17,6 +17,7 @@ packages=(
     jq                       # 12. JSON
     tig                      # 12. git terminal UI
     tealdeer                 # 12. tldr, short examples for a command
+    foot                     # 13. terminal
     neovim                   # 11. EDITOR
     cargo                    # 11. cargo install for CLI tools
 )

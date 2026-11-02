@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
-# Nerd Font icons as a fontconfig fallback, so any font can show them
+# Commit Mono for text, and Nerd Font icons as a fontconfig fallback so any
+# font can show them. Fedora packages neither.
 
 set -euo pipefail
 
@@ -12,6 +13,21 @@ if [[ $(cat "$font_dir/VERSION" 2>/dev/null) != "$version" ]]; then
     curl -fL "https://github.com/ryanoasis/nerd-fonts/releases/download/$version/NerdFontsSymbolsOnly.tar.xz" |
         tar -xJ -C "$font_dir"
     cp "$font_dir/10-nerd-font-symbols.conf" ~/.config/fontconfig/conf.d/
+    echo "$version" >"$font_dir/VERSION"
+    fc-cache -f
+fi
+
+version=v1.143
+font_dir=~/.local/share/fonts/CommitMono
+
+if [[ $(cat "$font_dir/VERSION" 2>/dev/null) != "$version" ]]; then
+    rm -rf "$font_dir"
+    mkdir -p "$font_dir"
+    zip=$(mktemp)
+    curl -fL -o "$zip" "https://github.com/eigilnikolajsen/commit-mono/releases/download/$version/CommitMono-${version#v}.zip"
+    # The hinted TTFs render better at small sizes than the OTFs
+    bsdtar -xf "$zip" -C "$font_dir" --strip-components 2 '*/ttfautohint/*'
+    rm "$zip"
     echo "$version" >"$font_dir/VERSION"
     fc-cache -f
 fi

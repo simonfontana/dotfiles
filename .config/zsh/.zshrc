@@ -126,6 +126,22 @@ SPACESHIP_DIR_COLOR=blue
 SPACESHIP_EXIT_CODE_SHOW=true
 source ~/.local/share/spaceship/spaceship.zsh
 
+# Tell the terminal the folder and where each prompt and output start, so
+# foot's Ctrl+Shift+N opens a terminal here and Ctrl+Shift+Z/X jump between
+# prompts. The sequences come from foot's wiki; other terminals ignore them.
+osc7-pwd() {
+    (( ZSH_SUBSHELL )) && return # a cd inside ( ) doesn't move this shell
+    emulate -L zsh
+    setopt extendedglob
+    local LC_ALL=C
+    printf '\e]7;file://%s%s\e\\' $HOST ${PWD//(#m)([^@-Za-z&-;_~])/%${(l:2::0:)$(([##16]#MATCH))}}
+}
+osc133-prompt() { print -n '\e]133;D\e\\\e]133;A\e\\' } # output ended, prompt starts
+osc133-output() { print -n '\e]133;C\e\\' }             # output starts
+add-zsh-hook chpwd osc7-pwd
+add-zsh-hook precmd osc133-prompt
+add-zsh-hook preexec osc133-output
+
 # Suggestions from history: → or Ctrl+E accepts, Ctrl+→ takes a word
 source /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 bindkey -M viins '^L' autosuggest-accept

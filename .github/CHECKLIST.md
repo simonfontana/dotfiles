@@ -70,7 +70,11 @@ Delete this file when the list is done.
   - New: ripgrep, fd, bat, jq and tealdeer (`tldr`). fzf's Ctrl+T and Alt+C list paths with fd, so `.gitignore`d files drop out.
   - `diff` colours its own output, so colordiff is gone.
   - Dropped: thefuck (unmaintained, broke on Python 3.12), glow, notes-cli, k9s, kubectl, helm and their aliases. eza was considered and skipped.
-- [ ] 13. Terminal: alacritty with doom_one, or foot
+- [x] 13. Terminal: alacritty with doom_one, or foot
+  - foot replaces alacritty: Sway's default terminal, Wayland-native, minimal. Its server mode is set up with Sway (item 14 onwards).
+  - Colours: foot's bundled onedark, the closest to doom_one, with a lighter bright black so autosuggestions are readable.
+  - Font: Commit Mono 9.5, a pinned download by the bootstrap; fontconfig makes it the default monospace for every program. Picked after comparing Droid Sans Mono, JetBrains Mono, Cascadia Mono, Adwaita Mono, Geist Mono, IBM Plex Mono, Intel One Mono and Hack.
+  - zsh reports the folder and prompt positions, so Ctrl+Shift+N opens a terminal in the same folder and Ctrl+Shift+Z/X jump between prompts.
 - [ ] 51. bash: set up `.bashrc` or keep Fedora's default
 
 ## Phase 2: Sway core
