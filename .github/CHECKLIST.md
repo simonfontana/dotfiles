@@ -67,7 +67,7 @@ Delete this file when the list is done.
   - `NOTES_CLI_*` moves to item 12, `GOTESTS_TEMPLATE` to item 44, how Go is installed to item 46.
 - [x] 12. CLI tools: thefuck, lazygit, ydiff, colordiff, glow, notes-cli, k9s/kubectl/helm
   - tig replaces lazygit; its simpler interface is preferred.
-  - New: ripgrep, fd, bat, jq and tealdeer (`tldr`). fzf's Ctrl+T and Alt+C list paths with fd, so `.gitignore`d files drop out.
+  - New: ripgrep, fd, bat, jq and tldr. Fedora 45 retired tealdeer, so tldr is Fedora's `tldr` package, the official client. fzf's Ctrl+T and Alt+C list paths with fd, so `.gitignore`d files drop out.
   - `diff` colours its own output, so colordiff is gone.
   - Dropped: thefuck (unmaintained, broke on Python 3.12), glow, notes-cli, k9s, kubectl, helm and their aliases. eza was considered and skipped.
 - [x] 13. Terminal: alacritty with doom_one, or foot

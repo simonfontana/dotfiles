@@ -16,7 +16,7 @@ packages=(
     bat                      # 12. cat with syntax highlighting
     jq                       # 12. JSON
     tig                      # 12. git terminal UI
-    tealdeer                 # 12. tldr, short examples for a command
+    tldr                     # 12. short examples for a command
     foot                     # 13. terminal
     neovim                   # 11. EDITOR
     cargo                    # 11. cargo install for CLI tools
