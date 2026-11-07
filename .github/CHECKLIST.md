@@ -82,7 +82,11 @@ Delete this file when the list is done.
 
 ## Phase 2: Sway core
 
-- [ ] 14. Base config: upstream or Fedora stock config, included or copied; start from vanilla
+- [x] 14. Base config: upstream or Fedora stock config, included or copied; start from vanilla
+  - `~/.config/sway/config` starts as a copy of Fedora's `/etc/sway/config`, which is Sway's upstream default; later items change it one at a time. Including the stock file was rejected: its bar cannot be removed and every change would be an override.
+  - It keeps the stock `include /etc/sway/config.d/*`, which loads Fedora's sway-systemd session setup.
+  - foot runs as a server: foot's own socket unit is wanted by `sway-session.target`, so it starts in Sway but not in Plasma, and `$term` is `footclient`.
+  - The Fedora Sway Spin's `sway-config-fedora` was skipped: a finished desktop rather than vanilla.
 - [ ] 15. Keyboard: repeat rate, altgr-intl
 - [ ] 16. Mouse and focus: `mouse_warping`, floating modifier
 - [ ] 17. Monitor: 240 Hz, VRR, `DP-2` disabled
