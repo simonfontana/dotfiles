@@ -20,6 +20,9 @@ packages=(
     foot                     # 13. terminal
     neovim                   # 11. EDITOR
     cargo                    # 11. cargo install for CLI tools
+    greetd                   # 54. login manager
+    gtkgreet                 # 54. login screen
+    wayland-logout           # 54. ends the login screen's Sway
 )
 
 if ! rpm -q "${packages[@]}" >/dev/null; then

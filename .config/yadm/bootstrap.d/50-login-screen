@@ -1,0 +1,27 @@
+#!/usr/bin/env bash
+# Login screen: greetd with gtkgreet instead of SDDM.
+#
+# SDDM starts the session before its own login screen has let go of the GPU,
+# so Sway can't get the 9070 XT and runs headless on the iGPU (black screen).
+# greetd starts the session only after the login screen has exited.
+#
+# Sessions are started through a zsh login shell (see environments), as SDDM
+# did, so they get PATH and EDITOR from ~/.config/zsh/.zshenv.
+
+set -euo pipefail
+
+src=~/.config/yadm/system
+
+for file in greetd/config.toml greetd/sway-config greetd/environments pam.d/greetd; do
+    if ! cmp -s "$src/etc/$file" "/etc/$file"; then
+        sudo install -m 644 "$src/etc/$file" "/etc/$file"
+    fi
+done
+
+# Both claim display-manager.service, so SDDM has to go first
+if systemctl -q is-enabled sddm.service 2>/dev/null; then
+    sudo systemctl disable sddm.service
+fi
+if ! systemctl -q is-enabled greetd.service; then
+    sudo systemctl enable greetd.service
+fi

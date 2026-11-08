@@ -59,7 +59,7 @@ Delete this file when the list is done.
   - Dropped: the `..` family (`autocd` does it), grep colours (Fedora sets them), history and time shortcuts, `bc`, `less -R`, `truevim`, `e`, `wttr_repeat`, the Satisfactory network hack.
   - docker aliases move to item 46; `k`, `h`, `gg` and colordiff to item 12.
 - [x] 11. Environment and PATH: Go, cargo, Homebrew, Android SDK, nvim, LM Studio, the secrets file, EDITOR
-  - Set in `~/.config/zsh/.zshenv`, which every zsh reads, including the login shell SDDM starts the session with, so GUI apps get it too.
+  - Set in `~/.config/zsh/.zshenv`, which every zsh reads, including the login shell the login screen starts the session with (item 54), so GUI apps get it too.
   - PATH: `~/.local/bin` first; Go, cargo and LM Studio last.
   - `EDITOR` is nvim from Fedora's package; its config is item 44. cargo is Fedora's package, only for `cargo install`.
   - Homebrew is dropped: Fedora packages nearly every tool it was used for; the rest are item 12.
@@ -100,6 +100,12 @@ Delete this file when the list is done.
 
 ## Phase 3: session plumbing
 
+- [x] 54. Login screen: SDDM, or greetd with gtkgreet
+  - greetd with gtkgreet replaces SDDM. SDDM starts the session before its login screen lets go of the GPU, so Sway ran on the iGPU with no monitor: a black screen after a fresh boot. greetd waits for the login screen to exit.
+  - The login screen is Fedora's gtkgreet setup in Sway, plus the keyboard layout and `DP-2` off. ReGreet was rejected: only personal COPRs package it. cage was rejected: no control over outputs or keyboard.
+  - Config is kept in `~/.config/yadm/system/` and installed by the bootstrap; SDDM stays installed as the way back.
+  - Sessions start through `zsh -lc`, as SDDM did; greetd's own `sh` would skip `.zshenv`.
+  - greetd marks the session as a tty, so the KDE wallet's login unlock needs `force_run`, in a copy of Fedora's PAM file.
 - [ ] 25. Lock and idle: screen off after 10 min, lock only on suspend or a keypress, fullscreen keeps the screen awake
 - [ ] 26. Notifications daemon
 - [ ] 27. Polkit agent

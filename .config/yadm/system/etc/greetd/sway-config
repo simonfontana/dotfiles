@@ -1,0 +1,15 @@
+# Installed to /etc/greetd/ by ~/.config/yadm/bootstrap.d/50-login-screen
+#
+# Sway for the login screen. Fedora's gtkgreet config does the work: it
+# starts gtkgreet, sets the wallpaper, turns the screen off when idle and
+# binds Super+Shift+E to a power-off/reboot bar.
+include /etc/gtkgreet/gtkgreet-sway.conf
+
+# The same layout as the console (localectl), for typing the password
+input type:keyboard {
+    xkb_layout us
+    xkb_variant altgr-intl
+}
+
+# The monitor's second input, only used for picture-by-picture
+output DP-2 disable

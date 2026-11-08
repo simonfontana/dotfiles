@@ -1,0 +1,9 @@
+# Installed to /etc/greetd/ by ~/.config/yadm/bootstrap.d/50-login-screen
+
+[terminal]
+vt = 1
+
+# The login screen: gtkgreet in a minimal Sway
+[default_session]
+command = "sway --config /etc/greetd/sway-config"
+user = "greetd"
