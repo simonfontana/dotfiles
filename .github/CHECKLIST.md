@@ -87,7 +87,10 @@ Delete this file when the list is done.
   - It keeps the stock `include /etc/sway/config.d/*`, which loads Fedora's sway-systemd session setup.
   - foot runs as a server: foot's own socket unit is wanted by `sway-session.target`, so it starts in Sway but not in Plasma, and `$term` is `footclient`.
   - The Fedora Sway Spin's `sway-config-fedora` was skipped: a finished desktop rather than vanilla.
-- [ ] 15. Keyboard: repeat rate, altgr-intl
+- [x] 15. Keyboard: repeat rate, altgr-intl
+  - One `input type:keyboard` block sets every keyboard to `us` with `altgr-intl`; Sway ignores the system layout from `localectl`.
+  - Repeat is back to i3's 200 ms delay and 55 per second, instead of Sway's 600/25.
+  - Plasma is left alone: it already takes the layout from the system.
 - [ ] 16. Mouse and focus: `mouse_warping`, floating modifier
 - [ ] 17. Monitor: 240 Hz, VRR, `DP-2` disabled
 - [ ] 18. Wallpaper
