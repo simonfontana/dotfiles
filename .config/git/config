@@ -5,6 +5,7 @@
   filemode = true
   pager = delta
   autocrlf = false
+  quotePath = false
 [color]
   ui = auto
 [interactive]
