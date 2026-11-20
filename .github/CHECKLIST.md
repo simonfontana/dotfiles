@@ -94,7 +94,7 @@ Delete this file when the list is done.
 - [ ] 16. Mouse and focus: `mouse_warping`, floating modifier
 - [x] 17. Monitor: 240 Hz, VRR, `DP-2` disabled
   - The monitor's EDID prefers 60 Hz, so Sway picked that; the config now sets 5120x1440 at 240 Hz. The output is matched by make and model, not by port.
-  - Adaptive sync is on.
+  - Adaptive sync is off: Sway can't limit it to fullscreen games, and on the desktop the OLED flickers. At 240 Hz a missed frame waits at most 4.2 ms, so games lose little; item 47 can revisit it.
   - `DP-2` is left out: Sway only sees `DP-3`.
 - [ ] 18. Wallpaper
 - [ ] 19. Window keys: hjkl, splits, layouts, parent/child
