@@ -92,7 +92,10 @@ Delete this file when the list is done.
   - Repeat is back to i3's 200 ms delay and 55 per second, instead of Sway's 600/25.
   - Plasma is left alone: it already takes the layout from the system.
 - [ ] 16. Mouse and focus: `mouse_warping`, floating modifier
-- [ ] 17. Monitor: 240 Hz, VRR, `DP-2` disabled
+- [x] 17. Monitor: 240 Hz, VRR, `DP-2` disabled
+  - The monitor's EDID prefers 60 Hz, so Sway picked that; the config now sets 5120x1440 at 240 Hz. The output is matched by make and model, not by port.
+  - Adaptive sync is on.
+  - `DP-2` is left out: Sway only sees `DP-3`.
 - [ ] 18. Wallpaper
 - [ ] 19. Window keys: hjkl, splits, layouts, parent/child
 - [ ] 20. Workspaces: 1–10 plus z/x/c, output assignment, moving workspaces between outputs

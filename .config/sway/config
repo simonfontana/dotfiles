@@ -22,6 +22,8 @@ set $menu wmenu-run
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
 output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
+# The monitor's EDID prefers 60 Hz, so Sway picks that unless told otherwise.
+output "Microstep MPG491CX OLED Unknown" mode 5120x1440@240Hz adaptive_sync on
 #
 # Example configuration:
 #
