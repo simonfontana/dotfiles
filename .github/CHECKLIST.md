@@ -91,7 +91,10 @@ Delete this file when the list is done.
   - One `input type:keyboard` block sets every keyboard to `us` with `altgr-intl`; Sway ignores the system layout from `localectl`.
   - Repeat is back to i3's 200 ms delay and 55 per second, instead of Sway's 600/25.
   - Plasma is left alone: it already takes the layout from the system.
-- [ ] 16. Mouse and focus: `mouse_warping`, floating modifier
+- [x] 16. Mouse and focus: `mouse_warping`, floating modifier
+  - Mice use the `flat` acceleration profile instead of libinput's `adaptive`. Games get raw motion on Wayland either way.
+  - The stock config's `floating_modifier $mod normal` matches i3's; focus follows the mouse, as before.
+  - `mouse_warping none` is dropped: Sway's default only moves the cursor when focus changes output, and there is one output. Add it back if a second screen arrives (item 49).
 - [x] 17. Monitor: 240 Hz, VRR, `DP-2` disabled
   - The monitor's EDID prefers 60 Hz, so Sway picked that; the config now sets 5120x1440 at 240 Hz. The output is matched by make and model, not by port.
   - Adaptive sync is off: Sway can't limit it to fullscreen games, and on the desktop the OLED flickers. At 240 Hz a missed frame waits at most 4.2 ms, so games lose little; item 47 can revisit it.
