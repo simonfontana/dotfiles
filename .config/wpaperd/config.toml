@@ -1,0 +1,7 @@
+# Wallpapers for every screen: a random one from the folder every 15 minutes,
+# shown whole on black. The folder is not tracked; see item 18 in the checklist.
+[any]
+path = "~/Pictures/Wallpapers"
+duration = "15m"
+sorting = "random"
+mode = "fit"

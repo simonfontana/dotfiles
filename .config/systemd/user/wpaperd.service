@@ -1,0 +1,13 @@
+[Unit]
+Description=Wallpaper daemon
+Documentation=https://github.com/danyspin97/wpaperd
+PartOf=graphical-session.target
+After=graphical-session.target
+ConditionEnvironment=WAYLAND_DISPLAY
+
+[Service]
+ExecStart=%h/.cargo/bin/wpaperd
+Restart=on-failure
+
+[Install]
+WantedBy=sway-session.target

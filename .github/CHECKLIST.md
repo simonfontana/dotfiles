@@ -99,7 +99,13 @@ Delete this file when the list is done.
   - The monitor's EDID prefers 60 Hz, so Sway picked that; the config now sets 5120x1440 at 240 Hz. The output is matched by make and model, not by port.
   - Adaptive sync is off: Sway can't limit it to fullscreen games, and on the desktop the OLED flickers. At 240 Hz a missed frame waits at most 4.2 ms, so games lose little; item 47 can revisit it.
   - `DP-2` is left out: Sway only sees `DP-3`.
-- [ ] 18. Wallpaper
+- [x] 18. Wallpaper
+  - wpaperd shows a random image from `~/Pictures/Wallpapers` every 15 minutes, with a short fade. The folder is not tracked: the repo is public and the images are other people's work.
+  - Images are shown whole on black (`fit`): 32:9 fills the screen, 16:9 sits in the middle. Black backgrounds blend into the OLED's black.
+  - swaybg was rejected for rotation: Sway kills the old swaybg before the new one draws, so every change would flash.
+  - wpaperd 1.3.0 is built by the bootstrap from its git tag: Fedora doesn't package it and crates.io stops at 1.0.1. A user unit wanted by `sway-session.target` starts it, so it runs in Sway but not in Plasma.
+  - Fading image edges into the black was tried and dropped: a fixed fade smudges, and a good one is hand work per image.
+  - HDR wallpapers have to wait: neither swaybg nor wpaperd uses Wayland's colour management (item 47).
 - [ ] 19. Window keys: hjkl, splits, layouts, parent/child
 - [ ] 20. Workspaces: 1–10 plus z/x/c, output assignment, moving workspaces between outputs
 - [ ] 21. Resize mode
@@ -153,6 +159,7 @@ Delete this file when the list is done.
 
 ## Phase 7: later
 
+- [ ] 55. Colours from the wallpaper: wallust or matugen; decided last, after the rest of the list
 - [ ] 49. Other machines: yadm alternates, the old laptop and workstation branches
 - [ ] 50. Cleanup: delete the old clone, the old GitHub branches and `draft-2026-10`; move "To try" somewhere that outlives this file
 
