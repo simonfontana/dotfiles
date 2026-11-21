@@ -106,7 +106,9 @@ Delete this file when the list is done.
   - wpaperd 1.3.0 is built by the bootstrap from its git tag: Fedora doesn't package it and crates.io stops at 1.0.1. A user unit wanted by `sway-session.target` starts it, so it runs in Sway but not in Plasma.
   - Fading image edges into the black was tried and dropped: a fixed fade smudges, and a good one is hand work per image.
   - HDR wallpapers have to wait: neither swaybg nor wpaperd uses Wayland's colour management (item 47).
-- [ ] 19. Window keys: hjkl, splits, layouts, parent/child
+- [x] 19. Window keys: hjkl, splits, layouts, parent/child
+  - Sway's stock keys stay as they are. They match i3's old ones, except that `$mod+b` splits horizontally (was `$mod+g`) and focus child has no key (was `$mod+p`).
+  - Autotiling helpers (autotiling, persway) and the swayr window switcher were skipped: none is packaged in Fedora, and the autotilers replace manual splits rather than add to them.
 - [ ] 20. Workspaces: 1–10 plus z/x/c, output assignment, moving workspaces between outputs
 - [ ] 21. Resize mode
 - [ ] 22. Session keys: reload, exit, lock, power menu
