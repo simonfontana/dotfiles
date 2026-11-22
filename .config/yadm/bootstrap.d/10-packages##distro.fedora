@@ -22,6 +22,9 @@ packages=(
     cargo                    # 11. cargo install for CLI tools
     wayland-devel            # 18. to build wpaperd
     libglvnd-devel           # 18. to build wpaperd
+    swayidle                 # 25. screen off and lock when idle
+    swaylock                 # 25. lock screen
+    python3-gobject-base     # 25. screensaver-bridge
     greetd                   # 54. login manager
     gtkgreet                 # 54. login screen
     wayland-logout           # 54. ends the login screen's Sway

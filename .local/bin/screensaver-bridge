@@ -1,0 +1,187 @@
+#!/usr/bin/python3
+"""Answer org.freedesktop.ScreenSaver calls in Sway, for swayidle.
+
+Plasma and GNOME own org.freedesktop.ScreenSaver on the session bus, and apps
+use it to keep the screen on: Chromium and VLC call Inhibit, and SDL games
+(and Steam's overlay) call SimulateUserActivity every 30 seconds. Sway has
+nothing there, so those calls are lost.
+
+This answers both with logind idle inhibitors, which swayidle obeys. An Inhibit
+holds one until UnInhibit; SimulateUserActivity holds one until the pings stop.
+Either is released when the caller leaves the bus.
+"""
+
+import json
+import os
+import subprocess
+import sys
+
+from gi.repository import Gio, GLib
+
+NAME = "org.freedesktop.ScreenSaver"
+PATHS = ["/org/freedesktop/ScreenSaver", "/ScreenSaver"]
+INTERFACE = Gio.DBusNodeInfo.new_for_xml("""
+<node>
+  <interface name="org.freedesktop.ScreenSaver">
+    <method name="Inhibit">
+      <arg type="s" name="application_name" direction="in"/>
+      <arg type="s" name="reason_for_inhibit" direction="in"/>
+      <arg type="u" name="cookie" direction="out"/>
+    </method>
+    <method name="UnInhibit">
+      <arg type="u" name="cookie" direction="in"/>
+    </method>
+    <method name="SimulateUserActivity"/>
+    <method name="GetActive">
+      <arg type="b" name="active" direction="out"/>
+    </method>
+  </interface>
+</node>
+""").interfaces[0]
+
+# SDL pings every 30 seconds; hold long enough to survive one late ping.
+PING_HOLD_SECONDS = 65
+
+system_bus = Gio.bus_get_sync(Gio.BusType.SYSTEM)
+session_bus = Gio.bus_get_sync(Gio.BusType.SESSION)
+inhibits = {}  # cookie -> (sender, logind fd)
+pings = {}     # sender -> (logind fd, expiry timer id)
+watches = {}   # sender -> name watch id
+next_cookie = 1
+
+
+def log(message):
+    print(message, file=sys.stderr, flush=True)
+
+
+def logind_inhibit(who, why):
+    """Take a logind idle inhibitor; it lasts until the fd is closed."""
+    result, fds = system_bus.call_with_unix_fd_list_sync(
+        "org.freedesktop.login1", "/org/freedesktop/login1",
+        "org.freedesktop.login1.Manager", "Inhibit",
+        GLib.Variant("(ssss)", ("idle", who, why, "block")),
+        GLib.VariantType("(h)"), Gio.DBusCallFlags.NONE, -1, None, None)
+    return fds.steal_fds()[result.unpack()[0]]
+
+
+def program(sender):
+    """The caller's program name, for logs and `systemd-inhibit --list`."""
+    try:
+        pid = session_bus.call_sync(
+            "org.freedesktop.DBus", "/org/freedesktop/DBus",
+            "org.freedesktop.DBus", "GetConnectionUnixProcessID",
+            GLib.Variant("(s)", (sender,)), GLib.VariantType("(u)"),
+            Gio.DBusCallFlags.NONE, -1, None).unpack()[0]
+        with open(f"/proc/{pid}/cmdline", "rb") as cmdline:
+            return os.path.basename(cmdline.read().split(b"\0")[0].decode())
+    except (GLib.Error, OSError, UnicodeDecodeError):
+        return sender
+
+
+def wake_screen():
+    """Turn powered-off outputs back on.
+
+    swayidle drops its timers while a logind inhibitor exists, without running
+    their resume commands. An inhibitor that arrives while the screen is off
+    would leave it off, deaf to the mouse, until 10 more idle minutes passed.
+    """
+    try:
+        outputs = json.loads(subprocess.run(
+            ["swaymsg", "-r", "-t", "get_outputs"],
+            capture_output=True, check=True).stdout)
+        if any(output["active"] and not output["power"] for output in outputs):
+            log("Screen was off; turning it on")
+            subprocess.run(["swaymsg", "output * power on"],
+                           stdout=subprocess.DEVNULL, check=True)
+    except (OSError, ValueError, subprocess.CalledProcessError) as error:
+        log(f"Could not check the screen: {error}")
+
+
+def watch(sender):
+    if sender not in watches:
+        watches[sender] = Gio.bus_watch_name_on_connection(
+            session_bus, sender, Gio.BusNameWatcherFlags.NONE,
+            None, sender_vanished)
+
+
+def inhibit(sender, application, reason):
+    global next_cookie
+    if not inhibits and not pings:
+        wake_screen()
+    cookie = next_cookie
+    next_cookie += 1
+    inhibits[cookie] = (sender, logind_inhibit(application or sender, reason))
+    watch(sender)
+    log(f"Inhibit {cookie} by {application} ({sender}): {reason}")
+    return cookie
+
+
+def uninhibit(sender, cookie):
+    if inhibits.get(cookie, (None,))[0] != sender:
+        return
+    os.close(inhibits.pop(cookie)[1])
+    log(f"UnInhibit {cookie} by {sender}")
+
+
+def ping(sender):
+    if sender in pings:
+        fd, timer = pings[sender]
+        GLib.source_remove(timer)
+    else:
+        if not inhibits and not pings:
+            wake_screen()
+        name = program(sender)
+        fd = logind_inhibit(name, "Simulated user activity")
+        watch(sender)
+        log(f"Activity pings from {name} ({sender}): holding")
+    timer = GLib.timeout_add_seconds(PING_HOLD_SECONDS, pings_stopped, sender)
+    pings[sender] = (fd, timer)
+
+
+def pings_stopped(sender):
+    os.close(pings.pop(sender)[0])
+    log(f"Activity pings from {sender} stopped: released")
+    return GLib.SOURCE_REMOVE
+
+
+def sender_vanished(connection, sender):
+    for cookie in [c for c, (s, _) in inhibits.items() if s == sender]:
+        os.close(inhibits.pop(cookie)[1])
+        log(f"Released {cookie}: {sender} left the bus")
+    if sender in pings:
+        fd, timer = pings.pop(sender)
+        GLib.source_remove(timer)
+        os.close(fd)
+        log(f"Released pings: {sender} left the bus")
+    Gio.bus_unwatch_name(watches.pop(sender))
+
+
+def handle_call(connection, sender, path, interface, method, params, call):
+    try:
+        if method == "Inhibit":
+            cookie = inhibit(sender, *params.unpack())
+            call.return_value(GLib.Variant("(u)", (cookie,)))
+        elif method == "UnInhibit":
+            uninhibit(sender, *params.unpack())
+            call.return_value(None)
+        elif method == "SimulateUserActivity":
+            ping(sender)
+            call.return_value(None)
+        elif method == "GetActive":
+            call.return_value(GLib.Variant("(b)", (False,)))
+    except GLib.Error as error:
+        log(f"{method} from {sender} failed: {error.message}")
+        call.return_dbus_error("org.freedesktop.DBus.Error.Failed",
+                               error.message)
+
+
+def name_lost(connection, name):
+    log(f"Could not own {name}; is another desktop running?")
+    sys.exit(1)
+
+
+for path in PATHS:
+    session_bus.register_object(path, INTERFACE, handle_call, None, None)
+Gio.bus_own_name_on_connection(
+    session_bus, NAME, Gio.BusNameOwnerFlags.DO_NOT_QUEUE, None, name_lost)
+GLib.MainLoop().run()

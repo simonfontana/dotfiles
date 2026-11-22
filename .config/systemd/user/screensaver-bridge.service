@@ -1,0 +1,14 @@
+[Unit]
+Description=Answer org.freedesktop.ScreenSaver inhibit calls for swayidle
+PartOf=graphical-session.target
+After=graphical-session.target
+ConditionEnvironment=WAYLAND_DISPLAY
+
+[Service]
+Type=dbus
+BusName=org.freedesktop.ScreenSaver
+ExecStart=%h/.local/bin/screensaver-bridge
+Restart=on-failure
+
+[Install]
+WantedBy=sway-session.target

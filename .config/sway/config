@@ -32,16 +32,10 @@ output "Microstep MPG491CX OLED Unknown" mode 5120x1440@240Hz
 
 ### Idle configuration
 #
-# Example configuration:
-#
-# exec swayidle -w \
-#          timeout 300 'swaylock -f -c 000000' \
-#          timeout 600 'swaymsg "output * power off"' resume 'swaymsg "output * power on"' \
-#          before-sleep 'swaylock -f -c 000000'
-#
-# This will lock your screen after 300 seconds of inactivity, then turn off
-# your displays after another 300 seconds, and turn your screens back on when
-# resumed. It will also lock your screen before your computer goes to sleep.
+# swayidle runs as a systemd user unit; its timeouts are in
+# ~/.config/swayidle/config. Apps keep the screen awake on their own: over
+# Wayland's idle-inhibit (Firefox, mpv), or over D-Bus (SDL games, Chromium),
+# which ~/.local/bin/screensaver-bridge answers.
 
 ### Input configuration
 #

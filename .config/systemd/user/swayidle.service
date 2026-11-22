@@ -1,0 +1,18 @@
+[Unit]
+Description=Idle manager: screen off and lock
+Documentation=man:swayidle(1)
+PartOf=graphical-session.target
+After=graphical-session.target
+ConditionEnvironment=WAYLAND_DISPLAY
+
+[Service]
+# -w: wait for swaylock -f to lock before letting the system suspend.
+# Events are in ~/.config/swayidle/config.
+ExecStart=/usr/bin/swayidle -w
+Restart=on-failure
+# swaylock runs in this unit. Restarting swayidle must not kill a running
+# lock screen, or Sway is left locked with no way to type the password.
+KillMode=process
+
+[Install]
+WantedBy=sway-session.target

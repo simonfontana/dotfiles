@@ -1,0 +1,13 @@
+# Read by swayidle, which swayidle.service starts in the Sway session.
+# One event per line; swayidle only skips lines that start with #.
+#
+# After 10 minutes the screen goes off. Touching the mouse or a key within the
+# next 10 seconds brings it back without a password; after that it locks.
+# Apps that ask keep the screen awake; see the Sway config.
+timeout 600 'swaymsg "output * power off"' resume 'swaymsg "output * power on"'
+timeout 610 'swaylock -f -c 000000'
+
+# Lock before suspend, and on `loginctl lock-session`. These two also make
+# swayidle watch logind, which is how it sees screensaver-bridge's inhibits.
+before-sleep 'swaylock -f -c 000000'
+lock 'swaylock -f -c 000000'

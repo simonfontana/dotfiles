@@ -123,8 +123,17 @@ Delete this file when the list is done.
   - Config is kept in `~/.config/yadm/system/` and installed by the bootstrap; SDDM stays installed as the way back.
   - Sessions start through `zsh -lc`, as SDDM did; greetd's own `sh` would skip `.zshenv`.
   - greetd marks the session as a tty, so the KDE wallet's login unlock needs `force_run`, in a copy of Fedora's PAM file.
-- [ ] 25. Lock and idle: screen off after 10 min, lock only on suspend or a keypress, fullscreen keeps the screen awake
+- [x] 25. Lock and idle: screen off, lock, apps keeping the screen awake
+  - The screen goes off after 10 minutes idle and locks 10 seconds later; touching the mouse or a key in between brings it back without a password, as GNOME and Plasma do. It also locks before suspend and on `loginctl lock-session`. The i3 setup locked after X's 10-minute screensaver too.
+  - swayidle and swaylock, both stock. swaylock is black (`-c 000000`); its default light grey is the worst colour for the OLED. swayidle runs as a user unit wanted by `sway-session.target`, with its events in `~/.config/swayidle/config`.
+  - A gamepad doesn't count as activity: games read it directly, so Sway never sees it. Games keep the screen on by asking instead, over D-Bus on `org.freedesktop.ScreenSaver`, which Plasma answers and Sway doesn't. Victoria 3 and Steam's overlay (SDL) call `SimulateUserActivity` every 30 seconds while the game runs; Chromium and VLC call `Inhibit`.
+  - `~/.local/bin/screensaver-bridge` answers both with logind idle inhibitors, which swayidle obeys: an Inhibit holds one until UnInhibit, pings hold one until they stop for 65 seconds, and either ends when the caller leaves the bus. It's our own Python (Gio), since the existing bridges are archived (wscreensaver-bridge) or unmaintained and unpackaged (inhibit-bridge), and hypridle, which has it built in, isn't in Fedora. Python over Go: no build step or downloaded modules.
+  - A running game keeps the screen on and unlocked, even when it's paused and nobody is there, as in Plasma.
+  - swayidle drops its timers while a logind inhibitor exists without running their resume commands, so an inhibitor arriving while the screen is off would leave it off; the bridge turns the screen on first.
+  - `inhibit_idle fullscreen` for all windows was dropped: it also kept a fullscreen terminal on forever, unlocked. Firefox and mpv inhibit over Wayland on their own. Flatpaks that ask through the portal still get nothing: Fedora's GTK portal backend only claims to inhibit.
+  - A dim before the screen goes off was looked at: chayang is barely maintained and can flash the desktop when it ends, DDC brightness is slow and can fail while the monitor wakes, and swaylock-effects isn't in Fedora. A warning notification is for item 26.
 - [ ] 26. Notifications daemon
+  - Item 25 wants a "Screen off in 10 s" warning: a swayidle timeout at 590 s that sends it, and a `resume` that dismisses it.
 - [ ] 27. Polkit agent
 - [ ] 28. Screen sharing: portals, the Teams cursor hack
 - [ ] 29. Network applet
