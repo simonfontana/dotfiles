@@ -113,7 +113,11 @@ Delete this file when the list is done.
   - Sway's stock workspaces 1–10 stay as they are.
   - Dropped: z/x/c, pinning workspaces to outputs, and `$mod+Shift+n/m` to move a workspace to another output. They served the old three-screen setup; with one output they do nothing. Item 49 can bring them back.
   - `workspace_auto_back_and_forth` was considered and skipped.
-- [ ] 21. Resize mode
+- [x] 21. Resize mode
+  - Sway's stock resize mode on `$mod+r` stays, and `$mod+r` leaves it again, as in i3.
+  - Steps are 5 with no unit: tiled windows change by 5 percent, floating ones by 5 px, like i3's old `5 px or 5 ppt`. Sway's stock 10 px is 0.2% of the 5120 px screen.
+  - New: `$mod+Ctrl+hjkl` resizes without the mode. Multi-monitor setups often put moving workspaces between outputs there; item 49 can move resizing if a second screen arrives.
+  - Preset widths for the ultrawide (a third, a half) were considered and skipped.
 - [ ] 22. Session keys: reload, exit, lock, power menu
 - [ ] 23. Window rules: floating Yad/origin.exe, PanGPUI at the mouse
 - [ ] 24. Window look: title bars, inactive-window dimming and fading
