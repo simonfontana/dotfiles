@@ -138,7 +138,7 @@ Delete this file when the list is done.
 
 - [x] 35. Bar behaviour: hidden until Alt; burn-in risk on the OLED
   - The bar is hidden and shows while Alt is held, as in i3, so nothing static sits on the OLED.
-  - Decided early: while Sway's bar is visible at login, Sway never tells wpaperd its surface is on screen, so the wallpaper stays black until something else changes. A hidden bar avoids it; to be reported to Sway.
+  - Decided early: wpaperd's first buffer is a 10x10 placeholder in the top-left corner, and it waits for a frame callback before drawing the wallpaper. A bar at the top covers the placeholder, so Sway sends no callbacks and the wallpaper stays black after login. A hidden bar avoids it; a wpaperd bug, to be reported there.
 - [ ] 36. Bar contents
 - [ ] 37. Launcher
 - [ ] 38. Volume keys
