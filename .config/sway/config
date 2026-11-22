@@ -238,6 +238,11 @@ bindsym $mod+r mode "resize"
 bar {
     position top
 
+    # Hidden until Alt is held, as in i3. Keeps it off the OLED, and a
+    # visible bar stops wpaperd from drawing its first wallpaper at login.
+    mode hide
+    modifier Mod1
+
     # When the status_command prints a new line to stdout, swaybar updates.
     # The default just shows the current date and time.
     status_command while date +'%Y-%m-%d %X'; do sleep 1; done

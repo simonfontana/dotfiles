@@ -136,7 +136,9 @@ Delete this file when the list is done.
 
 ## Phase 4: bar, launcher, keys
 
-- [ ] 35. Bar behaviour: hidden until Alt; burn-in risk on the OLED
+- [x] 35. Bar behaviour: hidden until Alt; burn-in risk on the OLED
+  - The bar is hidden and shows while Alt is held, as in i3, so nothing static sits on the OLED.
+  - Decided early: while Sway's bar is visible at login, Sway never tells wpaperd its surface is on screen, so the wallpaper stays black until something else changes. A hidden bar avoids it; to be reported to Sway.
 - [ ] 36. Bar contents
 - [ ] 37. Launcher
 - [ ] 38. Volume keys
